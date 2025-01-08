@@ -119,10 +119,3 @@ management.addEventListener('click' , ()=>{
 })
 
 
-
-
-
-
-
-
-

@@ -221,8 +221,8 @@ span {
 
 .Chat-header {
     width: 100%;
-    min-height: 50px;
-    background-color: grey;
+    min-height: 40px;
+    background-color: lightblue;
     padding: 5px;
     margin-bottom: 10px;
 
@@ -245,7 +245,18 @@ span {
     gap: 10px;
 
 }
+.Conversacion-li{
+    width: 95%;
+    background-color: lightgray;
 
+    padding: 5px;
+    margin: ;
+    
+    border: 0.2px solid grey;
+    border-radius: 8px;
+
+    text-align: center;
+}
 .Menu-li--chat {
     cursor: pointer;
 }
@@ -871,6 +882,7 @@ input[type="submit"] {
     background-color: lightgreen;
 
     border-radius: 8px;
+    cursor: pointer;
 }
 .Form-low{
     background-color: red;
@@ -919,4 +931,53 @@ input[type="submit"] {
 .Form-select--status , .Form-select--priority{
     width: 70%;
     height: 120px;
+}
+
+.Home-reports{
+    width: 75%;
+    min-height: 600px;
+    max-height: 700px;
+    background-color: white;
+    
+    margin: 10px 40px;
+    padding: 10px;
+
+    border-radius: 8px;
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+
+    overflow-y: scroll;
+
+}
+.Reports-ul{
+    width: 90%;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: repeat( 4 , 1fr);
+    gap: 20px;
+    
+}
+.Reports-li{
+    min-height: 200px;
+    background-color: lightgray;
+    
+}
+
+
+.Reports-date{
+    position: absolute;
+    top: 55%;
+    right: 8%;
+}
+.Reports-p{
+    padding: 20px;
+    margin: 20px 200px 0;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(109, 197, 252);
+
+    position: absolute;
+    top: 40%;
+    right: -5%;
 }
