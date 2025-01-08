@@ -1,0 +1,922 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p a {
+    display: inline;
+}
+
+/*img , svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+svg{
+    fill: currentColor;
+}*/
+body {
+    font-family: monospace;
+    hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+span {
+    display: none;
+}
+
+
+
+.Header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(73, 73, 73);
+    background: linear-gradient(82deg, rgba(73, 73, 73, 1) 0%, rgba(194, 194, 194, 1) 77%, rgba(205, 205, 205, 1) 99%, rgba(237, 237, 237, 1) 100%);
+
+    display: flex;
+}
+
+.Header-logo {
+    width: 15%;
+    /*background-color: blue;*/
+}
+
+.Header-picture {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-img {
+    width: 38%;
+    height: 70px;
+}
+
+
+
+
+
+.Header-nav {
+    width: 70%;
+    max-width: 120em;
+    /*background-color: lightgray;*/
+
+    padding: 1em;
+}
+
+.Menu-ul {
+    width: 100%;
+    /*background-color: lightblue;*/
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.Menu-li {
+    /* background-color: lightgreen;*/
+    padding: 1em;
+    margin: 0 1em 0 0;
+
+    transition: all .5s ease;
+
+}
+
+.Menu-li.isActive {
+    background-color: lightblue;
+    border-radius: 10px;
+    color: white;
+}
+
+.Menu-information {
+
+    position: relative;
+}
+
+.Bloque {
+    width: 60%;
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+
+    border-radius: 10px;
+    border: 1px solid black;
+
+    font-weight: bold;
+
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: all .5s ease;
+
+    z-index: 3;
+}
+
+.Bloque.Bloque.isActive {
+    display: unset;
+}
+
+
+
+.Bloque-Calendario {
+    width: 60%;
+    height: 400px;
+
+    position: absolute;
+    top: 0;
+    left: 12%;
+}
+
+.Bloque-Contactos {
+    width: 60%;
+
+    padding: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 23%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    display: none;
+}
+
+.Bloque-Proyectos {
+    width: 60%;
+
+    padding: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 37%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    display: none;
+}
+
+.Bloque-Informes {
+    width: 35%;
+
+    padding: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 48%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    display: none;
+}
+
+.Bloque-dt {
+    color: red;
+    padding-bottom: 20px;
+}
+
+.Bloque-dd {
+    color: black;
+    padding: 0 0 5px 20px;
+}
+
+.Bloque-chat {
+    width: 56%;
+    min-height: 560px;
+
+    position: absolute;
+    top: 19px;
+    right: -208px;
+
+}
+
+.Chat-header {
+    width: 100%;
+    min-height: 50px;
+    background-color: grey;
+    padding: 5px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+
+    border-radius: 5px;
+
+    color: red;
+}
+
+.Chat-ul {
+    width: 40%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.Menu-li--chat {
+    cursor: pointer;
+}
+
+.Contact-ul {
+    width: 30%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+.Bloque-dd-Conversacion {
+    background-color: lightgray;
+    border-radius: 5px;
+
+    margin-bottom: 5px;
+}
+
+.Bloque-dd--calendar {
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.Header-wrapper {
+    width: 10%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+.Menu-ul--wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Bloque-search {
+    width: 20%;
+
+    position: absolute;
+    top: 10%;
+    left: 65%;
+}
+
+.Bloque-profile {
+    width: 10%;
+    min-height: 150px;
+    padding: 15px;
+
+    position: absolute;
+    top: 10%;
+    left: 85%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+
+    text-align: center;
+    z-index: 2;
+    display: none;
+}
+
+.Bloque-configuration {
+    width: 12%;
+    min-height: 150px;
+    padding: 15px;
+
+    position: absolute;
+    top: 10%;
+    left: 87%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+
+    text-align: center;
+    display: none;
+}
+
+.Bloque-li--user,
+.Bloque-li--configuration {
+    padding: 0 0 10px 0;
+}
+
+.Bloque-li--profile,
+.Bloque-li--close,
+.Bloque-li--modo,
+.Bloque-li--idioma,
+.Bloque-li--acerca {
+    background-color: lightgray;
+    padding: 5px;
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+.Bloque-li--close {
+    background-color: lightcoral;
+}
+
+
+.Main {
+    width: 100%;
+    min-height: 250vh;
+    background-color: lightgrey;
+
+}
+
+.Home-picture {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-img {
+    width: 40%;
+    opacity: 0.03;
+
+    position: fixed;
+    top: 20%;
+    z-index: 0;
+
+}
+
+.Home-organizer {
+    width: 50%;
+    min-height: 400px;
+    background-color: white;
+    margin: 40px;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+
+    color: black;
+
+}
+
+.Organizer-dt,
+.Tasks-dt,
+.Contacts-dt {
+    background-color: lightgray;
+    padding: 10px;
+
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+}
+
+.Organizer-dd,
+.Tasks-dd,
+.Contacts-dd {
+    background-color: rgb(232, 231, 231);
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+    color: black;
+}
+
+.Contacts-dd {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+}
+
+.Home-tasks {
+    width: 85%;
+
+    margin: 10px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.Tasks-dt,
+.Contacts-dt {
+    font-weight: bold;
+
+}
+
+.Tasks-dl,
+.Contacts-dl{
+    width: 80%;
+    min-height: 200px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+
+    position: relative;
+}
+
+.Tasks-dl--important {
+    width: 40%;
+    min-height: 500px;
+
+
+    position: fixed;
+    top: 15%;
+    right: 3%;
+
+    opacity: 0;
+
+}
+
+.Tasks-dl--important.isActive {
+    opacity: 1;
+}
+
+.Tasks-dt--important {
+    background-color: red;
+}
+
+.Tasks-dd--important {
+    border: 1px solid red;
+    margin: 15px auto;
+}
+
+.Home-button {
+    width: 4%;
+    height: 50px;
+    background-color: red;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 18%;
+    right: 0;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Home-button:hover {
+    transform: scale(0.95);
+}
+
+
+.Tasks-dt--ok {
+    background-color: green;
+}
+
+.Tasks-dd--ok {
+    border: 1px solid green;
+}
+
+.Home-client {
+    width: 10%;
+    height: 30px;
+    background-color: white;
+    padding: 3px;
+    margin: 20px 40px;
+
+    border: 1px solid black;
+    border-radius: 8px;
+
+    text-align: center;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.Clients-ul{
+    width: 100%;
+    min-height: 120px;
+    background-color: white;
+    padding: 3px;
+    margin: 20px 40px;
+
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 2;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    border: 1px solid black;
+    border-radius: 8px;
+
+    text-align: center;
+
+    opacity: 0;
+}
+
+.Clients-ul.isActive {
+    opacity: 1;
+}
+
+.Clients:active{
+    background-color: grey;
+}
+
+.Clients-a:hover{
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.Contacts-create {
+    position: absolute;
+    top: 35%;
+    right: 7%;
+}
+
+.Contacts-management {
+    position: absolute;
+    top: 40%;
+    right: 7%;
+}
+
+
+.Home-h2 , .Create-link ,.Management-link{
+    padding: 20px;
+    margin: 20px 200px 0;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+
+}
+.Home-create{
+    width: 80%;
+    height: 80vh;
+    background-color: white;
+
+    margin: 10px auto;
+    padding: 20px;
+
+    border-radius: 8px;
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+    position: relative;
+}
+.Form{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Form-left--contact{
+    width: 50%;
+    margin: 20px 0 20px 0;
+
+    color: red;
+    font-size: 1rem; 
+}
+.Form-left--projects{
+    width: 60%;
+    margin: 20px 0 20px 0;
+}
+.Form-right--projects{
+    width: 40%;
+    margin: 40px 0 20px 20px;
+
+}
+
+.Form-second , .Form-third{
+    width: 90%;
+    margin: 20px 0 20px 0;
+
+    color: red;
+    font-size: 1rem;
+
+    border-bottom: 1px solid black;
+}
+.Form-right--contact{
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+    align-content: center;
+}
+input, select, textarea, label {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-size: 1em;
+
+    display: inline-block;
+}
+input[type="email"], input[type="tel"], input[type="text"], select, textarea {
+    background-color: rgb(230, 230, 230);
+}
+input[type="submit"] {
+    width: 15%;
+    background-color: #44bb48;
+
+    padding: 10px;
+    margin: 20px auto;
+
+    color: white;
+    font-size: 1em;
+    border-radius: 8px;
+
+    display: block;
+    cursor: pointer;
+}
+.Form-label {
+    width: 35%;
+    margin: 0 0 8px;
+    padding: 7px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    border: 1.2px solid black;
+}
+.Form-input {
+    width: 60%;
+    margin: 8px 0 8px 10px;
+    color: black;
+}
+.Form-input--observations {
+    min-height: 150px;
+    hyphens: auto;
+    resize: none;
+}
+.Form-back{
+    position: absolute;
+    bottom: -20%;
+    right: 15%;
+    z-index: 2;
+}
+.Management-back{
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    z-index: 2;
+}
+
+
+
+
+.Home-management{
+    width: 40%;
+    min-height: 120px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+    z-index: 2;
+}
+.Management-li{
+    font-size: 1rem;
+}
+.Management-li:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px;
+}
+.Export-btn , .Import-btn{
+    background-color: transparent;
+}
+
+.Home-general{
+    width: 55%;
+    border-right: 1px solid black;
+
+}
+.Projects-ul{
+    width: 88%;
+    min-height: 150px;
+    background-color: white;
+    margin: 20px 50px;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+
+    position: relative;
+}
+.Projects-li{
+    height: 90%;
+    min-height: 90px;
+    background-color: lightgray;
+
+    margin: 20px;
+
+    border-radius: 7px;
+}
+.Home-new{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+.Home-head{
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+.Home-management--projects{
+    position: absolute;
+    top: 90%;
+    right: 3%;
+
+    display: none;
+}
+.Home-management--projects.isActive{
+    display: unset;
+}
+.Management-li{
+    padding: 8px;
+}
+
+
+.Home-form{
+    width: 80%;
+    height: 190vh;
+    background-color: white;
+
+    margin: 10px auto;
+    padding: 20px;
+
+
+    border-radius: 8px;
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+    position: relative;
+}
+.Form-first{
+    display: flex;
+    flex-flow: row nowrap;
+
+    border-bottom: 1px solid black;
+}
+
+.Form-label--projects{
+    margin: 20px 0;
+}
+
+
+.Form-select--status , .Form-select--priority , .Form-input--expenses{
+    width: 50%;
+    margin: 0 0 20px 0;
+}
+.Form-input-description , .Form-input-comments{
+    height: 100px;
+    margin: 0 0 20px 0;
+}
+
+.Form-back--projects{
+    position: absolute;
+    top: 230%;
+}
+.Form-h2{
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: lightblue;
+}
+.Form-send{
+    width: 100%;
+    padding: 20px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.Form-button{
+    width: 10%;
+    height: 30px;
+    background-color: lightgreen;
+
+    border-radius: 8px;
+}
+.Form-low{
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.Form-medium{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.Form-high{
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.Form-critical{
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+.Form-planning , .Form-progressing , .Form-complete{
+    border: 1.5px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 3px;
+}
+.Form-progressing{
+    border: 1.5px solid yellow;
+}
+.Form-complete{
+    border: 1.5px solid green;
+}
+.Form-label--status , .Form-label--priority{
+    width: 50%;
+}
+.Form-select--status , .Form-select--priority{
+    width: 70%;
+    height: 120px;
+}
