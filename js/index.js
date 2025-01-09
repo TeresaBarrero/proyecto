@@ -1,9 +1,9 @@
 
 
 const li = document.querySelectorAll('.Menu-li')
-const bloque = document.querySelectorAll('.Bloque')
-const main = document.querySelector('.Main')
-const chat = document.querySelector('.Bloque-chat')
+const block = document.querySelectorAll('.Block')
+const home = document.querySelector('.Home')
+const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const alertButton = document.querySelector('.Home-button')
 const tasksImportant = document.querySelector('.Tasks-dl--important')
@@ -19,15 +19,15 @@ let statusArrow = 0
     // Si NO contains class 'Menu-li--Chat'
         // Cuando MOUSEOVER en li 
             // TODOS .Menu-li REMOVE isActive
-            // TODOS .Bloque REMOVE is Active
+            // TODOS .Block REMOVE is Active
             // .Menu-li [POSICION] ADD isActive
-            // .Bloque [POSICION] ADD isActive
+            // .Block [POSICION] ADD isActive
 
     // SI contains class 'Menu-li--Chat'
         // Cuando CLICK en liChat
             // chat TOGGLE 'isActive'
             // Recorre TODOS li 
-                // Si NO contains class 'Menu-li--Chat' o 'Bloque-Chat'
+                // Si NO contains class 'Menu-li--Chat' o 'Block-Chat'
                     // TODOS li REMOVE isActive
 
     // SI NO contains class 'Menu-li--wrapper`
@@ -38,12 +38,12 @@ li.forEach( ( _, i )=>{
         li[i].addEventListener('mouseover', ()=>{
             li.forEach( ( _ , i )=>{
                 li[i].classList.remove('isActive')
-                bloque[i].classList.remove('isActive')
+                block[i].classList.remove('isActive')
             })
             if(!li[i].classList.contains('Menu-li--wrapper')){
                 li[i].classList.add('isActive')
             }
-            bloque[i].classList.add('isActive')
+            block[i].classList.add('isActive')
         })   
     }
     else{
@@ -51,9 +51,9 @@ li.forEach( ( _, i )=>{
             //liChat.classList.toggle('isActive')
             chat.classList.toggle('isActive')
             li.forEach( ( _ , i )=>{
-                if(!li[i].classList.contains('Menu-li--chat'||'Bloque-chat')){
+                if(!li[i].classList.contains('Menu-li--chat'||'Block-chat')){
                     li[i].classList.remove('isActive')
-                    bloque[i].classList.remove('isActive')
+                    block[i].classList.remove('isActive')
                 }
             })
             
@@ -62,23 +62,27 @@ li.forEach( ( _, i )=>{
 })
 
 
-// Cuando MOUSEOVER main
-    // Si NO contains class 'Bloque-chat'
-        // TODOS .Bloque[i] REMOVE isActive
+// Cuando MOUSEOVER home
+    // Si NO contains class 'Block-chat'
+        // TODOS .Block[i] REMOVE isActive
         // TODOS li REMOVE is Active
 
-main.addEventListener('mouseover' , ()=>{
-    bloque.forEach( ( _ , i )=>{
-        if(!bloque[i].classList.contains('Bloque-chat')){
-            bloque[i].classList.remove('isActive')
-            li[i].classList.remove('isActive')
-        }
+if(home != null){
+    home.addEventListener('mouseover' , ()=>{
+        block.forEach( ( _ , i )=>{
+            if(!block[i].classList.contains('Block-chat')){
+                block[i].classList.remove('isActive')
+                li[i].classList.remove('isActive')
+            }
+        })
     })
-})
+}
+
 
 
 // Cuando CLICK en .Home-button
     // tasksImportant TOGGLE isActive
+    
 if(alertButton != null){
     alertButton.addEventListener('click' , ()=>{
         tasksImportant.classList.toggle('isActive')
@@ -89,33 +93,176 @@ if(alertButton != null){
 
 // Cuando CLICK en .Home-client
     // listClients TOBBLE isActive
-
-clientsButton.addEventListener('click' , ()=>{
-    listClients.classList.toggle('isActive')
-})
+if(clientsButton != null){
+    
+    clientsButton.addEventListener('click' , ()=>{
+        listClients.classList.toggle('isActive')
+    })
+}
 
 
 // Cuando CLICK en .Clients
     // arrow le STYLE transform rotate (90deg)
-    
-clients.addEventListener('click', ()=>{
-    if(statusArrow === 0){
-        arrow.style.transform = 'rotate(90deg)'
-        statusArrow = 1
-    }
-    else{
-        arrow.style.transform = 'rotate(0deg)'
-        statusArrow = 0
-    }
-    console.log(arrow)
-})
+if(clients != null){
+
+    clients.addEventListener('click', ()=>{
+        if(statusArrow === 0){
+            arrow.style.transform = 'rotate(90deg)'
+            statusArrow = 1
+        }
+        else{
+            arrow.style.transform = 'rotate(0deg)'
+            statusArrow = 0
+        }
+        console.log(arrow)
+    })
+}    
 
 // Cuando CLICK en .Management-link
     // homeManagement TOGGLE isActive
+if(management != null){
 
-management.addEventListener('click' , ()=>{
-    homeManagement.classList.toggle('isActive')
-    console.log(management)
-})
+    management.addEventListener('click' , ()=>{
+        homeManagement.classList.toggle('isActive')
+        console.log(management)
+    })
+}
 
 
+
+// Calendar aportación ChatGPT
+
+class Calendar {
+    constructor() {
+      this.currentDate = new Date();
+      this.events = {};
+      this.activeFormDate = null;
+      this.newEvent = { title: "", startTime: "", endTime: "" };
+
+      this.init();
+    }
+
+    init() {
+      this.renderHeader();
+      this.generateDays();
+      document.getElementById("prevMonth").addEventListener("click", () => this.prevMonth());
+      document.getElementById("nextMonth").addEventListener("click", () => this.nextMonth());
+    }
+
+    renderHeader() {
+      const monthYear = document.getElementById("monthYear");
+      const options = { month: "long", year: "numeric" };
+      monthYear.textContent = this.currentDate.toLocaleDateString("es-ES", options);
+    }
+
+    generateDays() {
+      const calendarGrid = document.getElementById("calendarGrid");
+      calendarGrid.innerHTML = "";
+
+      const year = this.currentDate.getFullYear();
+      const month = this.currentDate.getMonth();
+      const firstDayOfMonth = new Date(year, month, 1);
+      const lastDayOfMonth = new Date(year, month + 1, 0);
+      const daysInMonth = lastDayOfMonth.getDate();
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const date = new Date(year, month, day);
+        const dateStr = date.toISOString().split("T")[0];
+
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("calendar-day");
+
+        const dayNumber = document.createElement("div");
+        dayNumber.classList.add("calendar-day-number");
+        dayNumber.textContent = day;
+
+        const eventsContainer = document.createElement("div");
+        if (this.events[dateStr]) {
+          this.events[dateStr].forEach(event => {
+            const eventElement = document.createElement("div");
+            eventElement.classList.add("calendar-event");
+            eventElement.textContent = `${event.title} (${event.startTime} - ${event.endTime})`;
+            eventsContainer.appendChild(eventElement);
+          });
+        }
+
+        const addEventButton = document.createElement("div");
+        addEventButton.classList.add("add-event");
+        addEventButton.textContent = "Add Event";
+        addEventButton.addEventListener("click", () => this.toggleForm(dateStr));
+
+        if (this.activeFormDate === dateStr) {
+          const form = this.createEventForm(dateStr);
+          dayElement.appendChild(form);
+        }
+
+        dayElement.appendChild(dayNumber);
+        dayElement.appendChild(eventsContainer);
+        dayElement.appendChild(addEventButton);
+        calendarGrid.appendChild(dayElement);
+      }
+    }
+
+    toggleForm(dateStr) {
+      this.activeFormDate = this.activeFormDate === dateStr ? null : dateStr;
+      this.newEvent = { title: "", startTime: "", endTime: "" };
+      this.generateDays();
+    }
+
+    createEventForm(dateStr) {
+      const form = document.createElement("div");
+      form.classList.add("event-form");
+
+      const titleInput = document.createElement("input");
+      titleInput.type = "text";
+      titleInput.placeholder = "Title";
+      titleInput.value = this.newEvent.title;
+      titleInput.addEventListener("input", e => this.newEvent.title = e.target.value);
+
+      const startTimeInput = document.createElement("input");
+      startTimeInput.type = "time";
+      startTimeInput.value = this.newEvent.startTime;
+      startTimeInput.addEventListener("input", e => this.newEvent.startTime = e.target.value);
+
+      const endTimeInput = document.createElement("input");
+      endTimeInput.type = "time";
+      endTimeInput.value = this.newEvent.endTime;
+      endTimeInput.addEventListener("input", e => this.newEvent.endTime = e.target.value);
+
+      const saveButton = document.createElement("button");
+      saveButton.textContent = "Save";
+      saveButton.addEventListener("click", () => this.addEvent(dateStr));
+
+      const cancelButton = document.createElement("button");
+      cancelButton.textContent = "Cancel";
+      cancelButton.addEventListener("click", () => this.toggleForm(null));
+
+      form.appendChild(titleInput);
+      form.appendChild(startTimeInput);
+      form.appendChild(endTimeInput);
+      form.appendChild(saveButton);
+      form.appendChild(cancelButton);
+
+      return form;
+    }
+
+    addEvent(dateStr) {
+      if (!this.events[dateStr]) this.events[dateStr] = [];
+      this.events[dateStr].push({ ...this.newEvent });
+      this.toggleForm(null);
+    }
+
+    prevMonth() {
+      this.currentDate.setMonth(this.currentDate.getMonth() - 1);
+      this.renderHeader();
+      this.generateDays();
+    }
+
+    nextMonth() {
+      this.currentDate.setMonth(this.currentDate.getMonth() + 1);
+      this.renderHeader();
+      this.generateDays();
+    }
+  }
+
+  new Calendar();

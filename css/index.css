@@ -4,22 +4,18 @@
     border: 0;
     box-sizing: border-box;
 }
-
 li {
     list-style: none;
 }
-
 a {
     display: block;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
 }
-
 p a {
     display: inline;
 }
-
 /*img , svg {
     display: block;
     width: 100%;
@@ -32,17 +28,10 @@ body {
     font-family: monospace;
     hyphens: auto;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: inherit;
 }
-
 span {
     display: none;
 }
@@ -62,7 +51,6 @@ span {
     width: 15%;
     /*background-color: blue;*/
 }
-
 .Header-picture {
     width: 100%;
     height: 100px;
@@ -72,7 +60,6 @@ span {
     justify-content: center;
     align-items: center;
 }
-
 .Header-img {
     width: 38%;
     height: 70px;
@@ -89,7 +76,6 @@ span {
 
     padding: 1em;
 }
-
 .Menu-ul {
     width: 100%;
     /*background-color: lightblue;*/
@@ -106,6 +92,7 @@ span {
     margin: 0 1em 0 0;
 
     transition: all .5s ease;
+    cursor: pointer;
 
 }
 
@@ -120,7 +107,7 @@ span {
     position: relative;
 }
 
-.Bloque {
+.Block{
     width: 60%;
     background-color: white;
     margin: 1em;
@@ -138,14 +125,13 @@ span {
 
     z-index: 3;
 }
-
-.Bloque.Bloque.isActive {
+.Block.Block.isActive {
     display: unset;
 }
 
 
 
-.Bloque-Calendario {
+.Block-calendar {
     width: 60%;
     height: 400px;
 
@@ -153,8 +139,7 @@ span {
     top: 0;
     left: 12%;
 }
-
-.Bloque-Contactos {
+.Block-contacts {
     width: 60%;
 
     padding: 20px;
@@ -168,8 +153,7 @@ span {
     justify-content: space-between;
     display: none;
 }
-
-.Bloque-Proyectos {
+.Block-projects {
     width: 60%;
 
     padding: 20px;
@@ -183,8 +167,7 @@ span {
     justify-content: space-between;
     display: none;
 }
-
-.Bloque-Informes {
+.Block-reports {
     width: 35%;
 
     padding: 20px;
@@ -198,18 +181,15 @@ span {
     justify-content: space-between;
     display: none;
 }
-
-.Bloque-dt {
+.Block-dt {
     color: red;
     padding-bottom: 20px;
 }
-
-.Bloque-dd {
+.Block-dd {
     color: black;
     padding: 0 0 5px 20px;
 }
-
-.Bloque-chat {
+.Block-chat {
     width: 56%;
     min-height: 400px;
     max-height: 560px;
@@ -221,14 +201,14 @@ span {
     overflow-y: scroll;
 
 }
-.Bloque-chat::-webkit-scrollbar{
+.Block-chat::-webkit-scrollbar{
     width: 10px;
 }
-.Bloque-chat::-webkit-scrollbar-track{
+.Block-chat::-webkit-scrollbar-track{
     background-color: lightgrey;
     border-radius: 8px;
 }
-.Bloque-chat::-webkit-scrollbar-thumb{
+.Block-chat::-webkit-scrollbar-thumb{
     background-color: grey;
     border-radius: 10px;
     border: 2px solid grey;
@@ -248,19 +228,31 @@ span {
 
     border-radius: 5px;
 
-    color: red;
+    color: white;
 }
-
-.Chat-ul {
-    width: 40%;
+.Chat-ul{
+    width: 50%;
+    padding: 10px;
 
     display: flex;
     flex-flow: row nowrap;
+    justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 
+    font-size: 1rem;
 }
-.Conversacion-li{
+.Contacts-ul {
+    width: 50%;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.Conversation-li{
     width: 95%;
     background-color: lightgray;
 
@@ -275,8 +267,7 @@ span {
 .Menu-li--chat {
     cursor: pointer;
 }
-
-.Contact-ul {
+.Chat-contacts{
     width: 30%;
 
     display: flex;
@@ -288,20 +279,18 @@ span {
 
 
 
-.Bloque-dd-Conversacion {
+.Block-dd-Conversation {
     background-color: lightgray;
     border-radius: 5px;
 
     margin-bottom: 5px;
 }
-
-.Bloque-dd--calendar {
+.Block-dd--calendar {
     background-color: red;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
 }
-
 .Header-wrapper {
     width: 10%;
 
@@ -310,7 +299,6 @@ span {
     justify-content: space-between;
 
 }
-
 .Menu-ul--wrapper {
     display: flex;
     flex-flow: row nowrap;
@@ -318,16 +306,14 @@ span {
     align-items: center;
 
 }
-
-.Bloque-search {
+.Block-search {
     width: 20%;
 
     position: absolute;
     top: 10%;
     left: 65%;
 }
-
-.Bloque-profile {
+.Block-profile {
     width: 10%;
     min-height: 150px;
     padding: 15px;
@@ -345,8 +331,7 @@ span {
     z-index: 2;
     display: none;
 }
-
-.Bloque-configuration {
+.Block-configuration {
     width: 12%;
     min-height: 150px;
     padding: 15px;
@@ -363,32 +348,24 @@ span {
     text-align: center;
     display: none;
 }
-
-.Bloque-li--user,
-.Bloque-li--configuration {
+.Block-li--user, .Block-li--configuration {
     padding: 0 0 10px 0;
 }
-
-.Bloque-li--profile,
-.Bloque-li--close,
-.Bloque-li--modo,
-.Bloque-li--idioma,
-.Bloque-li--acerca {
+.Block-li--profile, .Block-li--close, .Block-li--modo, .Block-li--idioma, .Block-li--acerca {
     background-color: lightgray;
     padding: 5px;
     margin: 5px;
 
     border-radius: 5px;
 }
-
-.Bloque-li--close {
+.Block-li--close {
     background-color: lightcoral;
 }
 
 
-.Main {
+.Home {
     width: 100%;
-    min-height: 250vh;
+    min-height: 950px;
     background-color: lightgrey;
 
 }
@@ -399,7 +376,6 @@ span {
     justify-content: center;
     align-items: center;
 }
-
 .Home-img {
     width: 40%;
     opacity: 0.03;
@@ -409,7 +385,6 @@ span {
     z-index: 0;
 
 }
-
 .Home-organizer {
     width: 50%;
     min-height: 400px;
@@ -425,9 +400,7 @@ span {
 
 }
 
-.Organizer-dt,
-.Tasks-dt,
-.Contacts-dt {
+.Organizer-dt, .Tasks-dt, .Contacts-dt {
     background-color: lightgray;
     padding: 10px;
 
@@ -436,26 +409,23 @@ span {
     text-align: center;
 }
 
-.Organizer-dd,
-.Tasks-dd,
-.Contacts-dd {
+.Organizer-dd, .Tasks-dd, .Contacts-dd {
     background-color: rgb(232, 231, 231);
     padding: 5px;
     margin: 8px;
     border-radius: 5px;
     color: black;
 }
-
 .Contacts-dd {
     display: flex;
     flex-flow: row nowrap;
     gap: 20px;
 }
-
 .Home-tasks {
     width: 85%;
+    min-height: 100px;
 
-    margin: 10px auto;
+    margin: auto;
     padding: 20px;
 
     display: flex;
@@ -470,8 +440,7 @@ span {
 
 }
 
-.Tasks-dt,
-.Contacts-dt {
+.Tasks-dt, .Contacts-dt {
     font-weight: bold;
 
 }
@@ -479,9 +448,9 @@ span {
 .Tasks-dl,
 .Contacts-dl{
     width: 80%;
-    min-height: 200px;
+    min-height: 100px;
     background-color: white;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px;
 
     border: 1px solid black;
@@ -501,7 +470,8 @@ span {
 
     position: fixed;
     top: 15%;
-    right: 3%;
+    right: 5%;
+    z-index: 2;
 
     opacity: 0;
 
@@ -649,7 +619,7 @@ span {
     flex-flow: row wrap;
 }
 
-.Form-left--contact{
+.Form-left--contacts{
     width: 50%;
     margin: 20px 0 20px 0;
 
@@ -675,7 +645,7 @@ span {
 
     border-bottom: 1px solid black;
 }
-.Form-right--contact{
+.Form-right--contacts{
     width: 50%;
     display: flex;
     flex-flow: column wrap;
@@ -731,6 +701,24 @@ input[type="submit"] {
     hyphens: auto;
     resize: none;
 }
+.Form-select--contacts{
+    width: 20%;
+    margin: 0 0 0 10px;
+    text-align: center;
+}
+.Form-option--active{
+    background-color: green;
+    border-radius: 5px;
+}
+.Form-option--pending{
+    background-color: orange;
+    border-radius: 5px;
+}
+.Form-option--inactive{
+    background-color: red;
+    border-radius: 5px;
+}
+
 .Form-back{
     position: absolute;
     bottom: -20%;
@@ -962,6 +950,9 @@ input[type="submit"] {
 
     overflow-y: scroll;
 
+    position: absolute;
+    z-index: 2;
+
 }
 .Reports-ul{
     width: 90%;
@@ -1064,3 +1055,83 @@ input[type="submit"] {
     margin: 10px 0;
     cursor: pointer;
 }
+.Wrapper-profile , .Wrapper-configuration , .Wrapper-search{
+    cursor: pointer;
+}
+
+
+
+
+.calendar-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .calendar-day-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .add-event {
+    background-color: #4caf50;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .add-event:hover {
+    background-color: #45a049;
+  }
+  .event-form {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .event-form input {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+  .event-form button {
+    padding: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .calendar-event {
+    text-align: center;
+    border: 1px solid #000;
+    margin-bottom: 4px;
+    background-color: aqua;
+  }
