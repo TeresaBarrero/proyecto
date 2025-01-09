@@ -211,12 +211,27 @@ span {
 
 .Bloque-chat {
     width: 56%;
-    min-height: 560px;
+    min-height: 400px;
+    max-height: 560px;
 
     position: absolute;
     top: 19px;
     right: -208px;
 
+    overflow-y: scroll;
+
+}
+.Bloque-chat::-webkit-scrollbar{
+    width: 10px;
+}
+.Bloque-chat::-webkit-scrollbar-track{
+    background-color: lightgrey;
+    border-radius: 8px;
+}
+.Bloque-chat::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 10px;
+    border: 2px solid grey;
 }
 
 .Chat-header {
@@ -250,7 +265,7 @@ span {
     background-color: lightgray;
 
     padding: 5px;
-    margin: ;
+    margin: 10px auto;
     
     border: 0.2px solid grey;
     border-radius: 8px;
