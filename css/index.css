@@ -949,7 +949,7 @@ input[type="submit"] {
 }
 
 .Home-reports{
-    width: 75%;
+    width: 65%;
     min-height: 600px;
     max-height: 700px;
     background-color: white;
@@ -982,9 +982,9 @@ input[type="submit"] {
 .Reports-date{
     position: absolute;
     top: 55%;
-    right: 8%;
+    right: 10%;
 }
-.Reports-p{
+.Reports-p , .Management-link--reports{
     padding: 20px;
     margin: 20px 200px 0;
 
@@ -994,5 +994,73 @@ input[type="submit"] {
 
     position: absolute;
     top: 40%;
-    right: -5%;
+    right: 0;
+}
+.Home-head--reports{
+    position: absolute;
+    top: 70%;
+    right: 0;
+}
+
+.Profile{
+    width: 100%;
+    min-height: 565px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Profile-information{
+    width: 70%;
+    min-height: 450px;
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+    border: 1px solid black;
+
+    border-radius: 8px;
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    z-index: 2;
+
+}
+.Profile-picture{
+    width: 25%;
+    height: 250px;
+    border-radius: 50%;
+}
+.Profile-img{
+    width: 100%;
+}
+.Profile-ul{
+    width: 60%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.Profile-li{
+    width: 90%;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+}
+.Profile-li--close{
+    width: 60%;
+    background-color: lightcoral;
+    margin: 10px 0;
+    cursor: pointer;
 }
