@@ -130,7 +130,7 @@ if(management != null){
 
 
 
-// Calendar aportación ChatGPT
+// Calendar recurso aportado parte por ChatGpt
 
 class Calendar {
     constructor() {

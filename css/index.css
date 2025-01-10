@@ -217,7 +217,7 @@ span {
 .Chat-header {
     width: 100%;
     min-height: 40px;
-    background-color: lightblue;
+    background-color: #648dcb;
     padding: 5px;
     margin-bottom: 10px;
 
@@ -1062,39 +1062,42 @@ input[type="submit"] {
 
 
 
-.calendar-container {
+.Schedule{
+    width: 90%;
+    min-height: 500px;
     font-family: Arial, sans-serif;
     max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-  }
-  .calendar-header {
+    padding: 40px;
+    margin: 40px auto;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+.Schedule-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
     font-size: 1.2rem;
-  }
-  .calendar-grid {
+}
+.Schedule-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
-  }
-  .calendar-day {
+}
+.calendar-day {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 2px solid grey;
     padding: 10px;
     border-radius: 5px;
     position: relative;
-  }
-  .calendar-day-number {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .add-event {
-    background-color: #4caf50;
+}
+.calendar-day-number {
+    font-size: 1rem;
+}
+.add-event {
+    background-color: rgb(139, 212, 236);
     color: white;
     font-size: 0.8rem;
     padding: 5px;
@@ -1102,11 +1105,11 @@ input[type="submit"] {
     cursor: pointer;
     margin-top: 5px;
     text-align: center;
-  }
-  .add-event:hover {
-    background-color: #45a049;
-  }
-  .event-form {
+}
+.add-event:hover {
+    background-color: #648dcb;
+}
+.event-form {
     position: absolute;
     top: 100%;
     left: 0;
@@ -1119,19 +1122,24 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
-  .event-form input {
+}
+.event-form input {
     padding: 5px;
     font-size: 0.9rem;
-  }
-  .event-form button {
+}
+.event-form button {
     padding: 5px;
     font-size: 0.9rem;
     cursor: pointer;
-  }
-  .calendar-event {
+}
+.calendar-event {
     text-align: center;
     border: 1px solid #000;
     margin-bottom: 4px;
-    background-color: aqua;
-  }
+    background-color: #b9e185;
+}
+.Schedule-prev , .Schedule-next{
+    background-color: #fbeb78;
+    padding: 5px 10px;
+    border-radius: 30%;
+}
