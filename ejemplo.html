@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Zoom</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/150" alt="Image 1">
+        <img src="https://via.placeholder.com/150" alt="Image 2">
+        <img src="https://via.placeholder.com/150" alt="Image 3">
+        <img src="https://via.placeholder.com/150" alt="Image 4">
+    </div>
+
+    <div class="overlay" id="overlay">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <img id="overlayImg" src="" alt="Expanded Image">
+    </div>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlayImg');
+        const closeBtn = document.getElementById('closeBtn');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                overlayImg.src = img.src;
+                overlay.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target !== overlayImg && e.target !== closeBtn) {
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

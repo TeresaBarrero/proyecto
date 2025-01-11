@@ -190,4 +190,26 @@ class Calendar {
 
   new Calendar();
 
+  // REESTRUCTURAR ESTE CÓDIGO
 
+const galleryImages = document.querySelectorAll('.Reports-img');
+const overlay = document.getElementById('overlay');
+const overlayImg = document.getElementById('overlayImg');
+const closeBtn = document.getElementById('closeBtn');
+
+galleryImages.forEach(img => {
+   img.addEventListener('click', () => {
+       overlayImg.src = img.src;
+       overlay.classList.add('active');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', (e) => {
+    if (e.target !== overlayImg && e.target !== closeBtn) {
+       overlay.classList.remove('active');
+   }
+});

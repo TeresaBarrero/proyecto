@@ -190,3 +190,51 @@ class Calendar {
 
   new Calendar();
 
+
+    // Cuando hago scroll hacia abajo, 
+    // .Button-slide le ADD `isActive´
+    // .Button-slide isVisible a MITAD de la ventana
+
+    const buttonSlide = document.querySelector('.Home-slide');
+
+    window.addEventListener('scroll', () => {
+    
+        let { scrollY, innerHeight } = window
+        let { offsetTop } = buttonSlide
+        
+        const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
+        
+        if (puntoActivacion) {
+          buttonSlide.classList.add('isVisible')
+        } 
+        else {
+            buttonSlide.classList.remove('isVisible')
+         }
+     })
+    
+    
+     // Cuando CLICK en .Button-slide
+        // scrollY arriba
+    
+    buttonSlide.addEventListener(`click` , ()=>{
+        window.scrollTo({top:0, behavior:`smooth`})
+    })
+    
+    
+    // Cuando scrollY esté arriba
+        // .Button-Slide REMOVE `isVisible´
+    
+    window.addEventListener(`scroll` , ()=>{
+            
+        let { scrollY, innerHeight } = window
+        let { offsetTop } = buttonSlide
+            
+        const puntoActivacion = scrollY <= offsetTop 
+    
+        if( puntoActivacion ){
+            buttonSlide.classList.remove(`isVisible`)
+        }
+        else{
+            buttonSlide.classList.add(`isVisible`)
+        }
+    })
