@@ -186,7 +186,6 @@ window.addEventListener(`scroll` , ()=>{
 })
     
    
-
         
 
 

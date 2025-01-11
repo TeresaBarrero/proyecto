@@ -1,107 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Zoom</title>
+    <title>Menú desplegable con scroll</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        .overlay {
+        nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .overlay.active {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .overlay .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
+            background-color: #333;
             color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
+            padding: 10px;
+            z-index: 1000;
         }
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        section {
+            height: 100vh;
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        #section1 { background-color: #f4a261; }
+        #section2 { background-color: #2a9d8f; }
+        #section3 { background-color: #e9c46a; }
+        #section4 { background-color: #264653; color: white; }
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/150" alt="Image 1">
-        <img src="https://via.placeholder.com/150" alt="Image 2">
-        <img src="https://via.placeholder.com/150" alt="Image 3">
-        <img src="https://via.placeholder.com/150" alt="Image 4">
-    </div>
 
-    <div class="overlay" id="overlay">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <img id="overlayImg" src="" alt="Expanded Image">
-    </div>
+<nav>
+    <label for="menu">Ir a: </label>
+    <select id="menu">
+        <option value="">Seleccionar sección</option>
+        <option value="section1">Sección 1</option>
+        <option value="section2">Sección 2</option>
+        <option value="section3">Sección 3</option>
+        <option value="section4">Sección 4</option>
+    </select>
+</nav>
 
-    <script>
-        const galleryImages = document.querySelectorAll('.gallery img');
-        const overlay = document.getElementById('overlay');
-        const overlayImg = document.getElementById('overlayImg');
-        const closeBtn = document.getElementById('closeBtn');
+<section id="section1">Sección 1</section>
+<section id="section2">Sección 2</section>
+<section id="section3">Sección 3</section>
+<section id="section4">Sección 4</section>
 
-        galleryImages.forEach(img => {
-            img.addEventListener('click', () => {
-                overlayImg.src = img.src;
-                overlay.classList.add('active');
-            });
-        });
-
-        closeBtn.addEventListener('click', () => {
-            overlay.classList.remove('active');
-        });
-
-        overlay.addEventListener('click', (e) => {
-            if (e.target !== overlayImg && e.target !== closeBtn) {
-                overlay.classList.remove('active');
+<script>
+    document.getElementById('menu').addEventListener('change', function() {
+        const selectedValue = this.value;
+        if (selectedValue) {
+            const section = document.getElementById(selectedValue);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        });
-    </script>
+        }
+    });
+</script>
+
 </body>
 </html>

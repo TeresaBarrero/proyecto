@@ -599,12 +599,15 @@ span {
     cursor: pointer;
 
 }
-.Home-create{
-    width: 80%;
-    min-height: 400px;
+
+/*Form Create-contacts*/
+
+.Home-form{
+    width: 70%;
+    min-height: 180px;
     background-color: white;
 
-    margin: 10px auto;
+    margin: 5px auto;
     padding: 20px;
 
     border-radius: 8px;
@@ -612,67 +615,48 @@ span {
 
     z-index: 2;
     position: relative;
-}
-.Form{
-    display: flex;
-    flex-flow: row wrap;
+
+    font-size: 10px;
 }
 
-.Form-left--contacts{
-    width: 50%;
-    margin: 20px 0 20px 0;
-
-    color: red;
-    font-size: 1rem; 
-}
-.Form-left--projects{
+/*.Form-left--projects{
     width: 60%;
     margin: 20px 0 20px 0;
 }
 .Form-right--projects{
     width: 40%;
     margin: 40px 0 20px 20px;
-
 }
-
-.Form-second , .Form-third{
+*/
+/*.Form-second , .Form-third{
     width: 90%;
-    margin: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
 
     color: red;
-    font-size: 1rem;
+    font-size: 10px;
 
     border-bottom: 1px solid black;
-}
-.Form-right--contacts{
-    width: 50%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: start;
-    align-content: center;
-}
+}*/
+
 input, select, textarea, label {
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
 
-    font-size: 1em;
+    font-size: 10px;
 
     display: inline-block;
 }
-input[type="email"], input[type="tel"], input[type="text"], select, textarea {
-    background-color: rgb(230, 230, 230);
-}
+
 input[type="submit"] {
     width: 15%;
     background-color: #44bb48;
 
     padding: 10px;
-    margin: 20px auto;
+    margin: 5px auto;
 
     color: white;
-    font-size: 1em;
+    font-size: 10px;
     border-radius: 8px;
 
     display: block;
@@ -681,7 +665,7 @@ input[type="submit"] {
 .Form-label {
     width: 35%;
     margin: 0 0 8px;
-    padding: 7px;
+    padding: 5px;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1em;
@@ -692,31 +676,36 @@ input[type="submit"] {
 }
 .Form-input {
     width: 60%;
-    margin: 8px 0 8px 10px;
+    margin: 4px 0 4px 10px;
     color: black;
 }
-.Form-input--observations {
-    min-height: 150px;
+.Form-textarea{
+    width: 55%;
+    min-height: 80px;
     hyphens: auto;
     resize: none;
 }
-.Form-select--contacts{
+.Form-select--contact{
     width: 20%;
     margin: 0 0 0 10px;
     text-align: center;
 }
 .Form-option--active{
     background-color: green;
+    padding: 5px;
     border-radius: 5px;
 }
 .Form-option--pending{
     background-color: orange;
+    padding: 5px;
     border-radius: 5px;
 }
 .Form-option--inactive{
     background-color: red;
+    padding: 5px;
     border-radius: 5px;
 }
+
 
 .Form-back{
     position: absolute;
