@@ -353,7 +353,8 @@
             </svg>
         </h2>
         <div class="Home-form Form">
-            <form class="Form-crate" action="/submit" method="POST">
+            <form class="Form-create" action="/submit" method="POST">
+                <div class="Form-left">
                     <label class="Form-label" for="fullName">Nombre y Apellidos</label>
                     <input class="Form-input" type="text" id="fullName" name="fullName" required>
                     <label class="Form-label" for="company">Empresa</label>
@@ -370,7 +371,9 @@
                     <input class="Form-input" type="tel" id="fax" name="fax" required>
                     <label class="Form-label" for="label">Etiqueta</label>
                     <input class="Form-input" type="text" id="label" name="label" required>
-                    <label class="Form-label" for="observations">Observaciones</label>
+                </div>
+                <div class="Form-right">
+                    <label class="Form-label Form-label--observations" for="observations">Observaciones</label>
                     <textarea class="Form-textarea" name="observations" id="observations" required></textarea>
                     <label class="Form-label" for="clientType">Tipo de cliente</label>
                     <input class="Form-input" type="text" id="clientType" name="clientType" required>
@@ -380,6 +383,7 @@
                         <option class="Form-option--pending" value="pendiente">?</option>
                         <option class="Form-option--inactive" value="inactivo">x</option>
                     </select>
+                </div>
                 <input type="submit" value="Enviar">
             </form>
         </div>

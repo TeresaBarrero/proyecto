@@ -328,7 +328,7 @@ span {
     align-items: center;
 
     text-align: center;
-    z-index: 2;
+    z-index: 3;
     display: none;
 }
 .Block-configuration {
@@ -362,7 +362,11 @@ span {
     background-color: lightcoral;
 }
 
-
+.Home{
+    width: 100%;
+    min-height: 200vh;
+    background-color: lightgrey;
+}
 .Home-principal{
     width: 100%;
     min-height: 700px;
@@ -603,7 +607,7 @@ span {
 /*Form Create-contacts*/
 
 .Home-form{
-    width: 70%;
+    width: 100%;
     min-height: 180px;
     background-color: white;
 
@@ -618,7 +622,26 @@ span {
 
     font-size: 10px;
 }
+.Form-create{
+    width: 100%;
+    min-height: 180px;
+    background-color: white;
 
+    margin: 5px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+.Form-left{
+    width: 55%;
+}
+.Form-right{
+    width: 40%;
+}
 /*.Form-left--projects{
     width: 60%;
     margin: 20px 0 20px 0;
@@ -680,8 +703,8 @@ input[type="submit"] {
     color: black;
 }
 .Form-textarea{
-    width: 55%;
-    min-height: 80px;
+    width: 100%;
+    min-height: 90px;
     hyphens: auto;
     resize: none;
 }
@@ -709,8 +732,8 @@ input[type="submit"] {
 
 .Form-back{
     position: absolute;
-    bottom: -20%;
-    right: 15%;
+    bottom: 0;
+    right: 5%;
     z-index: 2;
 }
 .Management-back{
