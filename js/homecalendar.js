@@ -1,8 +1,7 @@
 
-
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
-const home = document.querySelector('main')
+const home = document.querySelector('.Home-principal')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const alertButton = document.querySelector('.Home-button')
@@ -135,10 +134,6 @@ if(management != null){
 class Calendar {
     constructor() {
       this.currentDate = new Date();
-      this.events = {};
-      this.activeFormDate = null;
-      this.newEvent = { title: "", startTime: "", endTime: "" };
-
       this.init();
     }
 
@@ -167,7 +162,6 @@ class Calendar {
 
       for (let day = 1; day <= daysInMonth; day++) {
         const date = new Date(year, month, day);
-        const dateStr = date.toISOString().split("T")[0];
 
         const dayElement = document.createElement("div");
         dayElement.classList.add("calendar-day");
@@ -176,80 +170,9 @@ class Calendar {
         dayNumber.classList.add("calendar-day-number");
         dayNumber.textContent = day;
 
-        const eventsContainer = document.createElement("div");
-        if (this.events[dateStr]) {
-          this.events[dateStr].forEach(event => {
-            const eventElement = document.createElement("div");
-            eventElement.classList.add("calendar-event");
-            eventElement.textContent = `${event.title} (${event.startTime} - ${event.endTime})`;
-            eventsContainer.appendChild(eventElement);
-          });
-        }
-
-        const addEventButton = document.createElement("div");
-        addEventButton.classList.add("add-event");
-        addEventButton.textContent = "Add Event";
-        addEventButton.addEventListener("click", () => this.toggleForm(dateStr));
-
-        if (this.activeFormDate === dateStr) {
-          const form = this.createEventForm(dateStr);
-          dayElement.appendChild(form);
-        }
-
         dayElement.appendChild(dayNumber);
-        dayElement.appendChild(eventsContainer);
-        dayElement.appendChild(addEventButton);
         calendarGrid.appendChild(dayElement);
       }
-    }
-
-    toggleForm(dateStr) {
-      this.activeFormDate = this.activeFormDate === dateStr ? null : dateStr;
-      this.newEvent = { title: "", startTime: "", endTime: "" };
-      this.generateDays();
-    }
-
-    createEventForm(dateStr) {
-      const form = document.createElement("div");
-      form.classList.add("event-form");
-
-      const titleInput = document.createElement("input");
-      titleInput.type = "text";
-      titleInput.placeholder = "Title";
-      titleInput.value = this.newEvent.title;
-      titleInput.addEventListener("input", e => this.newEvent.title = e.target.value);
-
-      const startTimeInput = document.createElement("input");
-      startTimeInput.type = "time";
-      startTimeInput.value = this.newEvent.startTime;
-      startTimeInput.addEventListener("input", e => this.newEvent.startTime = e.target.value);
-
-      const endTimeInput = document.createElement("input");
-      endTimeInput.type = "time";
-      endTimeInput.value = this.newEvent.endTime;
-      endTimeInput.addEventListener("input", e => this.newEvent.endTime = e.target.value);
-
-      const saveButton = document.createElement("button");
-      saveButton.textContent = "Save";
-      saveButton.addEventListener("click", () => this.addEvent(dateStr));
-
-      const cancelButton = document.createElement("button");
-      cancelButton.textContent = "Cancel";
-      cancelButton.addEventListener("click", () => this.toggleForm(null));
-
-      form.appendChild(titleInput);
-      form.appendChild(startTimeInput);
-      form.appendChild(endTimeInput);
-      form.appendChild(saveButton);
-      form.appendChild(cancelButton);
-
-      return form;
-    }
-
-    addEvent(dateStr) {
-      if (!this.events[dateStr]) this.events[dateStr] = [];
-      this.events[dateStr].push({ ...this.newEvent });
-      this.toggleForm(null);
     }
 
     prevMonth() {
@@ -266,7 +189,3 @@ class Calendar {
   }
 
   new Calendar();
-
-
-
-

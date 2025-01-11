@@ -363,13 +363,12 @@ span {
 }
 
 
-.Home {
+.Home-principal{
     width: 100%;
-    min-height: 950px;
+    min-height: 700px;
     background-color: lightgrey;
 
 }
-
 .Home-picture {
     display: flex;
     flex-flow: row nowrap;
@@ -602,7 +601,7 @@ span {
 }
 .Home-create{
     width: 80%;
-    height: 80vh;
+    min-height: 400px;
     background-color: white;
 
     margin: 10px auto;
@@ -774,7 +773,7 @@ input[type="submit"] {
 }
 .Projects-ul{
     width: 88%;
-    min-height: 150px;
+    min-height: 100px;
     background-color: white;
     margin: 20px 50px;
     padding: 20px;
@@ -824,7 +823,6 @@ input[type="submit"] {
 
 .Home-form{
     width: 80%;
-    height: 190vh;
     background-color: white;
 
     margin: 10px auto;
@@ -1143,3 +1141,158 @@ input[type="submit"] {
     padding: 5px 10px;
     border-radius: 30%;
 }
+.Schedule-month{
+    background-color: #b9e185;
+    padding: 10px 30px;
+    border-radius: 30%;
+
+    /*font-family*/
+}
+
+
+.Schedule{
+    width: 90%;
+    min-height: 500px;
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    padding: 40px;
+    margin: 40px auto;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+.Schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.Schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.calendar-day-number {
+    font-size: 1rem;
+}
+.add-event {
+    background-color: rgb(139, 212, 236);
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+}
+.add-event:hover {
+    background-color: #648dcb;
+}
+.event-form {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.event-form input {
+    padding: 5px;
+    font-size: 0.9rem;
+}
+.event-form button {
+    padding: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.calendar-event {
+    text-align: center;
+    border: 1px solid #000;
+    margin-bottom: 4px;
+    background-color: #b9e185;
+}
+.Schedule-prev , .Schedule-next{
+    background-color: #fbeb78;
+    padding: 5px 10px;
+    border-radius: 30%;
+}
+.Schedule-month{
+    background-color: #b9e185;
+    padding: 10px 30px;
+    border-radius: 30%;
+
+    /*font-family*/
+}
+
+
+.CalendarView{
+    width: 90%;
+    min-height: 200px;
+    margin: auto;
+    padding: 0 0 10px 0;
+    background-color: lightblue;
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.CalendarView-header {
+    width: 100%;
+    height: 30px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+.CalendarView-grid{
+    width: 90%;
+    min-height: 230px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+.CalendarView-day {
+    width: 90%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 8px;
+}
+.CalendarView-prev , .CalendarView-next{
+    background-color: #648dcb;
+    padding: 5px 10px;
+    border-radius: 30%;
+}
+.CalendarView-month{
+    background-color: #648dcb;
+    padding: 10px 30px;
+    border-radius: 30%;
+    font-size: 10px;
+    
+}
+
+
