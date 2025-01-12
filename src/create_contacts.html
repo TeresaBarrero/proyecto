@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/homeprincipal.js" defer></script>
+    <script src="../js/homecreatecontact.js" defer></script>
 </head>
 
 <body>
@@ -353,7 +353,7 @@
             </svg>
         </h2>
         <div class="Home-form Form">
-            <form class="Form-create" action="/submit" method="POST">
+            <form class="Form-create"><!--elimino action="" para llevar las instrucciones pertinentes a JS-->
                 <div class="Form-left">
                     <label class="Form-label" for="fullName">Nombre y Apellidos</label>
                     <input class="Form-input" type="text" id="fullName" name="fullName" required>
@@ -374,7 +374,7 @@
                 </div>
                 <div class="Form-right">
                     <label class="Form-label Form-label--observations" for="observations">Observaciones</label>
-                    <textarea class="Form-textarea" name="observations" id="observations" required></textarea>
+                    <textarea class="Form-textarea" name="observations" id="observations"></textarea>
                     <label class="Form-label" for="clientType">Tipo de cliente</label>
                     <input class="Form-input" type="text" id="clientType" name="clientType" required>
                     <label class="Form-label" for="clientStatus">Estado de cliente</label>
@@ -384,7 +384,7 @@
                         <option class="Form-option--inactive" value="inactivo">x</option>
                     </select>
                 </div>
-                <input type="submit" value="Enviar">
+                <button class="Form-button" type="submit">Guardar</button>
             </form>
         </div>
         <div class="Form-back Back">

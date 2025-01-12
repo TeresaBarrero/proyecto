@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/hometasks.js" defer></script>
+    <script src="../js/homeupdatecontact.js" defer></script>
 </head>
 
 <body>
@@ -66,7 +66,7 @@
                 <div class="Block Block-calendar">
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
-                            <a class="Calendar-a" href="./calendar.html">
+                            <a class="Calendar-a" href="src/calendar.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path
@@ -98,6 +98,7 @@
                         </dd>
                     </dl>
                 </div>
+
 
                 <div class="Block Block-contacts">
                     <dl class="Block-dl">
@@ -263,7 +264,7 @@
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
-                    <svg class="Wrapper-search" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#648dcb"
+                    <svg class="Wrapper-search" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="blue"
                         viewBox="0 0 16 16">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -342,87 +343,60 @@
         <picture class="Home-picture">
             <img class="Home-img" src="../assets/Zink_logo.png" alt="Zink">
         </picture>
-        <div class="Home-client Clients">
-            <div class="Clients-header">
-                <svg class="Clients-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+
+        <h2 class="Home-h2">ACTUALIZAR CONTACTO
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-plus-circle"
+                viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+            </svg>
+        </h2>
+        <div class="Home-form Form">
+            <form class="Form-create"><!--elimino action="" para llevar las instrucciones pertinentes a JS-->
+                <div class="Form-left">
+                    <label class="Form-label" for="fullName">Nombre y Apellidos</label>
+                    <input class="Form-input" type="text" id="fullName" name="fullName" required>
+                    <label class="Form-label" for="company">Empresa</label>
+                    <input class="Form-input" type="text" id="company" name="company" required>
+                    <label class="Form-label" for="dni">DNI / NIF</label>
+                    <input class="Form-input" type="text" id="dni" name="dni" required>
+                    <label class="Form-label" for="dni">Dirección</label>
+                    <input class="Form-input" type="text" id="address" name="address" placeholder="C/" required>
+                    <label class="Form-label" for="email">Correo electrónico</label>
+                    <input class="Form-input" type="email" id="email" name="email" required>
+                    <label class="Form-label" for="phone">Teléfono</label>
+                    <input class="Form-input" type="tel" id="phone" name="phone" required>
+                    <label class="Form-label" for="fax">FAX</label>
+                    <input class="Form-input" type="tel" id="fax" name="fax" required>
+                    <label class="Form-label" for="label">Etiqueta</label>
+                    <input class="Form-input" type="text" id="label" name="label" required>
+                </div>
+                <div class="Form-right">
+                    <label class="Form-label Form-label--observations" for="observations">Observaciones</label>
+                    <textarea class="Form-textarea" name="observations" id="observations"></textarea>
+                    <label class="Form-label" for="clientType">Tipo de cliente</label>
+                    <input class="Form-input" type="text" id="clientType" name="clientType" required>
+                    <label class="Form-label" for="clientStatus">Estado de cliente</label>
+                    <select class="Form-select Form-select--contact" name="clientStatus" id="clientStatus" size="3"
+                        required>
+                        <option class="Form-option--active" value="activo">&check;</option>
+                        <option class="Form-option--pending" value="pendiente">?</option>
+                        <option class="Form-option--inactive" value="inactivo">x</option>
+                    </select>
+                </div>
+                <button class="Form-button" type="submit">Guardar</button>
+            </form>
+        </div>
+        <div class="Form-back Back">
+            <a class="Back-a" href="../src/contacts.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-backspace-fill"
                     viewBox="0 0 16 16">
                     <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z" />
                 </svg>
-                CLIENTES
-            </div>
-            <ul class="Clients-ul">
-                <li class="Clients-li">
-                    <a class="Clients-a" href="">CLIENTE1</a>
-                </li>
-                <li class="Clients-li">
-                    <a class="Clients-a" href="">CLIENTE2</a>
-                </li>
-                <li class="Clients-li">
-                    <a class="Clients-a" href="">CLIENTE3</a>
-                </li>
-                <li class="Clients-li">
-                    <a class="Clients-a" href="">CLIENTE4</a>
-                </li>
-                <li class="Clients-li">
-                    <a class="Clients-a" href="">CLIENTE5</a>
-                </li>
-            </ul>
+            </a>
         </div>
-
-
-        <div class="Home-tasks Tasks"> TAREAS
-            <dl class="Tasks-dl Tasks-dl-daily">
-                <dt class="Tasks-dt">
-                    TAREAS DEL DÍA
-                </dt>
-            </dl>
-            <dl class="Tasks-dl Tasks-dl-pending">
-                <dt class="Tasks-dt">
-                    TAREAS PENDIENTES DEL MES
-                </dt>
-            </dl>
-            <dl class="Tasks-dl Tasks-dl--important">
-                <dt class="Tasks-dt Tasks-dt--important">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                    </svg>
-                    TAREAS IMPORTANTES
-                </dt>
-            </dl>
-            <dl class="Tasks-dl Tasks-dl--ok">
-                <dt class="Tasks-dt Tasks-dt--ok">
-                    TAREAS CUMPLIDAS
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-check-lg" viewBox="0 0 16 16">
-                        <path
-                            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
-                    </svg>
-                </dt>
-            </dl>
-        </div>
-        <div class="Home-button Alert">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
-                <path
-                    d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-            </svg>
-        </div>
-
-
-        <div class="Home-slide Slide">
-            <svg class="Slide-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
-            </svg>
-        </div>
-
-
-
-
 
 
     </main>

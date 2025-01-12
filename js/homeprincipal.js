@@ -4,8 +4,21 @@ const block = document.querySelectorAll('.Block')
 const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
+const description = document.getElementById('description')
+const date = document.getElementById('date')
+const successButton = document.querySelector('.Form-button')
 
-
+function submitForm(){
+    if(!description.value && !date.value){
+        return alert("Completa todos los campos")
+    }
+    const data = JSON.parse(localStorage.getItem('taskJSON'))
+    data.push({_id:crypto.randomUUID(),desc:description.value,completed:false,important:false,date:date.value})
+    localStorage.setItem('taskJSON',JSON.stringify(data))
+}
+successButton.addEventListener('click' ,()=>{
+    submitForm()
+} )
 // Recorre TODOS elementos li
     // Si NO contains class 'Menu-li--Chat'
         // Cuando MOUSEOVER en li 

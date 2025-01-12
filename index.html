@@ -344,24 +344,16 @@
                 <img class="Home-img" src="assets/Zink_logo.png" alt="Zink">
             </picture>
             <div class="Home-organizer Organizer">
-                <dl class="Organizer-dl">
-                    <dt class="Organizer-dt">
-                        ORGANIZA TU DÍA
-                    </dt>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                    <dd class="Organizer-dd">TAREA</dd>
-                </dl>
+                <h2 class="Organizer-h2">ORGANIZA TU DÍA</h2>
+                <form class="Organizer-form">   <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
+                    <label class="Form-label" for="description">Descripción de tarea</label>
+                    <textarea class="Form-textarea Form-textarea--organizer" name="description" id="description" required></textarea>
+
+                    <label class="Form-label" for="date">Fecha:</label>
+                    <input class="Form-input" type="date" id="date" name="date" required>
+
+                    <button class="Form-button" type="submit">Guardar</button>
+                </form>
             </div>
 
             <div class="Home-slide Slide">

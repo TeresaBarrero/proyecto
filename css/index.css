@@ -402,8 +402,11 @@ span {
     color: black;
 
 }
+.Organizer-h2{
 
-.Organizer-dt, .Tasks-dt, .Contacts-dt {
+}
+
+.Tasks-dt, .Contacts-dt{
     background-color: lightgray;
     padding: 10px;
 
@@ -411,8 +414,10 @@ span {
     color: black;
     text-align: center;
 }
-
-.Organizer-dd, .Tasks-dd, .Contacts-dd {
+.Tasks-svg{
+    cursor: pointer;
+}
+.Tasks-dd, .Contacts-dd{
     background-color: rgb(232, 231, 231);
     padding: 5px;
     margin: 8px;
@@ -636,6 +641,13 @@ span {
     gap: 10px;
     
 }
+.Organizer-form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .Form-left{
     width: 55%;
 }
@@ -707,6 +719,11 @@ input[type="submit"] {
     min-height: 90px;
     hyphens: auto;
     resize: none;
+}
+.Form-textarea--organizer{
+    height: 150px;
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
 }
 .Form-select--contact{
     width: 20%;
@@ -872,7 +889,7 @@ input[type="submit"] {
     position: absolute;
     top: 230%;
 }
-.Form-h2{
+.Form-h2 , .Organizer-h2 {
     width: 100%;
     padding: 10px;
     margin: 20px;

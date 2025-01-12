@@ -4,49 +4,45 @@ const block = document.querySelectorAll('.Block')
 const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
-const contactList = document.querySelector('.Contacts-dl')
-const contacts = getContacts()
-
-function getContacts() {
-    if (!localStorage.getItem('contactJSON')) {
-        localStorage.setItem('contactJSON', '[]')
+const successButton = document.querySelector('.Form-button')
+const contact = {
+    givenName: document.getElementById('fullName'),
+    company: document.getElementById('company'),
+    dni: document.getElementById('dni'),
+    address: document.getElementById('address'),
+    email: document.getElementById('email'),
+    phone: document.getElementById('phone'),
+    fax: document.getElementById('fax'),
+    label: document.getElementById('label'),
+    observations: document.getElementById('observations'),
+    clientType: document.getElementById('clientType'),
+    clientStatus: document.getElementById('clientStatus')
+}
+function submitForm() {
+    if (!contact.givenName.value && !contact.company.value && !contact.dni.value && !contact.address.value && !contact.email.value && !contact.phone.value && !contact.fax.value && !contact.label.value && !contact.clientType.value && !contact.clientStatus.value) {
+        return alert("Completa todos los campos")
     }
-    return JSON.parse(localStorage.getItem('contactJSON'))
-}
-function listContacts() {
-    const editSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-</svg>`
-    const deleteSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
-</svg>`
-    const editSvgElement = new DOMParser().parseFromString(editSvgCode, 'image/svg+xml').documentElement
-    const deleteSvgElement = new DOMParser().parseFromString(deleteSvgCode, 'image/svg+xml').documentElement
-    contacts.forEach((contact) => {
-        const listContact = document.createElement('dd')
-        listContact.textContent = contact.givenName
-        listContact.classList.add('Contacts-dd')
-        contactList.appendChild(listContact)
-        const editSvgClone = editSvgElement.cloneNode(true)
-        const deleteSvgClone = deleteSvgElement.cloneNode(true)
-        editSvgClone.setAttribute('data-id', contact._id)
-        deleteSvgClone.setAttribute('data-id', contact._id)
-        listContact.appendChild(editSvgClone)
-        listContact.appendChild(deleteSvgClone)
-        editSvgClone.addEventListener('click', () => {
-            localStorage.setItem('idContact', contact._id)
-            window.location.href = '../src/update_contacts.html'
-        })
-        deleteSvgClone.addEventListener('click', () => {
-            let result = contacts.findIndex((contacto) => contacto._id === contact._id)
-            contacts.splice(result, 1)
-            localStorage.setItem('contactJSON', JSON.stringify(contacts))
-            window.location.reload();
-        })
+    const data = JSON.parse(localStorage.getItem('contactJSON'))
+    data.push({
+        _id: crypto.randomUUID(),
+        givenName: contact.givenName.value,
+        company: contact.company.value,
+        dni: contact.dni.value,
+        address: contact.address.value,
+        email: contact.email.value,
+        phone: contact.phone.value,
+        fax: contact.fax.value,
+        label: contact.label.value,
+        observations: contact.observations.value,
+        clientType: contact.clientType.value,
+        clientStatus: contact.clientStatus.value
     })
+    localStorage.setItem('contactJSON', JSON.stringify(data))
+    window.location.href= 'contacts.html'
 }
-listContacts()
+successButton.addEventListener('click' ,()=>{
+    submitForm()
+} )
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
@@ -109,6 +105,8 @@ if (home != null) {
         })
     })
 }
+
+
 
 
 
@@ -176,50 +174,3 @@ new Calendar();
 
 
 
-// Cuando hago scroll hacia abajo, 
-// .Button-slide le ADD `isActive´
-// .Button-slide isVisible a MITAD de la ventana
-
-const buttonSlide = document.querySelector('.Home-slide');
-
-window.addEventListener('scroll', () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-
-    const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
-
-    if (puntoActivacion) {
-        buttonSlide.classList.add('isVisible')
-    }
-    else {
-        buttonSlide.classList.remove('isVisible')
-    }
-})
-
-
-// Cuando CLICK en .Button-slide
-// scrollY arriba
-
-buttonSlide.addEventListener(`click`, () => {
-    window.scrollTo({ top: 0, behavior: `smooth` })
-})
-
-
-// Cuando scrollY esté arriba
-// .Button-Slide REMOVE `isVisible´
-
-window.addEventListener(`scroll`, () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-
-    const puntoActivacion = scrollY <= offsetTop
-
-    if (puntoActivacion) {
-        buttonSlide.classList.remove(`isVisible`)
-    }
-    else {
-        buttonSlide.classList.add(`isVisible`)
-    }
-})
