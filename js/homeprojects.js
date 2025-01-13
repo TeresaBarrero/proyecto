@@ -50,7 +50,7 @@ function listProjects() {
         deleteSvgClone.addEventListener('click', () => {
             let result = projects.findIndex((proyecto) => proyecto._id === project._id)
             projects.splice(result, 1)
-            localStorage.setItem('projectJSON', JSON.stringify(project))
+            localStorage.setItem('projectJSON', JSON.stringify(projects))
             window.location.reload();
         })
     })
@@ -281,3 +281,42 @@ class Calendar {
             buttonSlide.classList.add(`isVisible`)
         }
     })
+
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+    
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+    
+        messageInput.value = '';
+         }
+     }
+    
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    

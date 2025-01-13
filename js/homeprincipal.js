@@ -209,10 +209,8 @@ const chatMessages = document.getElementById('Chat-messages');
 const messageInput = document.getElementById('message-input');
 const sendButton = document.getElementById('send-button');
 
-    // Enviar mensaje al presionar el botón
 sendButton.addEventListener('click', sendMessage);
 
-    // Enviar mensaje al presionar "Enter"
 messageInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
     sendMessage();
@@ -223,15 +221,12 @@ function sendMessage() {
   const message = messageInput.value.trim();
 
   if (message !== '') {
-        // Mostrar el mensaje del usuario
     addMessage(message, 'user');
 
-        // Respuesta simulada del bot
     setTimeout(() => {
        addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
      }, 1000);
 
-        // Limpiar la entrada de texto
     messageInput.value = '';
      }
  }
@@ -243,10 +238,40 @@ function addMessage(text, sender) {
 
      chatMessages.appendChild(messageElement);
 
-      // Desplazar hacia el último mensaje
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
  
 
+
+const form = document.getElementById('exportForm');
+const fileInput = document.getElementById('export-file');
+    
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+        
+    const file = fileInput.files[0];
+        
+    if (file) {
+        const formData = new FormData();
+        formData.append("file", file);
+            
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Archivo cargado correctamente', data);
+            alert('Archivo exportado con éxito');
+        })
+        .catch(error => {
+            console.error('Error al cargar el archivo:', error);
+            alert('Hubo un error al cargar el archivo');
+        });
+    } 
+    else {
+        alert('Por favor selecciona un archivo para exportar');
+    }
+});
 
 
