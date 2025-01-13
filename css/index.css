@@ -16,14 +16,6 @@ a {
 p a {
     display: inline;
 }
-/*img , svg {
-    display: block;
-    width: 100%;
-    height: inherit;
-}
-svg{
-    fill: currentColor;
-}*/
 body {
     font-family: monospace;
     hyphens: auto;
@@ -35,18 +27,20 @@ h1, h2, h3, h4, h5, h6 {
 span {
     display: none;
 }
+svg{
+    cursor: pointer;
+}
 
-
-
+/* Header */
 .Header {
     width: 100%;
     height: 100px;
-    background-color: rgb(73, 73, 73);
-    background: linear-gradient(82deg, rgba(73, 73, 73, 1) 0%, rgba(194, 194, 194, 1) 77%, rgba(205, 205, 205, 1) 99%, rgba(237, 237, 237, 1) 100%);
+    background-color: #04202C;
 
     display: flex;
+    
+    color: white;
 }
-
 .Header-logo {
     width: 15%;
     /*background-color: blue;*/
@@ -66,9 +60,6 @@ span {
 }
 
 
-
-
-
 .Header-nav {
     width: 70%;
     max-width: 120em;
@@ -85,7 +76,6 @@ span {
     justify-content: flex-start;
     align-items: end;
 }
-
 .Menu-li {
     /* background-color: lightgreen;*/
     padding: 1em;
@@ -95,17 +85,16 @@ span {
     cursor: pointer;
 
 }
-
 .Menu-li.isActive {
-    background-color: lightblue;
+    background-color: #304040;
     border-radius: 10px;
     color: white;
 }
-
 .Menu-information {
-
     position: relative;
+
 }
+
 
 .Block{
     width: 60%;
@@ -147,7 +136,6 @@ span {
     top: 0;
     left: 12%;
 }
-
 .Block-contacts {
     width: 60%;
 
@@ -191,11 +179,11 @@ span {
     display: none;
 }
 .Block-dt {
-    color: red;
+    color: #DDA288;
     padding-bottom: 20px;
 }
 .Block-dd {
-    color: black;
+    color: #04202C;
     padding: 0 0 5px 20px;
 }
 .Block-chat {
@@ -210,40 +198,26 @@ span {
 
 
 
-.Block-dd-Conversation {
-    background-color: lightgray;
-    border-radius: 5px;
 
-    margin-bottom: 5px;
-}
 .Block-dd--calendar {
-    background-color: red;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
 }
 .Header-wrapper {
     width: 10%;
-
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-
-}
-.Menu-ul--wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-
 }
-.Block-search {
+/*.Block-search {
     width: 20%;
 
     position: absolute;
     top: 10%;
     left: 65%;
-}
+}*/
 .Block-profile {
     width: 10%;
     min-height: 150px;
@@ -262,7 +236,7 @@ span {
     z-index: 3;
     display: none;
 }
-.Block-configuration {
+/*.Block-configuration {
     width: 12%;
     min-height: 150px;
     padding: 15px;
@@ -278,31 +252,33 @@ span {
 
     text-align: center;
     display: none;
-}
-.Block-li--user, .Block-li--configuration {
-    padding: 0 0 10px 0;
-}
-.Block-li--profile, .Block-li--close, .Block-li--modo, .Block-li--idioma, .Block-li--acerca {
-    background-color: lightgray;
+}*/
+
+.Block-li--profile, .Block-li--close{
+    background-color: #C9D1C8;
     padding: 5px;
     margin: 5px;
 
     border-radius: 5px;
 }
 .Block-li--close {
-    background-color: lightcoral;
+    background-color: #DDA288;
 }
 
-.Home{
+
+
+
+/* MAIN */
+
+.Home{ 
     width: 100%;
-    min-height: 200vh;
-    background-color: lightgrey;
+    min-height: 300px;
+    background-color: whitesmoke;
 }
 .Home-principal{
     width: 100%;
     min-height: 700px;
-    background-color: lightgrey;
-
+    background-color: whitesmoke;
 }
 .Home-picture {
     display: flex;
@@ -319,34 +295,29 @@ span {
     z-index: 0;
 
 }
+
+
 .Home-organizer {
     width: 50%;
     min-height: 400px;
-    background-color: white;
+    background-color: #587065;
     margin: 40px;
     padding: 20px;
 
     border: 1px solid black;
     border-radius: 10px;
 
-
     color: black;
-
 }
-.Organizer-h2{
 
-}
 
 .Tasks-dt, .Contacts-dt{
-    background-color: lightgray;
+    background-color: #DDA288;
     padding: 10px;
 
     border-radius: 5px;
-    color: black;
+    color: #04202C;
     text-align: center;
-}
-.Tasks-svg{
-    cursor: pointer;
 }
 .Tasks-dd, .Contacts-dd{
     background-color: rgb(232, 231, 231);
@@ -354,11 +325,6 @@ span {
     margin: 8px;
     border-radius: 5px;
     color: black;
-}
-.Contacts-dd {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 20px;
 }
 .Home-tasks {
     width: 85%;
@@ -373,19 +339,16 @@ span {
     align-items: center;
     gap: 10px;
 
-    color: red;
+    color: #04202C;
     font-size: 20px;
     font-weight: bold;
 
 }
-
 .Tasks-dt, .Contacts-dt {
     font-weight: bold;
-
 }
 
-.Tasks-dl,
-.Contacts-dl{
+.Tasks-dl, .Contacts-dl{
     width: 80%;
     min-height: 100px;
     background-color: white;
@@ -421,18 +384,20 @@ span {
 }
 
 .Tasks-dt--important {
-    background-color: red;
+    background-color: rgb(109, 37, 37);
+
+    color: whitesmoke;
 }
 
 .Tasks-dd--important {
-    border: 1px solid red;
+    border: 1px solid rgb(109, 37, 37);
     margin: 15px auto;
 }
 
 .Home-button {
     width: 4%;
     height: 50px;
-    background-color: red;
+    background-color: rgb(109, 37, 37);
 
     display: flex;
     flex-flow: row nowrap;
@@ -453,14 +418,14 @@ span {
 
 
 .Tasks-dt--ok {
-    background-color: green;
+    background-color: #5b856f;
 }
 
 .Tasks-dd--ok {
-    border: 1px solid green;
+    border: 1px solid #5b856f;
 }
 
-.Home-client {
+/*.Home-client {
     width: 10%;
     height: 30px;
     background-color: white;
@@ -514,7 +479,7 @@ span {
     background-color: lightgray;
     border-radius: 5px;
     padding: 5px;
-}
+}*/
 
 .Contacts-create {
     position: absolute;
@@ -535,17 +500,17 @@ span {
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: red;
+    color: #04202C;
     cursor: pointer;
 
 }
 
-/*Form Create-contacts*/
+/*Form Create-contacts + Form Create-projects*/
 
 .Home-form{
-    width: 100%;
-    min-height: 180px;
-    background-color: white;
+    width: 80%;
+    min-height: 200px;
+    background-color: #5B7065;
 
     margin: 5px auto;
     padding: 20px;
@@ -561,7 +526,7 @@ span {
 .Form-create{
     width: 100%;
     min-height: 180px;
-    background-color: white;
+    background-color: #5B7065;
 
     margin: 5px auto;
     padding: 20px;
@@ -632,7 +597,8 @@ input[type="submit"] {
 }
 .Form-label {
     width: 35%;
-    margin: 0 0 8px;
+    background-color: #C9D1C8;
+    margin: 0 0 4px;
     padding: 5px;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -644,22 +610,26 @@ input[type="submit"] {
 }
 .Form-input {
     width: 60%;
+    background-color: #C9D1C8;
     margin: 4px 0 4px 10px;
     color: black;
 }
 .Form-textarea{
     width: 100%;
     min-height: 90px;
+    background-color: #C9D1C8;
     hyphens: auto;
     resize: none;
 }
 .Form-textarea--organizer{
     height: 150px;
+    background-color: #C9D1C8;
     margin: 0 0 20px 0;
     font-size: 1.2rem;
 }
 .Form-select--contact{
     width: 20%;
+    background-color: #C9D1C8;
     margin: 0 0 0 10px;
     text-align: center;
 }
@@ -688,7 +658,7 @@ input[type="submit"] {
 }
 .Management-back{
     position: absolute;
-    bottom: 0;
+    top: 50%;
     right: 15%;
     z-index: 2;
 }
@@ -765,12 +735,12 @@ input[type="submit"] {
 }
 .Home-head{
     position: absolute;
-    top: 80%;
+    top: 60%;
     right: 5%;
 }
 .Home-management--projects{
     position: absolute;
-    top: 90%;
+    top: 70%;
     right: 3%;
 
     display: none;
@@ -781,22 +751,11 @@ input[type="submit"] {
 .Management-li{
     padding: 8px;
 }
-
-
-.Home-form{
-    width: 80%;
-    background-color: white;
-
-    margin: 10px auto;
-    padding: 20px;
-
-
-    border-radius: 8px;
-    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
-
-    z-index: 2;
-    position: relative;
+.Export:hover{
+    background-color: #C9D1C8;
 }
+
+
 .Form-first{
     display: flex;
     flex-flow: row nowrap;
@@ -806,36 +765,36 @@ input[type="submit"] {
     border-bottom: 1px solid black;
 }
 
-.Form-label--projects{
-    margin: 20px 0;
-}
+
 
 
 .Form-select--status , .Form-select--priority , .Form-input--expenses{
     width: 50%;
+    background-color: #C9D1C8;
     margin: 0 0 20px 0;
 }
 .Form-input-description , .Form-input-comments{
-    height: 100px;
-    margin: 0 0 20px 0;
+    height: 80px;
+    margin: 0 0 10px 0;
 }
 
 .Form-back--projects{
     position: absolute;
-    top: 200%;
+    top: 140%;
 }
 .Form-h2 , .Organizer-h2 {
     width: 100%;
-    padding: 10px;
-    margin: 20px;
+    padding: 5px;
+    margin: 10px;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: lightblue;
+    color: #04202C;
+    text-align: center;
 }
 .Form-send{
     width: 100%;
-    padding: 20px;
+    padding: 8px;
     
     display: flex;
     flex-flow: row nowrap;
@@ -844,14 +803,16 @@ input[type="submit"] {
 .Form-button{
     width: 10%;
     height: 30px;
-    background-color: lightgreen;
-    margin: 10px auto;
+    background-color: #304040;
+    margin: 7px auto;
 
     border-radius: 8px;
     font-size: 10px;
+    color: whitesmoke;
+
     cursor: pointer;
 }
-.Form-low{
+.Form-low , .Form-medium , .Form-high , .Form-critical{
     background-color: red;
     padding: 5px;
     border-radius: 5px;
@@ -859,24 +820,12 @@ input[type="submit"] {
 }
 .Form-medium{
     background-color: orange;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-
 }
 .Form-high{
     background-color: green;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-
 }
 .Form-critical{
     background-color: yellow;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-
 }
 .Form-planning , .Form-progressing , .Form-complete{
     border: 1.5px solid blue;
@@ -984,22 +933,27 @@ input[type="submit"] {
     top: 55%;
     right: 10%;
 }
-.Reports-p , .Management-link--reports{
+.Reports-p{
     padding: 20px;
-    margin: 20px 200px 0;
-
+  
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(109, 197, 252);
+    color: #04202C;
 
+    position: absolute;
+    top: 45%;
+    right: 15%;
+}
+.Management-link--reports{
+    width: 50%;
     position: absolute;
     top: 40%;
     right: 0;
 }
 .Home-head--reports{
     position: absolute;
-    top: 70%;
-    right: 0;
+    top: 60%;
+    right: 5%;
 }
 
 .Profile{
@@ -1015,7 +969,7 @@ input[type="submit"] {
 .Profile-information{
     width: 70%;
     min-height: 450px;
-    background-color: white;
+    background-color: #C9D1C8;
     padding: 20px;
 
     display: flex;
@@ -1053,14 +1007,14 @@ input[type="submit"] {
 }
 .Profile-li{
     width: 90%;
-    background-color: lightblue;
+    background-color: #587065;
     padding: 5px;
     border-radius: 8px;
     text-align: center;
 }
 .Profile-li--close{
     width: 60%;
-    background-color: lightcoral;
+    background-color: #DDA288;
     margin: 10px 0;
     cursor: pointer;
 }
@@ -1078,7 +1032,7 @@ input[type="submit"] {
     max-width: 800px;
     padding: 40px;
     margin: 40px auto;
-    background-color: lightgrey;
+    background-color: #C9D1C8;
     border-radius: 10px;
 }
 .Schedule-header {
@@ -1097,7 +1051,7 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid grey;
+    border: 2px solid #04202C;
     padding: 10px;
     border-radius: 5px;
     position: relative;
@@ -1106,7 +1060,7 @@ input[type="submit"] {
     font-size: 1rem;
 }
 .add-event {
-    background-color: rgb(139, 212, 236);
+    background-color: #304040;
     color: white;
     font-size: 0.8rem;
     padding: 5px;
@@ -1116,14 +1070,14 @@ input[type="submit"] {
     text-align: center;
 }
 .add-event:hover {
-    background-color: #648dcb;
+    background-color: #5B7065;
 }
 .event-form {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: lightgray;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -1145,105 +1099,15 @@ input[type="submit"] {
     text-align: center;
     border: 1px solid #000;
     margin-bottom: 4px;
-    background-color: #b9e185;
+    background-color: #DDA288;
 }
 .Schedule-prev , .Schedule-next{
-    background-color: #fbeb78;
+    background-color: #7E675E;
     padding: 5px 10px;
     border-radius: 30%;
 }
 .Schedule-month{
-    background-color: #b9e185;
-    padding: 10px 30px;
-    border-radius: 30%;
-
-    /*font-family*/
-}
-
-
-.Schedule{
-    width: 90%;
-    min-height: 500px;
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    padding: 40px;
-    margin: 40px auto;
-    background-color: lightgrey;
-    border-radius: 10px;
-}
-.Schedule-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-.Schedule-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-}
-.calendar-day {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid grey;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-}
-.calendar-day-number {
-    font-size: 1rem;
-}
-.add-event {
-    background-color: rgb(139, 212, 236);
-    color: white;
-    font-size: 0.8rem;
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 5px;
-    text-align: center;
-}
-.add-event:hover {
-    background-color: #648dcb;
-}
-.event-form {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-.event-form input {
-    padding: 5px;
-    font-size: 0.9rem;
-}
-.event-form button {
-    padding: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-.calendar-event {
-    text-align: center;
-    border: 1px solid #000;
-    margin-bottom: 4px;
-    background-color: #b9e185;
-}
-.Schedule-prev , .Schedule-next{
-    background-color: #fbeb78;
-    padding: 5px 10px;
-    border-radius: 30%;
-}
-.Schedule-month{
-    background-color: #b9e185;
+    background-color: #7E675E;
     padding: 10px 30px;
     border-radius: 30%;
 
@@ -1256,18 +1120,20 @@ input[type="submit"] {
     min-height: 200px;
     margin: auto;
     padding: 0 0 10px 0;
-    background-color: lightblue;
+    background-color: #C9D1C8;
     border-radius: 10px;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+
+    color: white;
 }
 .CalendarView-header {
     width: 100%;
     height: 30px;
-    background-color: lightblue;
+    background-color: #304040;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1294,12 +1160,10 @@ input[type="submit"] {
     font-size: 8px;
 }
 .CalendarView-prev , .CalendarView-next{
-    background-color: #648dcb;
     padding: 5px 10px;
     border-radius: 30%;
 }
 .CalendarView-month{
-    background-color: #648dcb;
     padding: 10px 30px;
     border-radius: 30%;
     font-size: 10px;
@@ -1311,7 +1175,7 @@ input[type="submit"] {
 .Home-slide{
     width: 4%;
     height: 50px;
-    background-color: burlywood;
+    background-color: #DDA288;
     margin: 20px 40px 0 0;
     
     display: flex;
@@ -1338,7 +1202,7 @@ input[type="submit"] {
 .Chat-container {
     width: 400px;
     min-height: 400px;
-    background-color: #fff;
+    background-color: #C9D1C8;
     
     display: flex;
     flex-direction: column;
@@ -1350,7 +1214,7 @@ input[type="submit"] {
   }
 
   .Chat-header {
-    background-color: #fbeb78;
+    background-color: #C9D1C8;
     padding: 15px;
 
     text-align: center;
@@ -1387,12 +1251,12 @@ input[type="submit"] {
 
 .message.user {
     align-self: flex-end;
-    background-color: #648dcb;
+    background-color: #DDA288;
     color: white;
 }
 
 .message.bot {
-    background-color: #e4e6eb;
+    background-color: lightgray;
 
     align-self: flex-start;
 
@@ -1415,7 +1279,7 @@ input[type="submit"] {
     outline: none;
 }
 .Chat-input button {
-    background-color: green;
+    background-color: #587065;
 
     margin-left: 10px;
     padding: 10px 20px;
@@ -1428,5 +1292,5 @@ input[type="submit"] {
     cursor: pointer;
 }
 .Chat-input button:hover {
-    background-color: #b9e185;
+    background-color: #304040;
 }
