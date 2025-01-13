@@ -139,6 +139,15 @@ span {
     top: 0;
     left: 12%;
 }
+.Block-calendar--home {
+    width: 60%;
+    height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 12%;
+}
+
 .Block-contacts {
     width: 60%;
 
@@ -638,7 +647,8 @@ span {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    gap: 5px;
     
 }
 .Organizer-form{
@@ -913,8 +923,10 @@ input[type="submit"] {
     width: 10%;
     height: 30px;
     background-color: lightgreen;
+    margin: 10px auto;
 
     border-radius: 8px;
+    font-size: 10px;
     cursor: pointer;
 }
 .Form-low{
@@ -1005,7 +1017,7 @@ input[type="submit"] {
 .Reports-img:hover{
     transform: scale(1.1);   
 }
-.overlay {
+.Overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -1020,18 +1032,18 @@ input[type="submit"] {
     transition: opacity 0.3s ease;
 }
 
-.overlay img {
+.Overlay-img {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.overlay.active {
+.Overlay.active {
     visibility: visible;
     opacity: 1;
 }
 
-.overlay .close-btn {
+.Overlay .Overlay-close {
     position: absolute;
     top: 20px;
     right: 20px;

@@ -193,8 +193,8 @@ class Calendar {
   // REESTRUCTURAR ESTE CÓDIGO
 
 const galleryImages = document.querySelectorAll('.Reports-img');
-const overlay = document.getElementById('overlay');
-const overlayImg = document.getElementById('overlayImg');
+const overlay = document.getElementById('Overlay');
+const overlayImg = document.getElementById('Overlay-Img');
 const closeBtn = document.getElementById('closeBtn');
 
 galleryImages.forEach(img => {
