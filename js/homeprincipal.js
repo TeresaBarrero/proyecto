@@ -205,6 +205,48 @@ window.addEventListener(`scroll` , ()=>{
 })
     
    
-        
+const chatMessages = document.getElementById('Chat-messages');
+const messageInput = document.getElementById('message-input');
+const sendButton = document.getElementById('send-button');
+
+    // Enviar mensaje al presionar el botón
+sendButton.addEventListener('click', sendMessage);
+
+    // Enviar mensaje al presionar "Enter"
+messageInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+    sendMessage();
+  }
+});
+
+function sendMessage() {
+  const message = messageInput.value.trim();
+
+  if (message !== '') {
+        // Mostrar el mensaje del usuario
+    addMessage(message, 'user');
+
+        // Respuesta simulada del bot
+    setTimeout(() => {
+       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+     }, 1000);
+
+        // Limpiar la entrada de texto
+    messageInput.value = '';
+     }
+ }
+
+function addMessage(text, sender) {
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message', sender);
+     messageElement.textContent = text;
+
+     chatMessages.appendChild(messageElement);
+
+      // Desplazar hacia el último mensaje
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+ 
+
 
 
