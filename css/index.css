@@ -653,6 +653,7 @@ span {
 }
 .Form-right{
     width: 40%;
+    margin: 0 0 0 40px;
 }
 /*.Form-left--projects{
     width: 60%;
@@ -867,6 +868,8 @@ input[type="submit"] {
 .Form-first{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 
     border-bottom: 1px solid black;
 }
@@ -887,7 +890,7 @@ input[type="submit"] {
 
 .Form-back--projects{
     position: absolute;
-    top: 230%;
+    top: 200%;
 }
 .Form-h2 , .Organizer-h2 {
     width: 100%;

@@ -8,11 +8,54 @@ const alertButton = document.querySelector('.Home-button')
 const tasksImportant = document.querySelector('.Tasks-dl--important')
 const clientsButton = document.querySelector('.Home-client')
 const listClients = document.querySelector('.Clients-ul')
+const projectList = document.querySelector('.Projects-ul')
 const arrow = document.querySelector('.Clients-arrow')
 const clients = document.querySelector('.Clients')
 const management = document.querySelector('.Management-link')
 const homeManagement = document.querySelector('.Home-management--projects')
 let statusArrow = 0
+const projects = getProject()
+
+function getProject() {
+    if (!localStorage.getItem('projectJSON')) {
+        localStorage.setItem('projectJSON', '[]')
+    }
+    return JSON.parse(localStorage.getItem('projectJSON'))
+}
+function listProjects() {
+    const editSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+</svg>`
+    const deleteSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+</svg>`
+    const editSvgElement = new DOMParser().parseFromString(editSvgCode, 'image/svg+xml').documentElement
+    const deleteSvgElement = new DOMParser().parseFromString(deleteSvgCode, 'image/svg+xml').documentElement
+    projects.forEach((project) => {
+        const listProjects = document.createElement('li')
+        listProjects.textContent = project.projectName
+        listProjects.classList.add('Projects-li')
+        projectList.appendChild(listProjects)
+        const editSvgClone = editSvgElement.cloneNode(true)
+        const deleteSvgClone = deleteSvgElement.cloneNode(true)
+        editSvgClone.setAttribute('data-id', project._id)
+        deleteSvgClone.setAttribute('data-id', project._id)
+        listProjects.appendChild(editSvgClone)
+        listProjects.appendChild(deleteSvgClone)
+        editSvgClone.addEventListener('click', () => {
+            localStorage.setItem('idProject', project._id)
+            window.location.href = '../src/update_projects.html'
+        })
+        deleteSvgClone.addEventListener('click', () => {
+            let result = projects.findIndex((proyecto) => proyecto._id === project._id)
+            projects.splice(result, 1)
+            localStorage.setItem('projectJSON', JSON.stringify(project))
+            window.location.reload();
+        })
+    })
+}
+listProjects()
 
 // Recorre TODOS elementos li
     // Si NO contains class 'Menu-li--Chat'
