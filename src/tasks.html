@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panic</title>
+    <link rel="icon" href="../assets/Panic.png" type="icon">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/hometasks.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -180,21 +184,22 @@
                         <dd class="Block-dd">FILTRO:</dd>
                     </dl>
                     <div class="Block-dd Block-dd--calendar">
-                        <input type="date" name="Filter" id="Filter" style="background-color:red;">
+                        <input type="date" name="Filter" id="Filter" style="background-color: #5B7065;">
                     </div>
                 </div>
 
                 <div class="Block Block-chat Chat">
                     <div class="Chat-container">
                         <div class="Chat-header">
-                          <h3 class="Chat-h3">CHAT</h3>
+                            <h3 class="Chat-h3">CHAT</h3>
                         </div>
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
-                          <input class="Chat-input" type="text" id="message-input" placeholder="Escribe tu mensaje...">
-                          <button class="Chat-btn" id="send-button">Enviar</button>
+                            <input class="Chat-input" type="text" id="message-input"
+                                placeholder="Escribe tu mensaje...">
+                            <button class="Chat-btn" id="send-button">Enviar</button>
                         </div>
-                      </div>
+                    </div>
                 </div>
 
 
@@ -203,7 +208,8 @@
 
 
         <div class="Header-wrapper Menu">
-            <ul class="Menu-ul Menu-ul--wrapper">                 <!--los dos svg comentados se desarrollaran para la siguiente versión-->          
+            <ul class="Menu-ul Menu-ul--wrapper">
+                <!--los dos svg comentados se desarrollaran para la siguiente versión-->
                 <!--<li class="Menu-li Menu-li--wrapper Wrapper">
                     <svg class="Wrapper-search" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#648dcb"
                         viewBox="0 0 16 16">
@@ -212,8 +218,8 @@
                     </svg>
                 </li> -->
                 <li class="Menu-li Menu-li--wrapper Wrapper">
-                    <svg class="Wrapper-profile" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#DDA288"
-                        viewBox="0 0 16 16">
+                    <svg class="Wrapper-profile" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                        fill="#DDA288" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                         <path fill-rule="evenodd"
                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
@@ -228,7 +234,7 @@
                 </li>-->
             </ul>
 
-                <!--<div class="Block Block-search">
+            <!--<div class="Block Block-search">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-search"
                         viewBox="0 0 16 16">
                         <path
@@ -236,27 +242,27 @@
                     </svg>
                 </div>-->
 
-                <div class="Block Block-profile">
-                    <ul class="Block-ul">
-                        <li class="Block-li Block-li">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#04202C"
-                                class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                                <path fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                            </svg>
-                        </li>
-                        <li class="Block-li Block-li--user">USUARIO</li>
-                        <li class="Block-li Block-li--profile">
-                            <a class="Profile-a" href="../src/profile.html">
-                                PERFIL
-                            </a>
-                        </li>
-                        <li class="Block-li Block-li--close">CERRAR SESION</li>
-                    </ul>
-                </div>
+            <div class="Block Block-profile">
+                <ul class="Block-ul">
+                    <li class="Block-li Block-li">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#04202C"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>
+                    </li>
+                    <li class="Block-li Block-li--user">USUARIO</li>
+                    <li class="Block-li Block-li--profile">
+                        <a class="Profile-a" href="../src/profile.html">
+                            PERFIL
+                        </a>
+                    </li>
+                    <li class="Block-li Block-li--close">CERRAR SESION</li>
+                </ul>
+            </div>
 
-                <!--<div class="Block Block-configuration">
+            <!--<div class="Block Block-configuration">
                     <ul class="Block-ul">
                         <li class="Block-li Block-li--user">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -317,7 +323,17 @@
 
 
         <div class="Home-tasks Tasks">
-            <h2 class="Tasks-h2">TAREAS</h2> 
+            <h2 class="Tasks-h2">TAREAS
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#04202C"
+                    class="bi bi-list-task" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zM3 3H2v1h1z" />
+                    <path
+                        d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1z" />
+                    <path fill-rule="evenodd"
+                        d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
+                </svg>
+            </h2>
             <dl class="Tasks-dl Tasks-dl-daily">
                 <dt class="Tasks-dt">
                     TAREAS DEL DÍA

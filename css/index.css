@@ -17,7 +17,7 @@ p a {
     display: inline;
 }
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
     hyphens: auto;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -30,23 +30,38 @@ span {
 svg{
     cursor: pointer;
 }
+:root{
+    --primary-c: #04202C;
+    --home-c: whitesmoke;
+    --form-c: #5B7065;
+    --secondForm-c : #C9D1C8;
+    --basic-c: white;
+    --buttonActive-c: #304040;
+    --title-c: #DDA288;
+    --AlertImportant-c : rgb(109, 37, 37);
+    --tasksOk : #5b856f;
+
+    --form-ff : 'Zilla Slab';
+    --general-ff : var(--general-ff);
+
+
+}
 
 /* Header */
 .Header {
     width: 100%;
     height: 100px;
-    background-color: #04202C;
+    background-color: var(--primary-c);
 
     display: flex;
     
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
+    font-family: var(--general-ff);
+    color: var(--basic-c);
 
     animation: slideDown 1s ease both;
 }
 .Header-logo {
     width: 15%;
-    /*background-color: blue;*/
 }
 .Header-picture {
     width: 100%;
@@ -66,13 +81,11 @@ svg{
 .Header-nav {
     width: 70%;
     max-width: 120em;
-    /*background-color: lightgray;*/
 
     padding: 1em;
 }
 .Menu-ul {
     width: 100%;
-    /*background-color: lightblue;*/
 
     display: flex;
     flex-flow: row nowrap;
@@ -80,7 +93,6 @@ svg{
     align-items: end;
 }
 .Menu-li {
-    /* background-color: lightgreen;*/
     padding: 1em;
     margin: 0 1em 0 0;
 
@@ -89,9 +101,9 @@ svg{
 
 }
 .Menu-li.isActive {
-    background-color: #304040;
+    background-color: var(--buttonActive-c);
     border-radius: 10px;
-    color: white;
+    color: var(--basic-c);
 }
 .Menu-information {
     position: relative;
@@ -101,7 +113,7 @@ svg{
 
 .Block{
     width: 60%;
-    background-color: white;
+    background-color: var(--basic-c);
     margin: 1em;
     padding: 1em;
 
@@ -182,11 +194,11 @@ svg{
     display: none;
 }
 .Block-dt {
-    color: #DDA288;
+    color: var(--title-c);
     padding-bottom: 20px;
 }
 .Block-dd {
-    color: #04202C;
+    color: var(--primary-c);
     padding: 0 0 5px 20px;
 }
 .Block-chat {
@@ -258,16 +270,16 @@ svg{
 }*/
 
 .Block-li--profile, .Block-li--close{
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     padding: 5px;
     margin: 5px;
 
     border-radius: 5px;
 
-    color: #04202C;
+    color: var(--primary-c);
 }
 .Block-li--close {
-    background-color: #DDA288;
+    background-color: var(--title-c);
 }
 
 
@@ -278,7 +290,7 @@ svg{
 .Home{ 
     width: 100%;
     min-height: 300px;
-    background-color: whitesmoke;
+    background-color: var(--home-c);
 
     position: relative;
     
@@ -286,7 +298,7 @@ svg{
 .Home-principal{
     width: 100%;
     min-height: 700px;
-    background-color: whitesmoke;
+    background-color: var(--home-c);
 
     position: relative;
 }
@@ -310,7 +322,7 @@ svg{
 .Home-organizer {
     width: 50%;
     min-height: 400px;
-    background-color: #587065;
+    background-color: var(--form-c);
     margin: 40px;
     padding: 20px;
 
@@ -339,7 +351,7 @@ svg{
 .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
     width: 18%;
     height: 75px;
-    background-color: whitesmoke;
+    background-color: var(--home-c);
 
     display: flex;
     flex-flow: row nowrap;
@@ -348,7 +360,7 @@ svg{
 
     text-align: center;
     border-radius: 50%;
-    border: 1px solid #04202C;
+    border: 1px solid var(--primary-c);
 
     opacity: 0;
     transform: translateY(20px); 
@@ -405,11 +417,11 @@ svg{
 
 
 .Tasks-dt, .Contacts-dt{
-    background-color: #DDA288;
+    background-color: var(--title-c);
     padding: 10px;
 
     border-radius: 5px;
-    color: #04202C;
+    color: var(--primary-c);
     text-align: center;
 }
 .Tasks-dd, .Contacts-dd{
@@ -432,7 +444,7 @@ svg{
     align-items: center;
     gap: 10px;
 
-    color: #04202C;
+    color: var(--primary-c);
     font-size: 20px;
     font-weight: bold;
 
@@ -444,7 +456,7 @@ svg{
 .Tasks-dl, .Contacts-dl{
     width: 80%;
     min-height: 100px;
-    background-color: white;
+    background-color: var(--basic-c);
     margin: 20px auto;
     padding: 20px;
 
@@ -477,20 +489,20 @@ svg{
 }
 
 .Tasks-dt--important {
-    background-color: rgb(109, 37, 37);
+    background-color: var(--AlertImportant-c);
 
-    color: whitesmoke;
+    color: var(--home-c);
 }
 
 .Tasks-dd--important {
-    border: 1px solid rgb(109, 37, 37);
+    border: 1px solid var(--AlertImportant-c);
     margin: 15px auto;
 }
 
 .Home-button {
     width: 4%;
     height: 50px;
-    background-color: rgb(109, 37, 37);
+    background-color: var(--AlertImportant-c);
 
     display: flex;
     flex-flow: row nowrap;
@@ -511,17 +523,17 @@ svg{
 
 
 .Tasks-dt--ok {
-    background-color: #5b856f;
+    background-color: var(--tasksOk);
 }
 
 .Tasks-dd--ok {
-    border: 1px solid #5b856f;
+    border: 1px solid var(--tasksOk);
 }
 
 /*.Home-client {
     width: 10%;
     height: 30px;
-    background-color: white;
+    background-color: var(--basic-c);
     padding: 3px;
     margin: 20px 40px;
 
@@ -537,7 +549,7 @@ svg{
 .Clients-ul{
     width: 100%;
     min-height: 120px;
-    background-color: white;
+    background-color: var(--basic-c);
     padding: 3px;
     margin: 20px 40px;
 
@@ -601,7 +613,7 @@ svg{
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: #04202C;
+    color: var(--primary-c);
     cursor: pointer;
 
 }
@@ -611,7 +623,7 @@ svg{
 .Home-form{
     width: 80%;
     min-height: 200px;
-    background-color: #5B7065;
+    background-color: var(--form-c);
 
     margin: 5px auto;
     padding: 20px;
@@ -628,7 +640,7 @@ svg{
 .Form-create{
     width: 100%;
     min-height: 180px;
-    background-color: #5B7065;
+    background-color: var(--form-c) ;
 
     margin: 5px auto;
     padding: 20px;
@@ -685,12 +697,11 @@ input, select, textarea, label {
 
 input[type="submit"] {
     width: 15%;
-    background-color: #44bb48;
 
     padding: 10px;
     margin: 5px auto;
 
-    color: white;
+    color: var(--basic-c);
     font-size: 10px;
     border-radius: 8px;
 
@@ -699,11 +710,11 @@ input[type="submit"] {
 }
 .Form-label {
     width: 35%;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     margin: 0 0 4px;
     padding: 5px;
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
     font-size: 1em;
     font-weight: bold;
     color: black;
@@ -713,26 +724,32 @@ input[type="submit"] {
 }
 .Form-input {
     width: 60%;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     margin: 4px 0 4px 10px;
+
+    font-family: var(--form-ff);
     color: black;
 }
 .Form-textarea{
     width: 100%;
     min-height: 90px;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
+
+    font-family: var(--form-ff);
+
     hyphens: auto;
     resize: none;
 }
 .Form-textarea--organizer{
     height: 150px;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     margin: 0 0 20px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-family: var(--form-ff)
 }
 .Form-select--contact{
     width: 20%;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     margin: 0 0 0 10px;
     text-align: center;
 }
@@ -772,7 +789,7 @@ input[type="submit"] {
 .Home-management{
     width: 40%;
     min-height: 100px;
-    background-color: white;
+    background-color: var(--basic-c);
     padding: 20px;
     margin: 20px auto;
 
@@ -793,13 +810,11 @@ input[type="submit"] {
     font-size: 1rem;
 }
 .Management-li:hover{
-    background-color: lightgray;
+    background-color: var(--home-c);
     border-radius: 10px;
     padding: 5px;
 }
-.Export-btn , .Import-btn{
-    background-color: transparent;
-}
+
 
 .Home-general{
     width: 55%;
@@ -809,7 +824,7 @@ input[type="submit"] {
 .Projects-ul{
     width: 88%;
     min-height: 100px;
-    background-color: #DDA288;
+    background-color: var(--title-c);
     margin: 20px 50px;
     padding: 20px;
 
@@ -825,7 +840,7 @@ input[type="submit"] {
 .Projects-li{
     height: 90%;
     min-height: 50px;
-    background-color: rgb(232, 231, 231);
+    background-color: var(--home-c);
 
     margin: 20px;
 
@@ -871,7 +886,7 @@ input[type="submit"] {
     flex-flow: row nowrap;
 }
 .Export:hover{
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
 }
 
 
@@ -889,7 +904,7 @@ input[type="submit"] {
 
 .Form-select--status , .Form-select--priority , .Form-input--expenses{
     width: 50%;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     margin: 0 0 20px 0;
 }
 .Form-input-description , .Form-input-comments{
@@ -908,8 +923,8 @@ input[type="submit"] {
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: #04202C;
-    text-align: center;
+    color: var(--primary-c);
+    text-decoration-line: underline;
 }
 .Form-send{
     width: 100%;
@@ -922,12 +937,12 @@ input[type="submit"] {
 .Form-button{
     width: 10%;
     height: 30px;
-    background-color: #304040;
+    background-color: var(--buttonActive-c);
     margin: 7px auto;
 
     border-radius: 8px;
     font-size: 10px;
-    color: whitesmoke;
+    color: var(--home-c);
 
     cursor: pointer;
 }
@@ -971,7 +986,7 @@ input[type="submit"] {
 .Home-reports{
     width: 65%;
     height: 500px;
-    background-color: white;
+    background-color: var(--basic-c);
     
     margin: 10px 40px;
     padding: 10px;
@@ -1000,6 +1015,8 @@ input[type="submit"] {
     background-color: lightgray;
 
     object-fit: cover;
+
+    border: 0.5px solid var(--primary-c);
     
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -1039,9 +1056,8 @@ input[type="submit"] {
     top: 20px;
     right: 20px;
     font-size: 24px;
-    color: white;
+    color: var(--basic-c);
     cursor: pointer;
-    background: none;
     border: none;
 }
 
@@ -1058,7 +1074,7 @@ input[type="submit"] {
   
     font-size: 1.2rem;
     font-weight: bold;
-    color: #04202C;
+    color: var(--primary-c);
 
     position: absolute;
     top: 45%;
@@ -1089,7 +1105,7 @@ input[type="submit"] {
 .Profile-information{
     width: 70%;
     min-height: 450px;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     padding: 20px;
 
     display: flex;
@@ -1127,14 +1143,15 @@ input[type="submit"] {
 }
 .Profile-li{
     width: 90%;
-    background-color: #587065;
+    background-color: var(--buttonActive-c);
     padding: 5px;
     border-radius: 8px;
     text-align: center;
+    color: var(--basic-c);
 }
 .Profile-li--close{
     width: 60%;
-    background-color: #DDA288;
+    background-color: var(--title-c);
     margin: 10px 0;
     cursor: pointer;
 }
@@ -1148,11 +1165,11 @@ input[type="submit"] {
 .Schedule{
     width: 90%;
     min-height: 500px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
     max-width: 800px;
     padding: 40px;
     margin: 40px auto;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     border-radius: 10px;
 }
 .Schedule-header {
@@ -1163,7 +1180,7 @@ input[type="submit"] {
     align-items: center;
 
     font-size: 1.2rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
 
 }
 .Schedule-grid {
@@ -1179,9 +1196,9 @@ input[type="submit"] {
     align-items: center;
     
     border-radius: 5px;
-    border: 2px solid #04202C;
+    border: 2px solid var(--primary-c);
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
 
     position: relative;
 }
@@ -1189,21 +1206,21 @@ input[type="submit"] {
     font-size: 1rem;
 }
 .add-event {
-    background-color: #304040;
+    background-color: var(--buttonActive-c);
     padding: 5px;
     margin: 5px 0 0 0;
 
     border-radius: 3px;
 
-    color: white;
+    color: var(--basic-c);
     font-size: 0.8rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
     text-align: center;
 
     cursor: pointer;
 }
 .add-event:hover {
-    background-color: #5B7065;
+    background-color: var(--form-c);
 }
 .event-form {
     padding: 10px;
@@ -1222,30 +1239,30 @@ input[type="submit"] {
     right: 0;
     z-index: 10;
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
 
 }
 .event-form input {
     padding: 5px;
     font-size: 0.9rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
 
 }
 .event-form button {
     padding: 5px;
     font-size: 0.9rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
     cursor: pointer;
 }
 .calendar-event {
-    background-color: #DDA288;
+    background-color: var(--title-c);
 
     margin: 0 0 4px 0;
 
     border: 1px solid #000;
 
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--general-ff);
 
 }
 .Schedule-prev , .Schedule-next{
@@ -1267,7 +1284,7 @@ input[type="submit"] {
     min-height: 200px;
     margin: auto;
     padding: 0 0 10px 0;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     border-radius: 10px;
 
     display: flex;
@@ -1275,12 +1292,12 @@ input[type="submit"] {
     justify-content: center;
     align-items: center;
 
-    color: white;
+    color: var(--basic-c);
 }
 .CalendarView-header {
     width: 100%;
     height: 30px;
-    background-color: #304040;
+    background-color: var(--buttonActive-c);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1322,7 +1339,7 @@ input[type="submit"] {
 .Home-slide{
     width: 4%;
     height: 50px;
-    background-color: #DDA288;
+    background-color: var(--title-c);
     margin: 20px 40px 0 0;
     
     display: flex;
@@ -1349,7 +1366,7 @@ input[type="submit"] {
 .Chat-container {
     width: 400px;
     min-height: 400px;
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     
     display: flex;
     flex-direction: column;
@@ -1361,19 +1378,19 @@ input[type="submit"] {
   }
 
   .Chat-header {
-    background-color: #C9D1C8;
+    background-color: var(--secondForm-c);
     padding: 15px;
 
     text-align: center;
     font-size: 18px;
-    color: white;
+    color: var(--basic-c);
     font-weight: bold;
     color: black;
   }
 
 
 .Chat-messages {
-    background-color: #f9f9f9;
+    background-color: var(--home-c);
     padding: 10px;
     
     display: flex;
@@ -1398,8 +1415,8 @@ input[type="submit"] {
 
 .message.user {
     align-self: flex-end;
-    background-color: #DDA288;
-    color: white;
+    background-color: var(--title-c);
+    color: var(--basic-c);
 }
 
 .message.bot {
@@ -1432,14 +1449,14 @@ input[type="submit"] {
     padding: 10px 20px;
     border: none;
     
-    color: white;
+    color: var(--basic-c);
     border-radius: 20px;
     font-size: 14px;
 
     cursor: pointer;
 }
 .Chat-input button:hover {
-    background-color: #304040;
+    background-color: var(--buttonActive-c);
 }
 
 /*@keyframes slideDown{
