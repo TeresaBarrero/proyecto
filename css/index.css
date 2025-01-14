@@ -17,7 +17,7 @@ p a {
     display: inline;
 }
 body {
-    font-family: monospace;
+    font-family: 'Times New Roman', Times, serif;
     hyphens: auto;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +39,10 @@ svg{
 
     display: flex;
     
+    font-family: 'Times New Roman', Times, serif;
     color: white;
+
+    animation: slideDown 1s ease both;
 }
 .Header-logo {
     width: 15%;
@@ -201,7 +204,7 @@ svg{
 
 .Block-dd--calendar {
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 .Header-wrapper {
@@ -260,6 +263,8 @@ svg{
     margin: 5px;
 
     border-radius: 5px;
+
+    color: #04202C;
 }
 .Block-li--close {
     background-color: #DDA288;
@@ -274,11 +279,16 @@ svg{
     width: 100%;
     min-height: 300px;
     background-color: whitesmoke;
+
+    position: relative;
+    
 }
 .Home-principal{
     width: 100%;
     min-height: 700px;
     background-color: whitesmoke;
+
+    position: relative;
 }
 .Home-picture {
     display: flex;
@@ -307,7 +317,15 @@ svg{
     border: 1px solid black;
     border-radius: 10px;
 
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 0;
+
     color: black;
+
+    animation: slideRight 1s ease both;
+
 }
 
 
@@ -522,6 +540,7 @@ svg{
     position: relative;
 
     font-size: 10px;
+    
 }
 .Form-create{
     width: 100%;
@@ -601,10 +620,11 @@ input[type="submit"] {
     margin: 0 0 4px;
     padding: 5px;
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 1em;
     font-weight: bold;
     color: black;
+    font-family: 'Tinos';
     text-align: center;
     border: 1.2px solid black;
 }
@@ -652,7 +672,7 @@ input[type="submit"] {
 
 .Form-back{
     position: absolute;
-    bottom: 0;
+    top: 70%;
     right: 5%;
     z-index: 2;
 }
@@ -706,7 +726,7 @@ input[type="submit"] {
 .Projects-ul{
     width: 88%;
     min-height: 100px;
-    background-color: white;
+    background-color: #DDA288;
     margin: 20px 50px;
     padding: 20px;
 
@@ -721,8 +741,8 @@ input[type="submit"] {
 }
 .Projects-li{
     height: 90%;
-    min-height: 90px;
-    background-color: lightgray;
+    min-height: 50px;
+    background-color: rgb(232, 231, 231);
 
     margin: 20px;
 
@@ -730,13 +750,13 @@ input[type="submit"] {
 }
 .Home-new{
     position: absolute;
-    top: 50%;
-    right: 10%;
+    top: 30%;
+    right: 8%;
 }
 .Home-head{
     position: absolute;
-    top: 60%;
-    right: 5%;
+    top: 40%;
+    right: 3%;
 }
 .Home-management--projects{
     position: absolute;
@@ -782,10 +802,10 @@ input[type="submit"] {
     position: absolute;
     top: 140%;
 }
-.Form-h2 , .Organizer-h2 {
+.Form-h2 , .Organizer-h2 , .Tasks-h2 {
     width: 100%;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
 
     font-size: 1.2rem;
     font-weight: bold;
@@ -858,7 +878,7 @@ input[type="submit"] {
     padding: 10px;
 
     border-radius: 8px;
-    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 9px 4px 8px rgba(0, 0, 0.3, 0.5);
 
     overflow-y: scroll;
 
@@ -886,7 +906,7 @@ input[type="submit"] {
     transition: transform 0.3s ease;
 }
 .Reports-img:hover{
-    transform: scale(1.1);   
+    transform: scale(1.0);   
 }
 .Overlay {
     position: fixed;
@@ -904,8 +924,8 @@ input[type="submit"] {
 }
 
 .Overlay-img {
-    max-width: 90%;
-    max-height: 90%;
+    width: 50%;
+    height: 200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -1028,7 +1048,7 @@ input[type="submit"] {
 .Schedule{
     width: 90%;
     min-height: 500px;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     max-width: 800px;
     padding: 40px;
     margin: 40px auto;
@@ -1036,11 +1056,15 @@ input[type="submit"] {
     border-radius: 10px;
 }
 .Schedule-header {
+    margin: 0 0 10px 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+
     font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 .Schedule-grid {
     display: grid;
@@ -1048,12 +1072,17 @@ input[type="submit"] {
     gap: 5px;
 }
 .calendar-day {
+    padding: 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #04202C;
-    padding: 10px;
+    
     border-radius: 5px;
+    border: 2px solid #04202C;
+
+    font-family: 'Times New Roman', Times, serif;
+
     position: relative;
 }
 .calendar-day-number {
@@ -1061,45 +1090,63 @@ input[type="submit"] {
 }
 .add-event {
     background-color: #304040;
+    padding: 5px;
+    margin: 5px 0 0 0;
+
+    border-radius: 3px;
+
     color: white;
     font-size: 0.8rem;
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 5px;
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
+
+    cursor: pointer;
 }
 .add-event:hover {
     background-color: #5B7065;
 }
 .event-form {
+    padding: 10px;
+    background: lightgray;
+
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: lightgray;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
     z-index: 10;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+
+    font-family: 'Times New Roman', Times, serif;
+
 }
 .event-form input {
     padding: 5px;
     font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 .event-form button {
     padding: 5px;
     font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
 }
 .calendar-event {
-    text-align: center;
-    border: 1px solid #000;
-    margin-bottom: 4px;
     background-color: #DDA288;
+
+    margin: 0 0 4px 0;
+
+    border: 1px solid #000;
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 .Schedule-prev , .Schedule-next{
     background-color: #7E675E;
@@ -1293,4 +1340,25 @@ input[type="submit"] {
 }
 .Chat-input button:hover {
     background-color: #304040;
+}
+
+/*@keyframes slideDown{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}*/
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
