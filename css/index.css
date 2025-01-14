@@ -355,35 +355,35 @@ svg{
     animation-duration: 1s; 
     animation-fill-mode: forwards;
 }
-.Animation-graph{
+.Animation-clipboard{
     position: absolute;
     top: 0;
     left: 40%;
     animation-name: fadeInUp;
     animation-delay: 0s;
 }
-.Animation-clipboard{
+.Animation-calendar{
     position: absolute;
     top: 20%;
     left: 60%;
     animation-name: fadeInUp;
     animation-delay: 0.3s;
 }
-.Animation-folder{
+.Animation-people{
     position: absolute;
     top: 40%;
     left: 80%;
     animation-name: fadeInUp;
     animation-delay: 0.6s;
 }
-.Animation-people{
+.Animation-folder{
     position: absolute;
     top: 60%;
     left: 60%;
     animation-name: fadeInUp;
     animation-delay: 0.9s;
 }
-.Animation-calendar{
+.Animation-graph{
     position: absolute;
     top: 80%;
     left: 40%;
