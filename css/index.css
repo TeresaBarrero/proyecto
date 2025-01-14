@@ -327,8 +327,32 @@ svg{
     animation: slideRight 1s ease both;
 
 }
+.Home-animation{
+    width: 35%;
+    min-height: 400px;
+    background-color: lightblue;
 
+    margin: 50px 0;
 
+    position: relative;
+    left: 60%;
+}
+.Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+    width: 15%;
+    height: 60px;
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    border-radius: 50%;
+}
+.Animation-graph{
+
+}
 .Tasks-dt, .Contacts-dt{
     background-color: #DDA288;
     padding: 10px;
@@ -924,9 +948,10 @@ input[type="submit"] {
 }
 
 .Overlay-img {
-    width: 50%;
-    height: 200px;
+    max-width: 90%;
+    max-height: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
 }
 
 .Overlay.active {
