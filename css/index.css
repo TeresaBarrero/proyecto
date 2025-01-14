@@ -585,8 +585,16 @@ svg{
     top: 40%;
     right: 7%;
 }
-
-
+.Contacts-email{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+}
+.Contacts-tlf{
+    position: absolute;
+    top: 8%;
+    right: 5%;
+}
 .Home-h2 , .Create-link ,.Management-link{
     padding: 20px;
     margin: 20px 200px 0;
