@@ -243,35 +243,3 @@ function addMessage(text, sender) {
  
 
 
-const form = document.getElementById('exportForm');
-const fileInput = document.getElementById('export-file');
-    
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-        
-    const file = fileInput.files[0];
-        
-    if (file) {
-        const formData = new FormData();
-        formData.append("file", file);
-            
-        fetch('/upload', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Archivo cargado correctamente', data);
-            alert('Archivo exportado con éxito');
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo:', error);
-            alert('Hubo un error al cargar el archivo');
-        });
-    } 
-    else {
-        alert('Por favor selecciona un archivo para exportar');
-    }
-});
-
-

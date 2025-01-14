@@ -11,7 +11,7 @@ const listClients = document.querySelector('.Clients-ul')
 const arrow = document.querySelector('.Clients-arrow')
 const clients = document.querySelector('.Clients')
 const management = document.querySelector('.Management-link')
-const homeManagement = document.querySelector('.Home-management--projects')
+const homeManagement = document.querySelector('.Home-management--reports')
 let statusArrow = 0
 
 // Recorre TODOS elementos li

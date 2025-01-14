@@ -763,7 +763,7 @@ input[type="submit"] {
 
 .Home-management{
     width: 40%;
-    min-height: 120px;
+    min-height: 100px;
     background-color: white;
     padding: 20px;
     margin: 20px auto;
@@ -835,16 +835,32 @@ input[type="submit"] {
 }
 .Home-management--projects{
     position: absolute;
-    top: 70%;
+    top: 50%;
     right: 3%;
 
     display: none;
+}
+.Home-management--reports{
+    position: absolute;
+    top: 80%;
+    right: 3%;
+    display: none;
+}
+.Home-management--reports.isActive{
+    display: unset;
 }
 .Home-management--projects.isActive{
     display: unset;
 }
 .Management-li{
     padding: 8px;
+}
+.Export-svg{
+    margin: 0 0 0 20px;
+}
+.Export-form{
+    display: flex;
+    flex-flow: row nowrap;
 }
 .Export:hover{
     background-color: #C9D1C8;

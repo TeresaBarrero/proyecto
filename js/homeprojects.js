@@ -318,5 +318,9 @@ class Calendar {
     
          chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+
+
+
+
      
     
