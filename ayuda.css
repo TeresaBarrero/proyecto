@@ -1521,3 +1521,160 @@ input[type="submit"] {
         display: block;
     }
 }*/
+
+
+@media (max-width:1070px){
+    .Header{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+    .Header-logo{
+        width: 18%;
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Header-responsive{
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+    .Btn-chat{
+        display: block;
+    }
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 13%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+    }
+    .Home{
+        min-height: 900px;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Home-form{
+        width: 90%;
+        display: flex;
+    }
+    .Form-left{
+        width: 50%;
+    }
+    .Form-right{
+        width: 40%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Home-slide{
+        width: 4%;
+        height: 43px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;        
+    }
+    .Home-principal{
+        min-height: 110vh;
+    }
+    .Home-new{
+        position: absolute;
+        top: 30%;
+        right: 0;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+        right: -5%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 80%;
+    }
+    .Reports-p{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+    }
+    .Reports-date{
+        position: absolute;
+        top: 35%;
+        right: 5%;
+    }
+    .Management-link--reports{
+        position: absolute;
+        top: 0;
+    }
+    .Home-management{
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .Home-management--projects{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .Home-management--reports{
+        position: absolute;
+        top: 55%;
+    }
+    .Home-reports{
+        min-height: 700px;
+    }
+    .Schedule{
+        height: 300px;
+    }
+
+}

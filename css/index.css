@@ -293,7 +293,7 @@ svg{
 
 .Home{ 
     width: 100%;
-    min-height: 300px;
+    min-height: 30vh;
     background-color: var(--home-c);
 
     position: relative;
@@ -301,7 +301,7 @@ svg{
 }
 .Home-principal{
     width: 100%;
-    min-height: 700px;
+    min-height: 100vh;
     background-color: var(--home-c);
 
     position: relative;
@@ -611,7 +611,7 @@ svg{
     top: 8%;
     right: 5%;
 }
-.Home-h2 , .Create-link ,.Management-link{
+.Home-h2 , .Create-link{
     padding: 1.25rem;
     margin: 1.25rem 12.5rem 0;
 
@@ -620,6 +620,15 @@ svg{
     color: var(--primary-c);
     cursor: pointer;
 
+}
+.Home-head--reports{
+    width: 10%;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-c);
+
+    cursor: pointer;
 }
 
 /*Form Create-contacts + Form Create-projects*/
@@ -918,7 +927,7 @@ input[type="submit"] {
 
 .Form-back--projects{
     position: absolute;
-    top: 100%;
+    top: 90%;
 }
 .Form-h2 , .Organizer-h2 , .Tasks-h2 {
     width: 100%;
@@ -1087,16 +1096,14 @@ input[type="submit"] {
     top: 45%;
     right: 15%;
 }
-.Management-link--reports{
-    width: 50%;
+.Home-head--reports{
+    width: 15%;
     position: absolute;
-    top: 40%;
-    right: 0;
 }
 .Home-head--reports{
     position: absolute;
-    top: 60%;
-    right: 5%;
+    top: 65%;
+    right: 8%;
 }
 
 .Profile{
@@ -1530,7 +1537,6 @@ input[type="submit"] {
         display: none;
 
     }
-    
     .Btn-seccion{
         padding: 0.9375rem;
 
@@ -1550,6 +1556,12 @@ input[type="submit"] {
         position: absolute;
         top: 10%;
         left: 40%;
+    }
+    .Home{
+        min-height: 900px;
+    }
+    .Home-principal{
+        min-height: 900px;
     }
     .Home-form{
         width: 90%;
@@ -1571,6 +1583,10 @@ input[type="submit"] {
         width: 4%;
         height: 43px;
         border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;        
     }
     .Home-principal{
         min-height: 110vh;
@@ -1599,55 +1615,154 @@ input[type="submit"] {
         top: 35%;
         right: 5%;
     }
-    .Management-link--reports{
-        position: absolute;
-        top: 0;
-    }
     .Home-management{
         width: 50%;
         position: absolute;
-        top: 47%;
+        top: 10%;
+        left: 25%;
     }
-    .Home-management--reports{
+    .Home-management--projects{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .Home-head--reports{
         position: absolute;
         top: 55%;
     }
     .Home-reports{
         min-height: 700px;
     }
+    .Schedule{
+        height: 300px;
+    }
+
 }
 
-/*@media (max-width:780px){
+@media (max-width:850px){
     .Header{
-        width: 100%;  
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: center;
+
     }
     .Header-logo{
-        width: 24%;
+        width: 22%;
     }
     .Header-nav{
         display: none;
     }
     .Header-responsive{
-        width: 40%;
-        background-color: red;
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
 
         display: flex;
         flex-flow: row nowrap;
-
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
     }
-    .Menu-li--chat{
-        width: 50%;
-        text-align: center;
-        background-color: lightgoldenrodyellow;
-    }
-    .Btn-menu{
-        width: 50%;
-        background-color: lightblue;
-        text-align: end;
+    .Btn-chat{
         display: block;
     }
-}*/
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 13%;
+        left: 40%;
+    }
+    .Animation-clipboard , .Animation-calendar , .Animation-people , .Animation-folder , .Animation-graph{
+        width: 25%;
+    }
+    .Form-button{
+        width: 15%;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Home-slide{
+        width: 5%;
+        height: 40px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;   
+    }
+    .Contacts-create{
+        position: absolute;
+        top: 33%;
+        right: 6%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 90%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Home-new{
+        position: absolute;
+        top: 30%;
+        right: -10%;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+        right: -18%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        right: 0;
+    }
+    .Reports-container{
+        width: 80%;
+        margin: 1.875rem auto;
+
+        display: grid;
+        grid-template-columns: repeat( 3 , 1fr);
+        gap: 20px;
+    }
+    .Home-head--reports{
+        position: absolute;
+        top: 40%;
+        right: 12%;
+    }
+}

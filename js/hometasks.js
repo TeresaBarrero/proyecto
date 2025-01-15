@@ -259,7 +259,7 @@ li.forEach((_, i) => {
         })
     }
 })
-
+/*
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
     btn.addEventListener('click' , ()=>{
@@ -273,7 +273,7 @@ li.forEach((_, i) => {
         chat.classList.toggle('isActive')
         console.log(btnChat)
     })
-
+*/
 // Cuando MOUSEOVER home
 // Si NO contains class 'Block-chat'
 // TODOS .Block[i] REMOVE isActive
