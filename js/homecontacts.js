@@ -7,12 +7,17 @@ const liChat = document.querySelector('.Menu-li--chat')
 const contactList = document.querySelector('.Contacts-dl')
 const contacts = getContacts()
 
+
+// Principal función es que me devuelva contactJSON,
+    // si no existe, me lo crea antes 
 function getContacts() {
     if (!localStorage.getItem('contactJSON')) {
         localStorage.setItem('contactJSON', '[]')
     }
     return JSON.parse(localStorage.getItem('contactJSON'))
 }
+
+// Defino una función de edit y delet
 function listContacts() {
     const editSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
   <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -21,32 +26,49 @@ function listContacts() {
     const deleteSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
   <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
 </svg>`
+//Utilizamos DOMParser para parsear el string como si de un elemento html se tratara el svg
     const editSvgElement = new DOMParser().parseFromString(editSvgCode, 'image/svg+xml').documentElement
     const deleteSvgElement = new DOMParser().parseFromString(deleteSvgCode, 'image/svg+xml').documentElement
+    //Por cada elemento de contactos
     contacts.forEach((contact) => {
+        //Creo una etiqueta dd
         const listContact = document.createElement('dd')
         listContact.textContent = contact.givenName
+        //Le añado su clase
         listContact.classList.add('Contacts-dd')
+        //La adhiero como hijo al elemento padre
         contactList.appendChild(listContact)
+        //Clono los svg para poder utilizarlos en varias partes del diseño
         const editSvgClone = editSvgElement.cloneNode(true)
         const deleteSvgClone = deleteSvgElement.cloneNode(true)
+        //Le adjunto el id del elemento de contacts para luego poder hacer la navegación y traerme su data a la otra pantalla
         editSvgClone.setAttribute('data-id', contact._id)
         deleteSvgClone.setAttribute('data-id', contact._id)
         listContact.appendChild(editSvgClone)
         listContact.appendChild(deleteSvgClone)
         editSvgClone.addEventListener('click', () => {
+            //Guardo en el localStorage el id para luego recuperarlo en la pantalla donde me traigo la data
             localStorage.setItem('idContact', contact._id)
+            //Navegamos a la pantalla deseada
             window.location.href = '../src/update_contacts.html'
         })
         deleteSvgClone.addEventListener('click', () => {
+            //Busco la posición del objeto a eliminar mediante el index que traigo comparando el id
             let result = contacts.findIndex((contacto) => contacto._id === contact._id)
+            //Elimino el objeto del array
             contacts.splice(result, 1)
+            //Guardo el array de objetos sin el objeto previamente eliminado
             localStorage.setItem('contactJSON', JSON.stringify(contacts))
+            //Recargo la página para que los datos sean visualizados de forma actualizada
             window.location.reload();
         })
     })
 }
 listContacts()
+
+
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 

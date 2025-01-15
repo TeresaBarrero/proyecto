@@ -2,10 +2,14 @@
 const li = document.querySelectorAll('.Menu-li');
 const block = document.querySelectorAll('.Block');
 const home = document.querySelector('main');
+const btn = document.querySelector('.Btn-burguer')
+const btnNav = document.querySelector('.Btn-nav')
 const chat = document.querySelector('.Block-chat');
 const liChat = document.querySelector('.Menu-li--chat');
 const successButton = document.querySelector('.Form-button');
+//Obtenemos el id alacenado en el localStorage para obtener la data de este
 const specifyProject = getProject(localStorage.getItem('idProject'));
+//Objeto de project
 const project = {
     projectName: document.getElementById('project-name'),
     client: document.getElementById('client'),
@@ -20,20 +24,21 @@ const project = {
     information: document.getElementById('information'),
     labelProject: document.getElementById('label-project')
 };
-
+//Paso el id como parametro y con un .find traigo el objeto cuyo id pasado por parametro sea igual y devuelvo el objeto
 function getProject(id) {
     const data = JSON.parse(localStorage.getItem('projectJSON'));
     return data.find((project) => project._id === id);
 }
-
+//Una vez clicado el botón guardar, valido que ninguno de los campos obligatorios esté vacío
 function submitForm() {
     if (!project.projectName.value && !project.client.value && !project.startDate.value && !project.endDate.value && !project.description.value && !project.statusProjects.value && !project.priority.value && !project.budget.value && !project.resources.value && !project.expenses.value && !project.information.value && !project.labelProject.value) {
         return alert("Completa todos los campos");
     }
-
+//Obtengo el array de objetos completo
     const data = JSON.parse(localStorage.getItem('projectJSON'));
+    //Encuentro mediante id el objeto que quiero
     const projectToUpdate = data.find((project) => project._id === specifyProject._id);
-
+    //Actualizo la data del objeto
     if (projectToUpdate) {
         projectToUpdate.projectName = project.projectName.value;
         projectToUpdate.client = project.client.value;
@@ -54,11 +59,11 @@ function submitForm() {
         alert('No se pudo encontrar el proyecto para actualizar.');
     }
 }
-
+//Añado la funcionalidad de submitForm al botón de guardado
 successButton.addEventListener('click', () => {
     submitForm();
 });
-
+//Actualizo la información en el diseño de la data obtenida mediante el id
 document.addEventListener('DOMContentLoaded', () => {
     if (specifyProject) {
         project.projectName.value = specifyProject.proyectName;
@@ -77,6 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('No se encontró el proyecto en el almacenamiento local.');
     }
 });
+
+
+
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
@@ -123,6 +133,19 @@ li.forEach((_, i) => {
     }
 })
 
+// Cuando CLICK en .Btn-burguer
+    // Btn-nav TOGGLE isActive
+    btn.addEventListener('click' , ()=>{
+        btnNav.classList.toggle('isActive')
+    })
+    
+    
+    // Cuando CLICK en .Btn-chat
+        // Block-chat le TOGGLE 'isActive'
+    btnChat.addEventListener('click' , ()=>{
+        chat.classList.toggle('isActive')
+        console.log(btnChat)
+    })
 
 // Cuando MOUSEOVER home
 // Si NO contains class 'Block-chat'
@@ -144,7 +167,7 @@ if (home != null) {
 
 
 
-// Calendar recurso aportado parte por ChatGpt
+// Calendar recurso aportado parte por ChatGpt 
 
 class Calendar {
     constructor() {

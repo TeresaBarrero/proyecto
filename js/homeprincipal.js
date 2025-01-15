@@ -1,21 +1,31 @@
 
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
+const btn = document.querySelector('.Btn-burguer')
+const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
+const btnChat = document.querySelector('.Btn-chat')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const description = document.getElementById('description')
 const date = document.getElementById('date')
 const successButton = document.querySelector('.Form-button')
 
+//  Si description o date aparece vacío,
+    // Devuelve alert 
+//Me traigo la data del localStorage y le añado que se crea en el 
 function submitForm(){
-    if(!description.value && !date.value){
+    if(!description.value || !date.value){
         return alert("Completa todos los campos")
     }
     const data = JSON.parse(localStorage.getItem('taskJSON'))
+    // Crea un elemento nuevo y le genera un id.
+        // Se asigna el valor de la desc, y asigna false en principio. Se asigna en date el valor de la fecha
     data.push({_id:crypto.randomUUID(),desc:description.value,completed:false,important:false,date:date.value})
+    // Agregar el objeto a data
     localStorage.setItem('taskJSON',JSON.stringify(data))
 }
+// Hago CLICK y se envía la información
 if(successButton){
     successButton.addEventListener('click' ,()=>{
         submitForm()
@@ -67,6 +77,21 @@ li.forEach( ( _, i )=>{
             
         })  
     }
+})
+
+
+// Cuando CLICK en .Btn-burguer
+    // Btn-nav TOGGLE isActive
+btn.addEventListener('click' , ()=>{
+    btnNav.classList.toggle('isActive')
+})
+
+
+// Cuando CLICK en .Btn-chat
+    // Block-chat le TOGGLE 'isActive'
+btnChat.addEventListener('click' , ()=>{
+    chat.classList.toggle('isActive')
+    console.log(btnChat)
 })
 
 

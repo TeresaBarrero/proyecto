@@ -5,7 +5,9 @@ const home = document.querySelector('main');
 const chat = document.querySelector('.Block-chat');
 const liChat = document.querySelector('.Menu-li--chat');
 const successButton = document.querySelector('.Form-button');
+//Obtenemos el id alacenado en el localStorage para obtener la data de este
 const specifyContact = getContact(localStorage.getItem('idContact'));
+//Objeto de contact
 const contact = {
     givenName: document.getElementById('fullName'),
     company: document.getElementById('company'),
@@ -19,19 +21,22 @@ const contact = {
     clientType: document.getElementById('clientType'),
     clientStatus: document.getElementById('clientStatus'),
 };
-
+//Paso el id como parametro y con un .find traigo el objeto cuyo id pasado por parametro sea igual y devuelvo el objeto
 function getContact(id) {
     const data = JSON.parse(localStorage.getItem('contactJSON'));
     return data.find((contact) => contact._id === id);
 }
 
+//Una vez clicado el botón guardar, valido que ninguno de los campos obligatorios esté vacío
 function submitForm() {
     if (!contact.givenName.value || !contact.company.value || !contact.dni.value || !contact.address.value || !contact.email.value || !contact.phone.value || !contact.fax.value || !contact.label.value || !contact.clientType.value || !contact.clientStatus.value) {
         return alert("Completa todos los campos");
     }
-
+//Obtengo el array de objetos completo
     const data = JSON.parse(localStorage.getItem('contactJSON'));
+        //Encuentro mediante id el objeto que quiero
     const contactToUpdate = data.find((contact) => contact._id === specifyContact._id);
+        //Actualizo la data del objeto
 
     if (contactToUpdate) {
         contactToUpdate.givenName = contact.givenName.value;
@@ -52,11 +57,12 @@ function submitForm() {
         alert('No se pudo encontrar el contacto para actualizar.');
     }
 }
-
+//Añado la funcionalidad de submitForm al botón de guardado
 successButton.addEventListener('click', () => {
     submitForm();
 });
 
+//Actualizo la información en el diseño de la data obtenida mediante el id
 document.addEventListener('DOMContentLoaded', () => {
     if (specifyContact) {
         contact.givenName.value = specifyContact.givenName;

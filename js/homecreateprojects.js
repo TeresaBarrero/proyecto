@@ -5,6 +5,7 @@ const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const successButton = document.querySelector('.Form-button')
+//Objeto de project
 const project = {
     projectName: document.getElementById('project-name'),
     client: document.getElementById('client'),
@@ -19,10 +20,12 @@ const project = {
     information: document.getElementById('information'),
     labelProject: document.getElementById('label-project')
 }
+ // Creo el objeto con los datos del formulario
 function submitForm() {
     if (!project.projectName.value && !project.client.value && !project.startDate.value && !project.endDate.value && !project.description.value && !project.statusProjects.value && !project.priority.value && !project.budget.value && !project.resources.value && !project.expenses.value && !project.information.value && !project.labelProject.value) {
         return alert("Completa todos los campos")
     }
+    //Me traigo la data del localStorage y le añado el objeto que se crea en el
     const data = JSON.parse(localStorage.getItem('projectJSON'))
     data.push({
         _id: crypto.randomUUID(),
@@ -39,6 +42,7 @@ function submitForm() {
         information: project.information.value,
         labelProject: project.labelProject.value
     })
+    //Guardo la información completa con el nuevo objeto en el localStorage
     localStorage.setItem('projectJSON', JSON.stringify(data))
     window.location.href= '../projects-html'
 }

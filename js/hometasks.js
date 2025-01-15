@@ -12,12 +12,17 @@ const arrow = document.querySelector('.Clients-arrow')
 const clients = document.querySelector('.Clients')
 const management = document.querySelector('.Management-link')
 const homeManagement = document.querySelector('.Home-management--projects')
+let tasksDaily = document.querySelector('.Tasks-dl-daily')
+let tasksMonthPending = document.querySelector('.Tasks-dl-pending')
+let taskCompleted = document.querySelector('.Tasks-dl--ok')
 let moment = new Date()
 let tasks = getTask()
+//De las tasks, filtro por aquellas que coincidan con el día actual y que no estén completas
 const dailyTasks = tasks.filter((task) => {
     return task.date === `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-${String(moment.getDate()).padStart(2, '0')}`
         && task.completed === false && task.important === false
 })
+//De las tasks, filtro por aquellas que coincidan con el mes actual pero que no coincida con el día actual y que no estén completas
 const MonthTasks = tasks.filter((task) => {
     return task.date >= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-01` &&
         task.date <= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()}` &&
@@ -25,25 +30,18 @@ const MonthTasks = tasks.filter((task) => {
         && task.completed === false
         && task.important === false;
 });
+//De las tasks, filtro por aquellos que tengan la propiedad completed como true
 const completeTasks = tasks.filter((task) => { return task.completed === true });
+//De las tasks, filtro por aquellas que tengan la propiedad important como true pero que no estén completas
 const importantTasks = tasks.filter((task) => { return task.important === true && task.completed === false });
-let tasksDaily = document.querySelector('.Tasks-dl-daily')
-let tasksMonthPending = document.querySelector('.Tasks-dl-pending')
-let taskCompleted = document.querySelector('.Tasks-dl--ok')
-
-/*if(!localStorage.getItem('taskJSON')){
-    localStorage.setItem('taskJSON','[]')
-}
-const data = JSON.parse(localStorage.getItem('taskJSON'))
-localStorage.setItem('taskJSON',JSON.stringify(data))*/
 let statusArrow = 0
-
+//Obtengo las tareas almacenadas en el localStorage
 function getTask() {
     if (!localStorage.getItem('taskJSON')) {
         localStorage.setItem('taskJSON', '[]')
     }
     return JSON.parse(localStorage.getItem('taskJSON'))
-}
+}//Renderizamos en un bucle las tareas que correspondan en el día de hoy
 function getDailyTask() {
     const dailycompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="daily-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -90,6 +88,7 @@ function getDailyTask() {
         });
     }))
 }
+//Renderizamos las tareas que correspondan con el mes actual pero no con el día de hoy
 function getMonthTask() {
     const monthcompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="month-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -136,6 +135,7 @@ function getMonthTask() {
         });
     }))
 }
+//Renderizamos las tareas completas de la lista
 function getCompleteTask() {
     completeTasks.forEach((task => {
         const listTask = document.createElement('dd')
@@ -145,6 +145,7 @@ function getCompleteTask() {
         taskCompleted.appendChild(listTask)
     }))
 }
+//Renderizamos las tareas importantes de la lista
 function getImportantTask() {
     const importantcompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="important-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -186,18 +187,21 @@ function getImportantTask() {
         });
     }))
 }
+//Le paso el id de la task para encontrarla en el array de objetos task y le cambio la propiedad a completed true
 function completeTask(id) {
     let result = tasks.find((task) => task._id === id)
     result.completed = true;
     localStorage.setItem('taskJSON',JSON.stringify(tasks))
     window.location.reload();
 }
+//Le paso el id de la task para encontrarla en el array de objetos task y eliminarla
 function deleteTask(id){
     let result = tasks.findIndex((task) => task._id === id)
     tasks.splice(result,1)
     localStorage.setItem('taskJSON',JSON.stringify(tasks))
     window.location.reload();
 }
+//Le paso el id de la task para encontrarla en el array de objetos task y le cambio la propiedad a important true
 function importantTask(id) {
     let result = tasks.find((task) => task._id === id)
     result.important = true;
