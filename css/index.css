@@ -1587,7 +1587,7 @@ input[type="submit"] {
     }
     .Form-back--projects{
         position: absolute;
-        top: 97%;
+        top: 80%;
     }
     .Reports-p{
         position: absolute;
@@ -1606,7 +1606,14 @@ input[type="submit"] {
     .Home-management{
         width: 50%;
         position: absolute;
-        top: 60%;
+        top: 47%;
+    }
+    .Home-management--reports{
+        position: absolute;
+        top: 55%;
+    }
+    .Home-reports{
+        min-height: 700px;
     }
 }
 

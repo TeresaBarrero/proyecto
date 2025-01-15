@@ -1,6 +1,8 @@
 
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
+const btn = document.querySelector('.Btn-burguer')
+const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
@@ -115,6 +117,20 @@ li.forEach((_, i) => {
     }
 })
 
+/*
+// Cuando CLICK en .Btn-burguer
+    // Btn-nav TOGGLE isActive
+    btn.addEventListener('click' , ()=>{
+        btnNav.classList.toggle('isActive')
+    })
+    
+    
+    // Cuando CLICK en .Btn-chat
+        // Block-chat le TOGGLE 'isActive'
+    btnChat.addEventListener('click' , ()=>{
+        chat.classList.toggle('isActive')
+        console.log(btnChat)
+    })*/
 
 // Cuando MOUSEOVER home
 // Si NO contains class 'Block-chat'
