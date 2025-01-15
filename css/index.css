@@ -57,8 +57,6 @@ svg{
     
     font-family: var(--general-ff);
     color: var(--basic-c);
-
-    animation: slideDown 1s ease both;
 }
 .Header-logo {
     width: 15%;
@@ -154,7 +152,7 @@ svg{
 .Block-contacts {
     width: 60%;
 
-    padding: 20px;
+    padding: 1.25rem;
 
     position: absolute;
     top: 0;
@@ -168,7 +166,7 @@ svg{
 .Block-projects {
     width: 60%;
 
-    padding: 20px;
+    padding: 1.25rem;
 
     position: absolute;
     top: 0;
@@ -182,7 +180,7 @@ svg{
 .Block-reports {
     width: 35%;
 
-    padding: 20px;
+    padding: 1.25rem;
 
     position: absolute;
     top: 0;
@@ -195,11 +193,11 @@ svg{
 }
 .Block-dt {
     color: var(--title-c);
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 .Block-dd {
     color: var(--primary-c);
-    padding: 0 0 5px 20px;
+    padding: 0 0 0.3125rem 1.25rem;
 }
 .Block-chat {
     width: 56%;
@@ -207,8 +205,8 @@ svg{
     max-height: 560px;
 
     position: absolute;
-    top: 19px;
-    right: -208px;
+    top: 1.1875rem;
+    right: -13rem;
 }
 
 
@@ -216,7 +214,7 @@ svg{
 
 .Block-dd--calendar {
     border-radius: 5px;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
 }
 .Header-wrapper {
@@ -236,7 +234,7 @@ svg{
 .Block-profile {
     width: 10%;
     min-height: 150px;
-    padding: 15px;
+    padding: 0.9375rem;
 
     position: absolute;
     top: 10%;
@@ -254,7 +252,7 @@ svg{
 /*.Block-configuration {
     width: 12%;
     min-height: 150px;
-    padding: 15px;
+    padding: 0.9375rem;
 
     position: absolute;
     top: 10%;
@@ -271,8 +269,8 @@ svg{
 
 .Block-li--profile, .Block-li--close{
     background-color: var(--secondForm-c);
-    padding: 5px;
-    margin: 5px;
+    padding: 0.3125rem;
+    margin: 0.3125rem;
 
     border-radius: 5px;
 
@@ -323,8 +321,8 @@ svg{
     width: 50%;
     min-height: 400px;
     background-color: var(--form-c);
-    margin: 40px;
-    padding: 20px;
+    margin: 2.5rem;
+    padding: 1.25rem;
 
     border: 1px solid black;
     border-radius: 10px;
@@ -343,7 +341,7 @@ svg{
     width: 35%;
     min-height: 400px;
 
-    margin: 70px 0;
+    margin: 4.375rem 0;
 
     position: relative;
     left: 60%;
@@ -418,7 +416,7 @@ svg{
 
 .Tasks-dt, .Contacts-dt{
     background-color: var(--title-c);
-    padding: 10px;
+    padding: 0.625rem;
 
     border-radius: 5px;
     color: var(--primary-c);
@@ -426,8 +424,8 @@ svg{
 }
 .Tasks-dd, .Contacts-dd{
     background-color: rgb(232, 231, 231);
-    padding: 5px;
-    margin: 8px;
+    padding: 0.3125rem;
+    margin: 0.5rem;
     border-radius: 5px;
     color: black;
 }
@@ -436,7 +434,7 @@ svg{
     min-height: 100px;
 
     margin: auto;
-    padding: 20px;
+    padding: 1.25rem;
 
     display: flex;
     flex-flow: column nowrap;
@@ -445,7 +443,7 @@ svg{
     gap: 10px;
 
     color: var(--primary-c);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
 
 }
@@ -457,14 +455,14 @@ svg{
     width: 80%;
     min-height: 100px;
     background-color: var(--basic-c);
-    margin: 20px auto;
-    padding: 20px;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
 
     border: 1px solid black;
     border-radius: 10px;
 
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
 
     position: relative;
@@ -496,7 +494,7 @@ svg{
 
 .Tasks-dd--important {
     border: 1px solid var(--AlertImportant-c);
-    margin: 15px auto;
+    margin: 0.9375rem auto;
 }
 
 .Home-button {
@@ -534,8 +532,8 @@ svg{
     width: 10%;
     height: 30px;
     background-color: var(--basic-c);
-    padding: 3px;
-    margin: 20px 40px;
+    padding: 0.1875rem;
+    margin: 1.25rem 2.5rem;
 
     border: 1px solid black;
     border-radius: 8px;
@@ -550,8 +548,8 @@ svg{
     width: 100%;
     min-height: 120px;
     background-color: var(--basic-c);
-    padding: 3px;
-    margin: 20px 40px;
+    padding: 0.1875rem;
+    margin: 1.25rem 2.5rem;
 
     position: absolute;
     top: 40%;
@@ -583,7 +581,7 @@ svg{
 .Clients-a:hover{
     background-color: lightgray;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0.3125rem;
 }*/
 
 .Contacts-create {
@@ -608,8 +606,8 @@ svg{
     right: 5%;
 }
 .Home-h2 , .Create-link ,.Management-link{
-    padding: 20px;
-    margin: 20px 200px 0;
+    padding: 1.25rem;
+    margin: 1.25rem 12.5rem 0;
 
     font-size: 1.2rem;
     font-weight: bold;
@@ -625,8 +623,8 @@ svg{
     min-height: 200px;
     background-color: var(--form-c);
 
-    margin: 5px auto;
-    padding: 20px;
+    margin: 0.3125rem auto;
+    padding: 1.25rem;
 
     border-radius: 8px;
     box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
@@ -634,7 +632,7 @@ svg{
     z-index: 2;
     position: relative;
 
-    font-size: 10px;
+    font-size: 0.625rem;
     
 }
 .Form-create{
@@ -642,8 +640,8 @@ svg{
     min-height: 180px;
     background-color: var(--form-c) ;
 
-    margin: 5px auto;
-    padding: 20px;
+    margin: 0.3125rem auto;
+    padding: 1.25rem;
 
     display: flex;
     flex-flow: row wrap;
@@ -664,33 +662,33 @@ svg{
 }
 .Form-right{
     width: 40%;
-    margin: 0 0 0 40px;
+    margin: 0 0 0 2.5rem;
 }
 /*.Form-left--projects{
     width: 60%;
-    margin: 20px 0 20px 0;
+    margin: 1.25rem 1.25rem;
 }
 .Form-right--projects{
     width: 40%;
-    margin: 40px 0 20px 20px;
+    margin: 2.5rem 1.25rem 1.25rem;
 }
 */
 /*.Form-second , .Form-third{
     width: 90%;
-    margin: 10px 0 10px 0;
+    margin: 0.625rem 0 0.625rem 0;
 
     color: red;
-    font-size: 10px;
+    font-size: 0.625rem;
 
     border-bottom: 1px solid black;
 }*/
 
 input, select, textarea, label {
-    padding: 5px;
+    padding: 0.3125rem;
     border: 1px solid black;
     border-radius: 5px;
 
-    font-size: 10px;
+    font-size: 0.625rem;
 
     display: inline-block;
 }
@@ -698,11 +696,11 @@ input, select, textarea, label {
 input[type="submit"] {
     width: 15%;
 
-    padding: 10px;
-    margin: 5px auto;
+    padding: 0.625rem;
+    margin: 0.3125rem auto;
 
     color: var(--basic-c);
-    font-size: 10px;
+    font-size: 0.625rem;
     border-radius: 8px;
 
     display: block;
@@ -711,8 +709,8 @@ input[type="submit"] {
 .Form-label {
     width: 35%;
     background-color: var(--secondForm-c);
-    margin: 0 0 4px;
-    padding: 5px;
+    margin: 0 0 0.25rem;
+    padding: 0.3125rem;
 
     font-family: var(--general-ff);
     font-size: 1em;
@@ -725,7 +723,7 @@ input[type="submit"] {
 .Form-input {
     width: 60%;
     background-color: var(--secondForm-c);
-    margin: 4px 0 4px 10px;
+    margin: 0.25rem 0 0.25rem 0.625rem;
 
     font-family: var(--form-ff);
     color: black;
@@ -743,29 +741,29 @@ input[type="submit"] {
 .Form-textarea--organizer{
     height: 150px;
     background-color: var(--secondForm-c);
-    margin: 0 0 20px 0;
+    margin: 0 0 1.25rem 0;
     font-size: 1rem;
     font-family: var(--form-ff)
 }
 .Form-select--contact{
     width: 20%;
     background-color: var(--secondForm-c);
-    margin: 0 0 0 10px;
+    margin: 0 0 0 0.625rem;
     text-align: center;
 }
 .Form-option--active{
     background-color: green;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 5px;
 }
 .Form-option--pending{
     background-color: orange;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 5px;
 }
 .Form-option--inactive{
     background-color: red;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 5px;
 }
 
@@ -790,8 +788,8 @@ input[type="submit"] {
     width: 40%;
     min-height: 100px;
     background-color: var(--basic-c);
-    padding: 20px;
-    margin: 20px auto;
+    padding: 1.25rem;
+    margin: 1.25rem auto;
 
     display: flex;
     flex-flow: column nowrap;
@@ -812,7 +810,7 @@ input[type="submit"] {
 .Management-li:hover{
     background-color: var(--home-c);
     border-radius: 10px;
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 
@@ -825,14 +823,14 @@ input[type="submit"] {
     width: 88%;
     min-height: 100px;
     background-color: var(--title-c);
-    margin: 20px 50px;
-    padding: 20px;
+    margin: 1.25rem 3.125rem;
+    padding: 1.25rem;
 
     border: 1px solid black;
     border-radius: 10px;
 
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
 
     position: relative;
@@ -842,7 +840,7 @@ input[type="submit"] {
     min-height: 50px;
     background-color: var(--home-c);
 
-    margin: 20px;
+    margin: 1.25rem;
 
     border-radius: 7px;
 }
@@ -876,10 +874,10 @@ input[type="submit"] {
     display: unset;
 }
 .Management-li{
-    padding: 8px;
+    padding: 0.5rem;
 }
 .Export-svg{
-    margin: 0 0 0 20px;
+    margin: 0 0 0 1.25rem;
 }
 .Export-form{
     display: flex;
@@ -905,11 +903,11 @@ input[type="submit"] {
 .Form-select--status , .Form-select--priority , .Form-input--expenses{
     width: 50%;
     background-color: var(--secondForm-c);
-    margin: 0 0 20px 0;
+    margin: 0 0 1.25rem 0;
 }
 .Form-input-description , .Form-input-comments{
     height: 80px;
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
 }
 
 .Form-back--projects{
@@ -918,8 +916,8 @@ input[type="submit"] {
 }
 .Form-h2 , .Organizer-h2 , .Tasks-h2 {
     width: 100%;
-    padding: 5px;
-    margin: 5px;
+    padding: 0.3125rem;
+    margin: 0.3125rem;
 
     font-size: 1.2rem;
     font-weight: bold;
@@ -928,7 +926,7 @@ input[type="submit"] {
 }
 .Form-send{
     width: 100%;
-    padding: 8px;
+    padding: 0.5rem;
     
     display: flex;
     flex-flow: row nowrap;
@@ -938,17 +936,17 @@ input[type="submit"] {
     width: 10%;
     height: 30px;
     background-color: var(--buttonActive-c);
-    margin: 7px auto;
+    margin: 0.4375rem auto;
 
     border-radius: 8px;
-    font-size: 10px;
+    font-size: 0.625rem;
     color: var(--home-c);
 
     cursor: pointer;
 }
 .Form-low , .Form-medium , .Form-high , .Form-critical{
     background-color: red;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 5px;
     text-align: center;
 }
@@ -964,10 +962,10 @@ input[type="submit"] {
 .Form-planning , .Form-progressing , .Form-complete{
     border: 1.5px solid blue;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 5px;
     text-align: center;
-    margin: 3px;
+    margin: 0.1875rem;
 }
 .Form-progressing{
     border: 1.5px solid yellow;
@@ -988,8 +986,8 @@ input[type="submit"] {
     height: 500px;
     background-color: var(--basic-c);
     
-    margin: 10px 40px;
-    padding: 10px;
+    margin: 0.625rem 2.5rem;
+    padding: 0.625rem;
 
     border-radius: 8px;
     box-shadow: 9px 4px 8px rgba(0, 0, 0.3, 0.5);
@@ -1002,7 +1000,7 @@ input[type="submit"] {
 }
 .Reports-container{
     width: 90%;
-    margin: 30px auto;
+    margin: 1.875rem auto;
 
     display: grid;
     grid-template-columns: repeat( 4 , 1fr);
@@ -1025,15 +1023,18 @@ input[type="submit"] {
     transform: scale(1.0);   
 }
 .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1053,9 +1054,9 @@ input[type="submit"] {
 
 .Overlay .Overlay-close {
     position: absolute;
-    top: 20px;
+    top: 1.25rem;
     right: 20px;
-    font-size: 24px;
+    font-size: 1.25rem;
     color: var(--basic-c);
     cursor: pointer;
     border: none;
@@ -1070,7 +1071,7 @@ input[type="submit"] {
     right: 10%;
 }
 .Reports-p{
-    padding: 20px;
+    padding: 1.25rem;
   
     font-size: 1.2rem;
     font-weight: bold;
@@ -1106,7 +1107,7 @@ input[type="submit"] {
     width: 70%;
     min-height: 450px;
     background-color: var(--secondForm-c);
-    padding: 20px;
+    padding: 1.25rem;
 
     display: flex;
     flex-flow: column nowrap;
@@ -1144,7 +1145,7 @@ input[type="submit"] {
 .Profile-li{
     width: 90%;
     background-color: var(--buttonActive-c);
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 8px;
     text-align: center;
     color: var(--basic-c);
@@ -1152,7 +1153,7 @@ input[type="submit"] {
 .Profile-li--close{
     width: 60%;
     background-color: var(--title-c);
-    margin: 10px 0;
+    margin: 0.625rem 0;
     cursor: pointer;
 }
 .Wrapper-profile , .Wrapper-configuration , .Wrapper-search{
@@ -1167,13 +1168,13 @@ input[type="submit"] {
     min-height: 500px;
     font-family: var(--general-ff);
     max-width: 800px;
-    padding: 40px;
-    margin: 40px auto;
+    padding: 2.5rem;
+    margin: 2.5rem auto;
     background-color: var(--secondForm-c);
     border-radius: 10px;
 }
 .Schedule-header {
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
 
     display: flex;
     justify-content: space-between;
@@ -1189,7 +1190,7 @@ input[type="submit"] {
     gap: 5px;
 }
 .calendar-day {
-    padding: 10px;
+    padding: 0.625rem;
 
     display: flex;
     flex-direction: column;
@@ -1207,8 +1208,8 @@ input[type="submit"] {
 }
 .add-event {
     background-color: var(--buttonActive-c);
-    padding: 5px;
-    margin: 5px 0 0 0;
+    padding: 0.3125rem;
+    margin: 0.3125rem 0 0 0;
 
     border-radius: 3px;
 
@@ -1223,7 +1224,7 @@ input[type="submit"] {
     background-color: var(--form-c);
 }
 .event-form {
-    padding: 10px;
+    padding: 0.625rem;
     background: lightgray;
 
     display: flex;
@@ -1243,13 +1244,13 @@ input[type="submit"] {
 
 }
 .event-form input {
-    padding: 5px;
+    padding: 0.3125rem;
     font-size: 0.9rem;
     font-family: var(--general-ff);
 
 }
 .event-form button {
-    padding: 5px;
+    padding: 0.3125rem;
     font-size: 0.9rem;
     font-family: var(--general-ff);
     cursor: pointer;
@@ -1257,7 +1258,7 @@ input[type="submit"] {
 .calendar-event {
     background-color: var(--title-c);
 
-    margin: 0 0 4px 0;
+    margin: 0 0 0.25rem 0;
 
     border: 1px solid #000;
 
@@ -1267,12 +1268,12 @@ input[type="submit"] {
 }
 .Schedule-prev , .Schedule-next{
     background-color: #7E675E;
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     border-radius: 30%;
 }
 .Schedule-month{
     background-color: #7E675E;
-    padding: 10px 30px;
+    padding: 0.625rem 1.875rem;
     border-radius: 30%;
 
     /*font-family*/
@@ -1283,7 +1284,7 @@ input[type="submit"] {
     width: 90%;
     min-height: 200px;
     margin: auto;
-    padding: 0 0 10px 0;
+    padding: 0 0 0.625rem 0;
     background-color: var(--secondForm-c);
     border-radius: 10px;
 
@@ -1301,7 +1302,7 @@ input[type="submit"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     font-size: 1.2rem;
 }
 .CalendarView-grid{
@@ -1318,19 +1319,19 @@ input[type="submit"] {
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 5px;
     position: relative;
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 .CalendarView-prev , .CalendarView-next{
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
     border-radius: 30%;
 }
 .CalendarView-month{
-    padding: 10px 30px;
+    padding: 0.625rem 1.875rem;
     border-radius: 30%;
-    font-size: 10px;
+    font-size: 0.625rem;
     
 }
 
@@ -1340,7 +1341,7 @@ input[type="submit"] {
     width: 4%;
     height: 50px;
     background-color: var(--title-c);
-    margin: 20px 40px 0 0;
+    margin: 1.25rem 2.5rem 0 0;
     
     display: flex;
     flex-flow: row nowrap;
@@ -1364,7 +1365,7 @@ input[type="submit"] {
 
 
 .Chat-container {
-    width: 400px;
+    width: 100%;
     min-height: 400px;
     background-color: var(--secondForm-c);
     
@@ -1379,10 +1380,10 @@ input[type="submit"] {
 
   .Chat-header {
     background-color: var(--secondForm-c);
-    padding: 15px;
+    padding: 0.9375rem;
 
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--basic-c);
     font-weight: bold;
     color: black;
@@ -1391,7 +1392,7 @@ input[type="submit"] {
 
 .Chat-messages {
     background-color: var(--home-c);
-    padding: 10px;
+    padding: 0.625rem;
     
     display: flex;
     flex-flow: column nowrap;
@@ -1403,11 +1404,11 @@ input[type="submit"] {
 
 .message {
     max-width: 70%;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
 
     border-radius: 20px;
 
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.4;
 
     word-wrap: break-word;
@@ -1427,31 +1428,31 @@ input[type="submit"] {
     color: #333;
 }
 .Chat-input {
-    padding: 10px;
+    padding: 0.625rem;
 
     display: flex;
     border-top: 1px solid #ddd;
 }
 .Chat-input input {
     flex: 1;
-    padding: 10px;
+    padding: 0.625rem;
     
     border: 1px solid #ddd;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     outline: none;
 }
 .Chat-input button {
     background-color: #587065;
 
-    margin-left: 10px;
-    padding: 10px 20px;
+    margin-left: 0.625rem;
+    padding: 0.625rem 1.25rem;
     border: none;
     
     color: var(--basic-c);
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     cursor: pointer;
 }
@@ -1459,16 +1460,7 @@ input[type="submit"] {
     background-color: var(--buttonActive-c);
 }
 
-/*@keyframes slideDown{
-    from{
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}*/
+
 @keyframes slideRight{
     from{
         opacity: 0;
@@ -1479,3 +1471,6 @@ input[type="submit"] {
         transform: translateX(0%);
     }
 }
+
+
+
