@@ -621,14 +621,24 @@ svg{
     cursor: pointer;
 
 }
-.Home-head--reports{
-    width: 10%;
+.Management-link{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-c);
+    cursor: pointer;
+}
+.Home-head{
+    width: 25%;
+    padding: 10px 0;
+
+    position: absolute;
+    left: 58%;
 
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-c);
 
-    cursor: pointer;
+    
 }
 
 /*Form Create-contacts + Form Create-projects*/
@@ -871,7 +881,7 @@ input[type="submit"] {
 }
 .Home-management--projects{
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 3%;
 
     display: none;
