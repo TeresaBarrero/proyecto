@@ -5,7 +5,21 @@ const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const successButton = document.querySelector('.Form-button')
-//Objeto de project
+
+
+            // Función realizada con ayuda de documentación oficial (MDN y W3S) y ChatGpt
+
+
+// Defino objeto 'contact' 
+    // le ADD los datos de FORM
+
+// Creo una función para enviar DATA obtenida del FORM
+    // Me traigo la data del localStorage 
+    //  ADD el objeto que se crea
+
+// GUARDAR info con el nuevo objeto en el localStorage
+
+// CLICK en successButton y se envía la info
 const project = {
     projectName: document.getElementById('project-name'),
     client: document.getElementById('client'),
@@ -20,12 +34,10 @@ const project = {
     information: document.getElementById('information'),
     labelProject: document.getElementById('label-project')
 }
- // Creo el objeto con los datos del formulario
 function submitForm() {
     if (!project.projectName.value && !project.client.value && !project.startDate.value && !project.endDate.value && !project.description.value && !project.statusProjects.value && !project.priority.value && !project.budget.value && !project.resources.value && !project.expenses.value && !project.information.value && !project.labelProject.value) {
         return alert("Completa todos los campos")
     }
-    //Me traigo la data del localStorage y le añado el objeto que se crea en el
     const data = JSON.parse(localStorage.getItem('projectJSON'))
     data.push({
         _id: crypto.randomUUID(),
@@ -42,13 +54,14 @@ function submitForm() {
         information: project.information.value,
         labelProject: project.labelProject.value
     })
-    //Guardo la información completa con el nuevo objeto en el localStorage
     localStorage.setItem('projectJSON', JSON.stringify(data))
     window.location.href= '../projects-html'
 }
 successButton.addEventListener('click' ,()=>{
     submitForm()
 } )
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
@@ -178,43 +191,61 @@ class Calendar {
 new Calendar();
 
 
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
 
-sendButton.addEventListener('click', sendMessage);
 
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
 
-function sendMessage() {
-  const message = messageInput.value.trim();
 
-  if (message !== '') {
-    addMessage(message, 'user');
+                      // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
-    messageInput.value = '';
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
      }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
- 
-
-
-
-
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    

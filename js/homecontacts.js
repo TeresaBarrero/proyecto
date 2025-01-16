@@ -10,8 +10,10 @@ const contactList = document.querySelector('.Contacts-dl')
 const contacts = getContacts()
 
 
-// Principal función es que me devuelva contactJSON,
-    // si no existe, me lo crea antes 
+                    // Función realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
+
+// Function = devuelveme contactJSON,
+    // Si no existe,  CREATE IT
 function getContacts() {
     if (!localStorage.getItem('contactJSON')) {
         localStorage.setItem('contactJSON', '[]')
@@ -28,40 +30,45 @@ function listContacts() {
     const deleteSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
   <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
 </svg>`
-//Utilizamos DOMParser para parsear el string como si de un elemento html se tratara el svg
+
+//Utilizamos DOMParser para parsear (toma los datos y los descompone) el string como si de un elemento html se tratara el svg
+        //Por cada elemento de contactos = CREATE etiqueta 'dd'
+        // A 'dd' le ADD class
+        // AÑADO este listContact como hijo de contactList
+        // Clono los svg anteriores para utilizarlos en varias partes 
+        // ADJUNTO id de contacts para traer DATA a otra pantalla 
+
+// Cuando CLICK en editSvgClone
+    // Guardo ID en el localStorage para luego representarlo en la pantalla donde me traigo la data
+    // LINK to 'update_contacts?
+
+// Cuando CLICK en deleteSvgClone
+    // FINDINDEX del objeto 'contacto' a eliminar mediante el i que obtengo comparando ID
+    // DELETE objeto 
+    // GUARDAR objetos excepto el eliminado
+    // RECHARGE pág para actualizar data
+
     const editSvgElement = new DOMParser().parseFromString(editSvgCode, 'image/svg+xml').documentElement
     const deleteSvgElement = new DOMParser().parseFromString(deleteSvgCode, 'image/svg+xml').documentElement
-    //Por cada elemento de contactos
     contacts.forEach((contact) => {
-        //Creo una etiqueta dd
         const listContact = document.createElement('dd')
         listContact.textContent = contact.givenName
-        //Le añado su clase
         listContact.classList.add('Contacts-dd')
-        //La adhiero como hijo al elemento padre
         contactList.appendChild(listContact)
-        //Clono los svg para poder utilizarlos en varias partes del diseño
         const editSvgClone = editSvgElement.cloneNode(true)
         const deleteSvgClone = deleteSvgElement.cloneNode(true)
-        //Le adjunto el id del elemento de contacts para luego poder hacer la navegación y traerme su data a la otra pantalla
         editSvgClone.setAttribute('data-id', contact._id)
         deleteSvgClone.setAttribute('data-id', contact._id)
         listContact.appendChild(editSvgClone)
         listContact.appendChild(deleteSvgClone)
         editSvgClone.addEventListener('click', () => {
-            //Guardo en el localStorage el id para luego recuperarlo en la pantalla donde me traigo la data
             localStorage.setItem('idContact', contact._id)
-            //Navegamos a la pantalla deseada
             window.location.href = '../src/update_contacts.html'
         })
         deleteSvgClone.addEventListener('click', () => {
-            //Busco la posición del objeto a eliminar mediante el index que traigo comparando el id
             let result = contacts.findIndex((contacto) => contacto._id === contact._id)
-            //Elimino el objeto del array
             contacts.splice(result, 1)
-            //Guardo el array de objetos sin el objeto previamente eliminado
             localStorage.setItem('contactJSON', JSON.stringify(contacts))
-            //Recargo la página para que los datos sean visualizados de forma actualizada
             window.location.reload();
         })
     })
@@ -265,39 +272,59 @@ window.addEventListener(`scroll`, () => {
 
 
 
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
 
-sendButton.addEventListener('click', sendMessage);
+                        // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
-function sendMessage() {
-  const message = messageInput.value.trim();
 
-  if (message !== '') {
-    addMessage(message, 'user');
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
 
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
-
-    messageInput.value = '';
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
      }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    
  

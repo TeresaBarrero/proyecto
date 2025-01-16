@@ -216,39 +216,58 @@ overlay.addEventListener('click', (e) => {
 
 
 
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
 
-sendButton.addEventListener('click', sendMessage);
+                        // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
-function sendMessage() {
-  const message = messageInput.value.trim();
 
-  if (message !== '') {
-    addMessage(message, 'user');
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
 
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
-
-    messageInput.value = '';
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
      }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
- 
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    

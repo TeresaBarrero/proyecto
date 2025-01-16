@@ -50,7 +50,6 @@ svg{
 /* Header */
 .Header {
     width: 100%;
-    height: 100px;
     background-color: var(--primary-c);
 
     display: flex;
@@ -63,7 +62,7 @@ svg{
 }
 .Header-picture {
     width: 100%;
-    height: 100px;
+    margin: 0.625rem 0 0;
 
     display: flex;
     flex-flow: row nowrap;
@@ -98,8 +97,6 @@ svg{
     margin: 0 1em 0 0;
 
     transition: all .5s ease;
-    cursor: pointer;
-
 }
 .Menu-li.isActive {
     background-color: var(--buttonActive-c);
@@ -198,7 +195,7 @@ svg{
 }
 .Block-dt {
     color: var(--title-c);
-    padding-bottom: 1.25rem;
+    padding: 0 0 0.375rem 0;
 }
 .Block-dd {
     color: var(--primary-c);
@@ -618,7 +615,6 @@ svg{
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-c);
-    cursor: pointer;
 
 }
 .Management-link{
@@ -735,28 +731,31 @@ input[type="submit"] {
     width: 35%;
     background-color: var(--secondForm-c);
     margin: 0 0 0.25rem;
-    padding: 0.3125rem;
+    padding: .4063rem;
 
-    font-family: var(--general-ff);
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     color: black;
-    font-family: 'Tinos';
+    font-family: var(--form-ff);
     text-align: center;
     border: 1.2px solid black;
 }
 .Form-input {
     width: 60%;
-    background-color: var(--secondForm-c);
+    background-color: var(--home-c);
     margin: 0.25rem 0 0.25rem 0.625rem;
 
     font-family: var(--form-ff);
+    font-size: 1rem;
     color: black;
+}
+.Form-label--organizer{
+    font-size: 1.2rem;
 }
 .Form-textarea{
     width: 100%;
     min-height: 90px;
-    background-color: var(--secondForm-c);
+    background-color: var(--home-c);
 
     font-family: var(--form-ff);
 
@@ -765,14 +764,14 @@ input[type="submit"] {
 }
 .Form-textarea--organizer{
     height: 150px;
-    background-color: var(--secondForm-c);
+    background-color: var(--home-c);
     margin: 0 0 1.25rem 0;
     font-size: 1rem;
     font-family: var(--form-ff)
 }
 .Form-select--contact{
     width: 20%;
-    background-color: var(--secondForm-c);
+    background-color: var(--basic-c);
     margin: 0 0 0 0.625rem;
     text-align: center;
 }
@@ -925,14 +924,23 @@ input[type="submit"] {
 
 
 
-.Form-select--status , .Form-select--priority , .Form-input--expenses{
+.Form-select--status , .Form-select--priority{
     width: 50%;
-    background-color: var(--secondForm-c);
+    background-color: var(--home-c);
     margin: 0 0 1.25rem 0;
+    font-family: var(--form-ff);
 }
-.Form-input-description , .Form-input-comments{
+.Form-input--expenses{
+    width: 60%;
+    background-color: var(--home-c);
+}
+.Form-input-comments{
     height: 80px;
     margin: 0 0 0.625rem 0;
+}
+.Form-input-description{
+    height: 80px;
+
 }
 
 .Form-back--projects{
@@ -941,12 +949,13 @@ input[type="submit"] {
 }
 .Form-h2 , .Organizer-h2 , .Tasks-h2 {
     width: 100%;
-    padding: 0.3125rem;
-    margin: 0.3125rem;
+    padding: 1.25rem;
+    margin: 0.625rem 0;
 
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-c);
+    text-align: center;
     text-decoration-line: underline;
 }
 .Form-send{
@@ -958,22 +967,26 @@ input[type="submit"] {
     justify-content: center;
 }
 .Form-button{
-    width: 10%;
+    width: 13%;
     height: 30px;
     background-color: var(--buttonActive-c);
     margin: 0.4375rem auto;
+    padding: 0.4375rem;
 
     border-radius: 8px;
-    font-size: 0.625rem;
+    font-size: 1rem;
+    font-family: var(--form-ff);
     color: var(--home-c);
 
     cursor: pointer;
 }
 .Form-low , .Form-medium , .Form-high , .Form-critical{
     background-color: red;
-    padding: 0.3125rem;
+    padding: 0.1875rem;
+    margin: 0.125rem;
     border-radius: 5px;
     text-align: center;
+    font-size: 1rem;
 }
 .Form-medium{
     background-color: orange;
@@ -989,7 +1002,9 @@ input[type="submit"] {
     border-radius: 5px;
     padding: 0.3125rem;
     border-radius: 5px;
+    font-family: var(--form-ff);
     text-align: center;
+    font-size: 1rem;
     margin: 0.1875rem;
 }
 .Form-progressing{

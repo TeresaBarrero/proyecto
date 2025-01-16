@@ -63,6 +63,7 @@ li.forEach( ( _, i )=>{
     }
 })
 
+
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
 /*if(home != null){
@@ -80,6 +81,9 @@ if(home != null){
         console.log(btnChat)
     })
 }    */
+
+
+
 
 // Cuando MOUSEOVER home
     // Si NO contains class 'Block-chat'
@@ -109,6 +113,7 @@ if(alertButton != null){
         console.log(alertButton)
     })
 }
+
 
 // Cuando CLICK en .Home-client
     // listClients TOBBLE isActive

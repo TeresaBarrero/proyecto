@@ -11,26 +11,39 @@ const description = document.getElementById('description')
 const date = document.getElementById('date')
 const successButton = document.querySelector('.Form-button')
 
-//  Si description o date aparece vacío,
+
+                    // Funcionalidad realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
+
+
+//  Creo FUNCTION
+    // Si desc o date VACÍO,
     // Devuelve alert 
-//Me traigo la data del localStorage y le añado que se crea en el 
+
+    // SI OK 
+        // Traigo data del localStorage y ADD que se crea en el 
+            // Crea un element nuevo y genera ID
+                // ASIGNA valor de desc + FALSE
+                // DATE = valor fecha
+
+            // Agrega OBJETO a DATA
+
+// CLICK en successButton 
+    // Envia data de FUNCTION
+
 function submitForm(){
     if(!description.value || !date.value){
         return alert("Completa todos los campos")
     }
     const data = JSON.parse(localStorage.getItem('taskJSON'))
-    // Crea un elemento nuevo y le genera un id.
-        // Se asigna el valor de la desc, y asigna false en principio. Se asigna en date el valor de la fecha
     data.push({_id:crypto.randomUUID(),desc:description.value,completed:false,important:false,date:date.value})
-    // Agregar el objeto a data
     localStorage.setItem('taskJSON',JSON.stringify(data))
 }
-// Hago CLICK y se envía la información
 if(successButton){
     successButton.addEventListener('click' ,()=>{
         submitForm()
     } )
 }
+
 
 
 // Recorre TODOS elementos li
@@ -229,42 +242,59 @@ window.addEventListener(`scroll` , ()=>{
     }
 })
     
-   
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
-
-sendButton.addEventListener('click', sendMessage);
-
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
-
-function sendMessage() {
-  const message = messageInput.value.trim();
-
-  if (message !== '') {
-    addMessage(message, 'user');
-
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
-
-    messageInput.value = '';
-     }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
  
 
+                        // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
+
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
+     }
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    

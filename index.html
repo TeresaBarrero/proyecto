@@ -115,7 +115,7 @@
                                 CONTACTOS
                             </a>
                         </dt>
-                        <dd class="Block-dd">CONTACTOS</dd>
+                        <dd class="Block-dd"></dd>
                     </dl>
                     <dl class="Block-dl Block-dl--contacts">
                         <dt class="Block-dt">
@@ -143,7 +143,7 @@
                                 PROYECTOS
                             </a>
                         </dt>
-                        <dd class="Block-dd">PROYECTOS</dd>
+                        <dd class="Block-dd"></dd>
                     </dl>
                     <dl class="Block-dl Block-dl--projects">
                         <dt class="Block-dt">
@@ -172,15 +172,7 @@
                             </a>
 
                         </dt>
-                        <dd class="Block-dd">INFORMES
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-file-text" viewBox="0 0 16 16">
-                                <path
-                                    d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z" />
-                                <path
-                                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1" />
-                            </svg>
-                        </dd>
+                        <dd class="Block-dd"></dd>
                         <dd class="Block-dd">FILTRO:</dd>
                     </dl>
                     <div class="Block-dd Block-dd--calendar">
@@ -287,13 +279,13 @@
 
         <div class="Header-responsive Btn">
             <div class="Btn-menu">
-                <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill= #DDA288 
+                <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
                 <div class="Btn-chat Chat">
-                    <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill= #DDA288 
+                    <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                         viewBox="0 0 16 16">
                         <path
                             d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894m-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105" />
@@ -305,11 +297,11 @@
         </div>
         <div class="Btn-nav">
             <div class="Btn-seccion">
-                    <a href="src/tasks.html">TAREAS</a>
-                    <a href="src/calendar.html">CALENDARIO</a>
-                    <a href="src/contacts.html">CONTACTOS</a>
-                    <a href="src/projects.html">PROYECTOS</a>
-                    <a href="src/reports.html">INFORMES GENERALES</a>
+                <a href="src/tasks.html">TAREAS</a>
+                <a href="src/calendar.html">CALENDARIO</a>
+                <a href="src/contacts.html">CONTACTOS</a>
+                <a href="src/projects.html">PROYECTOS</a>
+                <a href="src/reports.html">INFORMES GENERALES</a>
             </div>
         </div>
 
@@ -324,7 +316,7 @@
         <div class="Home-organizer Organizer">
             <h2 class="Organizer-h2">ORGANIZA TU DÍA</h2>
             <form class="Organizer-form"> <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
-                <label class="Form-label" for="description">Descripción de tarea</label>
+                <label class="Form-label Form-label--organizer" for="description">Descripción de tarea</label>
                 <textarea class="Form-textarea Form-textarea--organizer" name="description" id="description"
                     required></textarea>
 
@@ -348,41 +340,41 @@
                 </a>
             </div>
             <div class="Animation-calendar">
-            <a class="Animation-a" href="src/calendar.html">
+                <a class="Animation-a" href="src/calendar.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#304040"
                         class="bi bi-calendar2-check-fill" viewBox="0 0 16 16">
                         <path
                             d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5m-2.6 5.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
                     </svg>
-                </div>
-            </a>
+                </a>
+            </div>
             <div class="Animation-people">
-            <a class="Animation-a" href="src/contacts.html">
+                <a class="Animation-a" href="src/contacts.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#304040" class="bi bi-people"
                         viewBox="0 0 16 16">
                         <path
                             d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
                     </svg>
-                </div>
-            </a>
+                </a>
+            </div>
             <div class="Animation-folder">
-            <a class="Animation-a" href="src/projects.html">
+                <a class="Animation-a" href="src/projects.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#304040" class="bi bi-folder"
                         viewBox="0 0 16 16">
                         <path
                             d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139q.323-.119.684-.12h5.396z" />
                     </svg>
-                </div>
-            </a>
+                </a>
+            </div>
             <div class="Animation-graph">
-            <a class="Animation-a" href="src/reports.html">
+                <a class="Animation-a" href="src/reports.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#304040"
                         class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
                     </svg>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
 
 

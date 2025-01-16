@@ -191,6 +191,28 @@ class Calendar {
   new Calendar();
 
 
+
+
+                        // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
+
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
+
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
   const chatMessages = document.getElementById('Chat-messages');
   const messageInput = document.getElementById('message-input');
   const sendButton = document.getElementById('send-button');
@@ -202,21 +224,18 @@ class Calendar {
       sendMessage();
     }
   });
-  //Al enviar un mensaje, si es distinto que "", entonces lo paso por otra función
   function sendMessage() {
     const message = messageInput.value.trim();
   
     if (message !== '') {
       addMessage(message, 'user');
-      //Si en un segundo, no recibo respuesta de la función, con un interval establezco por defecto un mensaje para que me devuelva alguna respuesta el chat
       setTimeout(() => {
          addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
        }, 1000);
-       //Limpio la variable esperando el próximo mensaje
       messageInput.value = '';
        }
    }
-  //Coge mi texto y me lo devuelve creando un elemento hijo dentro del mismo padre donse se ha creado el mensaje que yo he enviado
+
   function addMessage(text, sender) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', sender);

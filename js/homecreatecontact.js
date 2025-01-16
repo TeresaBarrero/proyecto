@@ -5,6 +5,20 @@ const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const successButton = document.querySelector('.Form-button')
+
+            // Función realizada con ayuda de documentación oficial (MDN y W3S) y ChatGpt
+
+// Defino objeto 'contact' 
+    // le ADD los datos de FORM
+
+// Creo una función para enviar DATA obtenida del FORM
+    // Me traigo la data del localStorage 
+    //  ADD el objeto que se crea
+
+// GUARDAR info con el nuevo objeto en el localStorage
+
+// CLICK en successButton y se envía la info
+
 const contact = {
     givenName: document.getElementById('fullName'),
     company: document.getElementById('company'),
@@ -43,6 +57,10 @@ function submitForm() {
 successButton.addEventListener('click' ,()=>{
     submitForm()
 } )
+
+
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
@@ -88,6 +106,7 @@ li.forEach((_, i) => {
         })
     }
 })
+
 
 
 // Cuando MOUSEOVER home
@@ -172,41 +191,64 @@ class Calendar {
 new Calendar();
 
 
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
 
-sendButton.addEventListener('click', sendMessage);
 
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
 
-function sendMessage() {
-  const message = messageInput.value.trim();
 
-  if (message !== '') {
-    addMessage(message, 'user');
+                      // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
-    messageInput.value = '';
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
      }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    
  
 
 

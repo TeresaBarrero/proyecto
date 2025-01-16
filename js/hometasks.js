@@ -14,17 +14,50 @@ const arrow = document.querySelector('.Clients-arrow')
 const clients = document.querySelector('.Clients')
 const management = document.querySelector('.Management-link')
 const homeManagement = document.querySelector('.Home-management--projects')
+
+
+            // Funcionalidad realizada con apoyo de Documentación Oficial (MDN y W3S) y ChatGpt
+
+
+// Declaro variables
+
+// En dailyTasks creo FILTER
+    // Pido que me devuelva tasks que cumpla filtro
+    // FILTER = coinciden con DÍA ACTUAL y NO COMPLETE
+
+// En MonthTasks creo FILTER
+    // Pido que me devuelva tasks que cumpla filtros
+    // FILTER = coinciden con mes actual pero NO DÍA ACTUAL y NO COMPLETE
+
+// En completeTasks creo FILTER
+    // Pido que me duevuelva tasks que tengan propiedad COMPLETE = TRUE
+
+// En importantTasks creo FILTER
+    // Pido que me devuelva tasks que tengan propiedad IMPORTANT = TRUE
+        // y COMPLETE == FALSE
+
+// Defino FUNCTION getTasks
+    // Obtengo tasks almacenadas en localStorage
+    //Renderizamos en un bucle las tareas que correspondan en el día de hoy
+
+// Defino FUNCTION getMonthTasks
+    //Renderizamos las tareas que correspondan con el mes actual pero no con el día de hoy
+
+// Defino FUNCTION getCompleteTasks
+    //Renderizamos las tareas completas de la lista
+
+// Defino FUNCTION getImportantTasks
+    //Renderizamos las tareas importantes de la lista
+
 let tasksDaily = document.querySelector('.Tasks-dl-daily')
 let tasksMonthPending = document.querySelector('.Tasks-dl-pending')
 let taskCompleted = document.querySelector('.Tasks-dl--ok')
 let moment = new Date()
 let tasks = getTask()
-//De las tasks, filtro por aquellas que coincidan con el día actual y que no estén completas
 const dailyTasks = tasks.filter((task) => {
     return task.date === `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-${String(moment.getDate()).padStart(2, '0')}`
         && task.completed === false && task.important === false
 })
-//De las tasks, filtro por aquellas que coincidan con el mes actual pero que no coincida con el día actual y que no estén completas
 const MonthTasks = tasks.filter((task) => {
     return task.date >= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-01` &&
         task.date <= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()}` &&
@@ -32,18 +65,15 @@ const MonthTasks = tasks.filter((task) => {
         && task.completed === false
         && task.important === false;
 });
-//De las tasks, filtro por aquellos que tengan la propiedad completed como true
 const completeTasks = tasks.filter((task) => { return task.completed === true });
-//De las tasks, filtro por aquellas que tengan la propiedad important como true pero que no estén completas
 const importantTasks = tasks.filter((task) => { return task.important === true && task.completed === false });
 let statusArrow = 0
-//Obtengo las tareas almacenadas en el localStorage
 function getTask() {
     if (!localStorage.getItem('taskJSON')) {
         localStorage.setItem('taskJSON', '[]')
     }
     return JSON.parse(localStorage.getItem('taskJSON'))
-}//Renderizamos en un bucle las tareas que correspondan en el día de hoy
+}
 function getDailyTask() {
     const dailycompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="daily-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -90,7 +120,6 @@ function getDailyTask() {
         });
     }))
 }
-//Renderizamos las tareas que correspondan con el mes actual pero no con el día de hoy
 function getMonthTask() {
     const monthcompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="month-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -137,7 +166,6 @@ function getMonthTask() {
         });
     }))
 }
-//Renderizamos las tareas completas de la lista
 function getCompleteTask() {
     completeTasks.forEach((task => {
         const listTask = document.createElement('dd')
@@ -147,7 +175,6 @@ function getCompleteTask() {
         taskCompleted.appendChild(listTask)
     }))
 }
-//Renderizamos las tareas importantes de la lista
 function getImportantTask() {
     const importantcompletedSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="important-Tasks-svg-ok"
                         viewBox="0 0 16 16">
@@ -214,6 +241,13 @@ getDailyTask()
 getMonthTask()
 getCompleteTask()
 getImportantTask()
+
+
+
+
+
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
@@ -456,44 +490,61 @@ window.addEventListener(`scroll`, () => {
 })
 
 
-const chatMessages = document.getElementById('Chat-messages');
-const messageInput = document.getElementById('message-input');
-const sendButton = document.getElementById('send-button');
 
-sendButton.addEventListener('click', sendMessage);
 
-messageInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
 
-function sendMessage() {
-  const message = messageInput.value.trim();
 
-  if (message !== '') {
-    addMessage(message, 'user');
+                        // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+                        
 
-    setTimeout(() => {
-       addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-     }, 1000);
+  // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+        // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+        // Si es 'Enter' se envía el mensaje
+    
+    //Al send mensaje
+        // Si es distinto que "", pasa a otra función
+        // Si en setTimeout NO REPLY,  
+            // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
-    messageInput.value = '';
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+        // Añado la clase 'message' y el valor 'sender'
+        // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    
+    sendButton.addEventListener('click', sendMessage);
+    
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+    function sendMessage() {
+      const message = messageInput.value.trim();
+    
+      if (message !== '') {
+        addMessage(message, 'user');
+        setTimeout(() => {
+           addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+         }, 1000);
+        messageInput.value = '';
+         }
      }
- }
-
-function addMessage(text, sender) {
-  const messageElement = document.createElement('div');
-  messageElement.classList.add('message', sender);
-     messageElement.textContent = text;
-
-     chatMessages.appendChild(messageElement);
-
-     chatMessages.scrollTop = chatMessages.scrollHeight;
-}
- 
-
-
-
-
-
+  
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+         messageElement.textContent = text;
+    
+         chatMessages.appendChild(messageElement);
+    
+         chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+     
+    
