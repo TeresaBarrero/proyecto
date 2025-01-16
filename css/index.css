@@ -137,7 +137,7 @@ svg{
 
 .Block-calendar {
     width: 60%;
-    height: 400px;
+    min-height: 300px;
 
     position: absolute;
     top: 0;
@@ -758,6 +758,7 @@ input[type="submit"] {
     background-color: var(--home-c);
 
     font-family: var(--form-ff);
+    font-size: 1rem;
 
     hyphens: auto;
     resize: none;

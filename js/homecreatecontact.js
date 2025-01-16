@@ -34,7 +34,7 @@ const contact = {
 }
 function submitForm() {
     if (!contact.givenName.value && !contact.company.value && !contact.dni.value && !contact.address.value && !contact.email.value && !contact.phone.value && !contact.fax.value && !contact.label.value && !contact.clientType.value && !contact.clientStatus.value) {
-        return alert("Completa todos los campos")
+        return message("Completa todos los campos")
     }
     const data = JSON.parse(localStorage.getItem('contactJSON'))
     data.push({
