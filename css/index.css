@@ -161,7 +161,7 @@ svg{
 
     position: absolute;
     top: 0;
-    left: 23%;
+    left: 30%;
 
     display: flex;
     flex-flow: row wrap;
@@ -175,7 +175,7 @@ svg{
 
     position: absolute;
     top: 0;
-    left: 37%;
+    left: 47%;
 
     display: flex;
     flex-flow: row wrap;
@@ -189,7 +189,7 @@ svg{
 
     position: absolute;
     top: 0;
-    left: 48%;
+    left: 63%;
 
     display: flex;
     flex-flow: row wrap;
@@ -244,7 +244,7 @@ svg{
 
     position: absolute;
     top: 10%;
-    left: 85%;
+    left: 82%;
 
     display: flex;
     flex-flow: column nowrap;
@@ -888,7 +888,7 @@ input[type="submit"] {
 }
 .Home-management--reports{
     position: absolute;
-    top: 80%;
+    top: 70%;
     right: 3%;
     display: none;
 }
@@ -1107,13 +1107,10 @@ input[type="submit"] {
     right: 15%;
 }
 .Home-head--reports{
-    width: 15%;
-    position: absolute;
-}
-.Home-head--reports{
+    width: 25%;
     position: absolute;
     top: 65%;
-    right: 8%;
+    left: 75%;
 }
 
 .Profile{
