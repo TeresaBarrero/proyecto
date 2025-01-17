@@ -342,7 +342,6 @@ svg{
 }
 .Home-animation{
     width: 35%;
-    min-height: 400px;
 
     margin: 4.375rem 0;
 
@@ -1793,4 +1792,58 @@ input[type="submit"] {
         top: 40%;
         right: 12%;
     }
+}
+
+
+.Header-logo{
+    width: 23%;
+}
+.Home-principal{
+    min-height: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+.Home-organizer {
+    width: 85%;
+    margin: 1.25rem auto;
+    animation: none;
+    opacity: 1;
+}
+.Home-animation{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+.Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+    width: 10%;
+    min-height: 60px;
+    animation: none;
+    opacity: 1;
+}
+.Animation-clipboard{
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+.Animation-calendar{
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+.Animation-people{
+    position: absolute;
+    top: 0;
+    left: 60%;
+}
+.Animation-folder{
+    position: absolute;
+    top: 0;
+    left: 80%;
+}
+.Animation-graph{
+    position: absolute;
+    top: 0;
+    left: 100%;
 }

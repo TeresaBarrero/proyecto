@@ -70,7 +70,7 @@ svg{
     align-items: center;
 }
 .Header-img {
-    width: 38%;
+    width: 43%;
     height: 70px;
 }
 
@@ -350,8 +350,8 @@ svg{
     left: 60%;
 }
 .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
-    width: 18%;
-    height: 75px;
+    width: 30%;
+    min-height: 75px;
     background-color: var(--home-c);
 
     display: flex;
@@ -1515,7 +1515,53 @@ input[type="submit"] {
 
 
 
-@media (max-width:1070px){
+@media (max-width: 1900px){
+    .Header-logo{
+        width: 11%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 13%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1600px){
+    .Header-logo{
+        width: 13%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 15%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1070px){
     .Header{
         width: 100%;
         display: flex;
@@ -1524,7 +1570,7 @@ input[type="submit"] {
 
     }
     .Header-logo{
-        width: 18%;
+        width: 17%;
     }
     .Header-nav{
         display: none;
@@ -1588,6 +1634,9 @@ input[type="submit"] {
     .Home{
         min-height: 900px;
     }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 20%;
+    }
     .Home-form{
         width: 90%;
         display: flex;
@@ -1631,7 +1680,7 @@ input[type="submit"] {
     .Home-head{
         position: absolute;
         top: 40%;
-        right: -5%;
+        left: 60%;
     }
     .Form-back--projects{
         position: absolute;
@@ -1656,17 +1705,18 @@ input[type="submit"] {
     .Home-management--projects{
         position: absolute;
         top: 47%;
-        left: 45%;
+        left: 50%;
     }
     .Home-head--reports{
         position: absolute;
         top: 45%;
+        left: 75%;
     }
     .Home-management--reports{
         width: 40%;
         position: absolute;
-        top: 50%;
-        left: 55%;
+        top: 53%;
+        left: 50%;
     }
     .Home-reports{
         min-height: 700px;
@@ -1675,11 +1725,13 @@ input[type="submit"] {
         width: 20%;
     }
     .Back{
+        top: 65%;
+    }
+    .Management-back{
         top: 30%;
     }
 }
-
-@media (max-width:850px){
+@media (max-width: 850px){
     .Header{
         width: 100%;
         display: flex;
@@ -1688,7 +1740,7 @@ input[type="submit"] {
 
     }
     .Header-logo{
-        width: 22%;
+        width: 20%;
     }
     .Header-nav{
         display: none;
@@ -1796,21 +1848,21 @@ input[type="submit"] {
         width: 50%;
     }
     .Home-new{
-        width: 30%;
+        width: 40%;
         position: absolute;
         top: 25%;
         right: 30%;
     }
     .Create-link{
-        width: 50%;
+        width: 100%;
     }
     .Home-head{
         position: absolute;
         top: 40%;
-        right: -18%;
     }
     .Form-back--projects{
         position: absolute;
+        top: 90%;
         right: 0;
     }
     .Reports-container{
@@ -1819,11 +1871,6 @@ input[type="submit"] {
         display: grid;
         grid-template-columns: repeat( 3 , 1fr);
         gap: 20px;
-    }
-    .Home-head{
-        width: 50%;
-        position: absolute;
-        left: 59%;
     }
     .Home-head--reports{
         width: 20%;
@@ -1843,7 +1890,62 @@ input[type="submit"] {
         top: 46%;
     }
 }
+@media (max-width: 780px){
+    .Header-logo{
+        width: 22%;
+    }
+    .Home-principal{
+        width: 100%;
 
-@media (max-width:780px){
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .Home-organizer{
+        width: 85%;
+        margin: 1.25rem auto;
+        position: static;
+        animation: none;
+    }
+    .Home-animation{
+        width: 80%;
+        min-height: 80px; 
+        margin: 0 auto;
+        position: static;
 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 14%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        opacity: 1;
+        animation: none;
+        
+    }
+    .Home-principal--reports{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+    .Home-reports{
+        width: 90%;
+        margin: 1.25rem auto;
+        position: static;
+
+    }
+
+    .Reports-p ,.Reports-date , .Home-head--reports{
+        width: 80%;
+        margin: 0 0 0 1.875rem;
+        padding: 1.25rem;
+        position: static;
+    }
+    .Home
+    
 }
+
