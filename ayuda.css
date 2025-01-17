@@ -1847,3 +1847,1118 @@ input[type="submit"] {
     top: 0;
     left: 100%;
 }
+
+
+
+
+
+
+@media (max-width: 1900px){
+    .Header-logo{
+        width: 11%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 13%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1600px){
+    .Header-logo{
+        width: 13%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 15%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1070px){
+    .Header{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+    .Header-logo{
+        width: 17%;
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Header-responsive{
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+    .Btn-chat{
+        display: block;
+    }
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 13%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+    }
+    .Home{
+        min-height: 900px;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 20%;
+    }
+    .Home-form{
+        width: 90%;
+        display: flex;
+    }
+    .Form-left{
+        width: 50%;
+    }
+    .Form-right{
+        width: 40%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Schedule{
+        min-height: 500px;
+    }
+    .Home-slide{
+        width: 4%;
+        height: 43px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;        
+    }
+    .Home-new{
+        width: 40%;
+        position: absolute;
+        top: 25%;
+        right: 7%;
+    }
+    .Create-link{
+        width: 60%;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+        left: 60%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 80%;
+    }
+    .Reports-p{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+    }
+    .Reports-date{
+        position: absolute;
+        top: 35%;
+        right: 5%;
+    }
+    .Home-management{
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .Home-management--projects{
+        position: absolute;
+        top: 47%;
+        left: 50%;
+    }
+    .Home-head--reports{
+        position: absolute;
+        top: 45%;
+        left: 75%;
+    }
+    .Home-management--reports{
+        width: 40%;
+        position: absolute;
+        top: 53%;
+        left: 50%;
+    }
+    .Home-reports{
+        min-height: 700px;
+    }
+    .Form-button{
+        width: 20%;
+    }
+    .Back{
+        top: 65%;
+    }
+    .Management-back{
+        top: 30%;
+    }
+}
+@media (max-width: 850px){
+    .Header{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+    .Header-logo{
+        width: 20%;
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Header-responsive{
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+    .Btn-chat{
+        display: block;
+    }
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 13%;
+        left: 40%;
+    }
+    .Animation-clipboard , .Animation-calendar , .Animation-people , .Animation-folder , .Animation-graph{
+        width: 25%;
+    }
+    .Form-button{
+        width: 15%;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Schedule{
+        min-height: 400px;
+    }
+    .Home-slide{
+        width: 5%;
+        height: 40px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;   
+    }
+    .Contacts-create{
+        position: absolute;
+        top: 33%;
+        right: 6%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 90%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Back{
+        position: absolute;
+        top: 70%;
+    }
+    .Management-back{
+        position: absolute;
+        top: 30%;
+    }
+    .Form-button{
+        width: 20%;
+    }
+    .Form-label--observations{
+        width: 50%;
+    }
+    .Home-new{
+        width: 40%;
+        position: absolute;
+        top: 25%;
+        right: 30%;
+    }
+    .Create-link{
+        width: 100%;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 90%;
+        right: 0;
+    }
+    .Reports-container{
+        margin: 1.875rem auto;
+
+        display: grid;
+        grid-template-columns: repeat( 3 , 1fr);
+        gap: 20px;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        top: 40%;
+        left: 73%;
+    }
+    .Management-link{
+        width: 80%;
+    }
+    .Home-management--projects{
+        position: absolute;
+        top: 45%;
+    }
+    .Home-management--reports{
+        position: absolute;
+        top: 46%;
+    }
+}
+@media (max-width: 780px){
+    .Header-logo{
+        width: 22%;
+    }
+    .Home-organizer{
+        width: 85%;
+        margin: 1.25rem auto;
+        position: static;
+        animation: none;
+    }
+    .Home-animation{
+        width: 60%;
+        min-height: 200px; 
+        margin: 0 auto;
+        position: static;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 20%;
+        margin: 0.625rem 1.25rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        opacity: 1;
+        animation: none;
+        
+    }
+    .Home-principal--projects{
+        width: 100%;
+    }
+    .Projects{
+        width: 90%;
+        margin: auto;
+
+        position: absolute;
+        top: 18%;
+        border-right: none;
+    }
+    .Home-new{
+        position: absolute;
+        top: -3%;
+        font-size: 0.625rem;
+    }
+    .Home-head{
+        width: 35%;
+        position: absolute;
+        top: 5%;
+        left: 63%;
+        font-size: 0.625rem;
+    }
+    .Home-management--projects{
+        width: 60%;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+    }
+    .Home-h2{
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+    .Home-principal--reports{
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    }
+    .Home-reports{
+        width: 80%;
+        min-height: 300px;
+        margin: 1.25rem auto;
+        position: static;
+
+    }
+
+    .Reports-p ,.Reports-date , .Home-head--reports{
+        width: 80%;
+        margin: 0 0 0 1.875rem;
+        padding: 1.25rem;
+        position: static;
+    }
+    .Home-management--reports{
+        width: 53%;
+        height: 80px;
+        position: absolute;
+        top: 80%;
+        left: -30%;
+    }
+}
+@media (max-width: 640px){
+    .Header-logo{
+        width: 25%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 23%;
+    }
+    .Contacts-email{
+        position: absolute;
+        top: 5%;
+        left: 91%;
+    }
+    .Contacts-tlf{
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+    .Slide{
+        width: 30px;
+        height: 30px;
+    }
+    
+    
+}
+/*
+
+
+
+
+
+@media (max-width: 1900px){
+    .Header-logo{
+        width: 11%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 13%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1600px){
+    .Header-logo{
+        width: 13%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 15%;
+    }
+    .Slide{
+        width: 3%;
+    }
+    .Home-new{
+        position: absolute;
+        left: 55%;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        left: 77%;
+    }
+    .Management-link{
+        width: 90%;
+    }
+}
+@media (max-width: 1070px){
+    .Header{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+    .Header-logo{
+        width: 17%;
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Header-responsive{
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+    .Btn-chat{
+        display: block;
+    }
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 13%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+    }
+    .Home{
+        min-height: 900px;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 20%;
+    }
+    .Home-form{
+        width: 90%;
+        display: flex;
+    }
+    .Form-left{
+        width: 50%;
+    }
+    .Form-right{
+        width: 40%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 75%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Schedule{
+        min-height: 500px;
+    }
+    .Home-slide{
+        width: 4%;
+        height: 43px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;        
+    }
+    .Home-new{
+        width: 40%;
+        position: absolute;
+        top: 25%;
+        right: 7%;
+    }
+    .Create-link{
+        width: 60%;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+        left: 60%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 80%;
+    }
+    .Reports-p{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+    }
+    .Reports-date{
+        position: absolute;
+        top: 35%;
+        right: 5%;
+    }
+    .Home-management{
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .Home-management--projects{
+        position: absolute;
+        top: 47%;
+        left: 50%;
+    }
+    .Home-head--reports{
+        position: absolute;
+        top: 45%;
+        left: 75%;
+    }
+    .Home-management--reports{
+        width: 40%;
+        position: absolute;
+        top: 53%;
+        left: 50%;
+    }
+    .Home-reports{
+        min-height: 700px;
+    }
+    .Form-button{
+        width: 20%;
+    }
+    .Back{
+        top: 65%;
+    }
+    .Management-back{
+        top: 30%;
+    }
+}
+@media (max-width: 850px){
+    .Header{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+    .Header-logo{
+        width: 20%;
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Header-responsive{
+        width: 15%;
+        display: block;
+    }
+    .Btn-menu{
+        height: 100px;
+        display: block;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    }
+    .Btn-chat{
+        display: block;
+    }
+    .Btn-nav{
+        width: 20%;
+        height: 200px;
+        background-color: var(--basic-c);
+
+        box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: .3125rem;
+        border: 1px solid var(--primary-c);
+
+        color: var(--primary-c);
+
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: 2;
+
+        display: none;
+
+    }
+    .Btn-seccion{
+        padding: 0.9375rem;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 15px;
+
+        font-family: var(--general-ff);
+        font-size: 1rem;
+    }
+    .Btn-nav.isActive{
+        display: unset;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 13%;
+        left: 40%;
+    }
+    .Animation-clipboard , .Animation-calendar , .Animation-people , .Animation-folder , .Animation-graph{
+        width: 25%;
+    }
+    .Form-button{
+        width: 15%;
+    }
+    .Home-principal{
+        min-height: 900px;
+    }
+    .Schedule{
+        min-height: 400px;
+    }
+    .Home-slide{
+        width: 5%;
+        height: 40px;
+        border-radius: 50%;
+
+        position: fixed;
+        bottom: 5%;
+        right: 0;   
+    }
+    .Contacts-create{
+        position: absolute;
+        top: 33%;
+        right: 6%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 90%;
+        right: 5%;
+        z-index: 2;
+    }
+    .Back{
+        position: absolute;
+        top: 70%;
+    }
+    .Management-back{
+        position: absolute;
+        top: 30%;
+    }
+    .Form-button{
+        width: 20%;
+    }
+    .Form-label--observations{
+        width: 50%;
+    }
+    .Home-new{
+        width: 40%;
+        position: absolute;
+        top: 25%;
+        right: 30%;
+    }
+    .Create-link{
+        width: 100%;
+    }
+    .Home-head{
+        position: absolute;
+        top: 40%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 90%;
+        right: 0;
+    }
+    .Reports-container{
+        margin: 1.875rem auto;
+
+        display: grid;
+        grid-template-columns: repeat( 3 , 1fr);
+        gap: 20px;
+    }
+    .Home-head--reports{
+        width: 20%;
+        position: absolute;
+        top: 40%;
+        left: 73%;
+    }
+    .Management-link{
+        width: 80%;
+    }
+    .Home-management--projects{
+        position: absolute;
+        top: 45%;
+    }
+    .Home-management--reports{
+        position: absolute;
+        top: 46%;
+    }
+}
+@media (max-width: 780px){
+    .Header-logo{
+        width: 22%;
+    }
+    .Home-organizer{
+        width: 85%;
+        margin: 1.25rem auto;
+        position: static;
+        animation: none;
+    }
+    .Home-animation{
+        width: 60%;
+        min-height: 200px; 
+        margin: 0 auto;
+        position: static;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 20%;
+        margin: 0.625rem 1.25rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        opacity: 1;
+        animation: none;
+        
+    }
+    .Home-principal--projects{
+        width: 100%;
+    }
+    .Projects{
+        width: 90%;
+        margin: auto;
+
+        position: absolute;
+        top: 18%;
+        border-right: none;
+    }
+    .Home-new{
+        position: absolute;
+        top: -3%;
+        font-size: 0.625rem;
+    }
+    .Home-head{
+        width: 35%;
+        position: absolute;
+        top: 5%;
+        left: 63%;
+        font-size: 0.625rem;
+    }
+    .Home-management--projects{
+        width: 60%;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+    }
+    .Home-h2{
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+    .Home-principal--reports{
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    }
+    .Home-reports{
+        width: 80%;
+        min-height: 300px;
+        margin: 1.25rem auto;
+        position: static;
+
+    }
+
+    .Reports-p ,.Reports-date , .Home-head--reports{
+        width: 80%;
+        margin: 0 0 0 1.875rem;
+        padding: 1.25rem;
+        position: static;
+    }
+    .Home-management--reports{
+        width: 53%;
+        height: 80px;
+        position: absolute;
+        top: 80%;
+        left: -30%;
+    }
+}
+@media (max-width: 640px){
+    .Header-logo{
+        width: 25%;
+    }
+    .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
+        width: 23%;
+    }
+    .Contacts-email{
+        position: absolute;
+        top: 5%;
+        left: 91%;
+    }
+    .Contacts-tlf{
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+    .Slide{
+        width: 30px;
+        height: 30px;
+    }
+    
+    
+}
+
+@media (max-width: 580){
+    .Schedule{
+        width: 70%;
+        min-height: 300px;
+        margin: 2.5rem auto;
+    }
+    .Schedule-header {
+        margin: 0 0 0.625rem 0;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        font-size: 1rem;
+        font-family: var(--general-ff);
+    
+    }
+    .Schedule-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+    }
+    .calendar-day {
+        padding: 0.625rem;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        border-radius: 5px;
+        border: 2px solid var(--primary-c);
+    
+        font-family: var(--general-ff);
+    
+        position: relative;
+    }
+    .calendar-day-number {
+        font-size: .4375rem;
+    }
+    .add-event {
+        background-color: var(--buttonActive-c);
+        padding: 0.3125rem;
+        margin: .125rem 0 0 0;
+    
+        border-radius: 3px;
+    
+        color: var(--basic-c);
+        font-size: .3125rem;
+        font-family: var(--general-ff);
+        text-align: center;
+    
+        cursor: pointer;
+    }
+    .add-event:hover {
+        background-color: var(--form-c);
+    }
+    .event-form {
+        padding: 0.625rem;
+        background: lightgray;
+    
+        display: flex;
+        flex-flow: column;
+        gap: 5px;
+    
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    
+        font-family: var(--general-ff);
+    
+    }
+    .event-form input {
+        padding: 0.3125rem;
+        font-size: 0.9rem;
+        font-family: var(--general-ff);
+    
+    }
+    .event-form button {
+        padding: 0.3125rem;
+        font-size: 0.9rem;
+        font-family: var(--general-ff);
+        cursor: pointer;
+    }
+    .calendar-event {
+        background-color: var(--title-c);
+    
+        margin: 0 0 0.25rem 0;
+    
+        border: 1px solid #000;
+    
+        text-align: center;
+        font-family: var(--general-ff);
+    
+    }
+    .Schedule-prev , .Schedule-next{
+        background-color: #7E675E;
+        padding: 0.3125rem .3125rem;
+        border-radius: 30%;
+    }
+    .Schedule-month{
+        min-height: 40px;
+        background-color: #7E675E;
+        padding: 0.625rem .0938rem;
+        border-radius: 30%;
+    
+    }
+    
+    
+} )
