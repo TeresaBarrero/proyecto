@@ -75,6 +75,7 @@ svg{
 }
 
 
+/* Menú del Header */
 .Header-nav {
     width: 70%;
     max-width: 120em;
@@ -111,6 +112,7 @@ svg{
     display: none;
 }
 
+/*Bloques de información que recoge cada uno de las secciones propuestas en el menu de Header*/
 .Block{
     width: 60%;
     background-color: var(--basic-c);
@@ -134,7 +136,7 @@ svg{
 }
 
 
-
+/*Calendario*/
 .Block-calendar {
     width: 60%;
     min-height: 300px;
@@ -151,6 +153,13 @@ svg{
     top: 0;
     left: 12%;
 }
+.Block-dd--calendar {
+    border-radius: 5px;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+/*Contactos*/
 .Block-contacts {
     width: 60%;
 
@@ -165,6 +174,8 @@ svg{
     justify-content: space-between;
     display: none;
 }
+
+/*Proyectos*/
 .Block-projects {
     width: 60%;
 
@@ -179,6 +190,8 @@ svg{
     justify-content: space-between;
     display: none;
 }
+
+/*Informes generales*/
 .Block-reports {
     width: 35%;
 
@@ -201,6 +214,8 @@ svg{
     color: var(--primary-c);
     padding: 0 0 0.3125rem 1.25rem;
 }
+
+/*Chat*/
 .Block-chat {
     width: 56%;
     min-height: 400px;
@@ -215,11 +230,7 @@ svg{
 
 
 
-.Block-dd--calendar {
-    border-radius: 5px;
-    padding: 0.625rem;
-    text-align: center;
-}
+/*Sección 2 de Header*/ 
 .Header-wrapper {
     width: 10%;
     display: flex;
@@ -227,13 +238,8 @@ svg{
     justify-content: end;
     align-items: center;
 }
-/*.Block-search {
-    width: 20%;
 
-    position: absolute;
-    top: 10%;
-    left: 65%;
-}*/
+/*Perfil*/
 .Block-profile {
     width: 10%;
     min-height: 150px;
@@ -252,24 +258,6 @@ svg{
     z-index: 3;
     display: none;
 }
-/*.Block-configuration {
-    width: 12%;
-    min-height: 150px;
-    padding: 0.9375rem;
-
-    position: absolute;
-    top: 10%;
-    left: 87%;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: center;
-
-    text-align: center;
-    display: none;
-}*/
-
 .Block-li--profile, .Block-li--close{
     background-color: var(--secondForm-c);
     padding: 0.3125rem;
@@ -286,8 +274,8 @@ svg{
 
 
 
-/* MAIN */
 
+/* MAIN */
 .Home{ 
     width: 100%;
     min-height: 30vh;
@@ -298,7 +286,7 @@ svg{
 }
 .Home-principal{
     width: 100%;
-    min-height: 100vh;
+    min-height: 150vh;
     background-color: var(--home-c);
 
     position: relative;
@@ -319,7 +307,7 @@ svg{
 
 }
 
-
+/* Home, pantalla principal */
 .Home-organizer {
     width: 50%;
     min-height: 400px;
@@ -416,7 +404,7 @@ svg{
 }
 
 
-
+/*Contenido de Tareas y Contactos*/ 
 .Tasks-dt, .Contacts-dt{
     background-color: var(--title-c);
     padding: 0.625rem;
@@ -453,7 +441,6 @@ svg{
 .Tasks-dt, .Contacts-dt {
     font-weight: bold;
 }
-
 .Tasks-dl, .Contacts-dl{
     width: 80%;
     min-height: 100px;
@@ -470,7 +457,6 @@ svg{
 
     position: relative;
 }
-
 .Tasks-dl--important {
     width: 40%;
     min-height: 300px;
@@ -484,22 +470,27 @@ svg{
     opacity: 0;
 
 }
-
 .Tasks-dl--important.isActive {
     opacity: 1;
 }
-
 .Tasks-dt--important {
     background-color: var(--AlertImportant-c);
 
     color: var(--home-c);
 }
-
 .Tasks-dd--important {
     border: 1px solid var(--AlertImportant-c);
     margin: 0.9375rem auto;
 }
+.Tasks-dt--ok {
+    background-color: var(--tasksOk);
+}
+.Tasks-dd--ok {
+    border: 1px solid var(--tasksOk);
+}
 
+
+/*Botón para moverse entre pantallas*/
 .Home-button {
     width: 4%;
     height: 50px;
@@ -517,97 +508,36 @@ svg{
     border-radius: 5px;
     cursor: pointer;
 }
-
 .Home-button:hover {
     transform: scale(0.95);
 }
 
-
-.Tasks-dt--ok {
-    background-color: var(--tasksOk);
-}
-
-.Tasks-dd--ok {
-    border: 1px solid var(--tasksOk);
-}
-
-/*.Home-client {
-    width: 10%;
-    height: 30px;
-    background-color: var(--basic-c);
-    padding: 0.1875rem;
-    margin: 1.25rem 2.5rem;
-
-    border: 1px solid black;
-    border-radius: 8px;
-
-    text-align: center;
-
-    position: relative;
-    cursor: pointer;
-}
-
-.Clients-ul{
-    width: 100%;
-    min-height: 120px;
-    background-color: var(--basic-c);
-    padding: 0.1875rem;
-    margin: 1.25rem 2.5rem;
-
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    z-index: 2;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-    border: 1px solid black;
-    border-radius: 8px;
-
-    text-align: center;
-
-    opacity: 0;
-}
-
-.Clients-ul.isActive {
-    opacity: 1;
-}
-
-.Clients:active{
-    background-color: grey;
-}
-
-.Clients-a:hover{
-    background-color: lightgray;
-    border-radius: 5px;
-    padding: 0.3125rem;
-}*/
-
+/*Crear Contactos*/
 .Contacts-create {
     position: absolute;
     top: 35%;
     right: 6%;
 }
-
+/*Gestionar contactos*/
 .Contacts-management {
     position: absolute;
     top: 40%;
     right: 6%;
 }
+/*Enviar email*/
 .Contacts-email{
     position: absolute;
     top: 8%;
     left: 5%;
 }
+/* Dirige a un tlf*/
 .Contacts-tlf{
     position: absolute;
     top: 8%;
     right: 5%;
 }
+
+/*Títulos y gestión*/
 .Home-h2 , .Create-link{
     padding: 1.25rem;
     margin: 1.25rem 1.875rem 0;
@@ -684,25 +614,8 @@ svg{
     width: 40%;
     margin: 0 0 0 2.5rem;
 }
-/*.Form-left--projects{
-    width: 60%;
-    margin: 1.25rem 1.25rem;
-}
-.Form-right--projects{
-    width: 40%;
-    margin: 2.5rem 1.25rem 1.25rem;
-}
-*/
-/*.Form-second , .Form-third{
-    width: 90%;
-    margin: 0.625rem 0 0.625rem 0;
 
-    color: red;
-    font-size: 0.625rem;
-
-    border-bottom: 1px solid black;
-}*/
-
+/*Elementos de formulario*/
 input, select, textarea, label {
     padding: 0.3125rem;
     border: 1px solid black;
@@ -712,7 +625,6 @@ input, select, textarea, label {
 
     display: inline-block;
 }
-
 input[type="submit"] {
     width: 15%;
 
@@ -791,7 +703,7 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
-
+/*Botón de vuelta*/
 .Form-back{
     position: absolute;
     top: 70%;
@@ -837,7 +749,7 @@ input[type="submit"] {
     padding: 0.3125rem;
 }
 
-
+/* Contenido de la pantalla de proyectos e informes generales */
 .Home-general{
     width: 55%;
     border-right: 1px solid black;
@@ -913,6 +825,8 @@ input[type="submit"] {
 }
 
 
+/*Formulario 2. Crea un proyecto*/
+
 .Form-first{
     display: flex;
     flex-flow: row nowrap;
@@ -921,10 +835,6 @@ input[type="submit"] {
 
     border-bottom: 1px solid black;
 }
-
-
-
-
 .Form-select--status , .Form-select--priority{
     width: 50%;
     background-color: var(--home-c);
@@ -948,7 +858,6 @@ input[type="submit"] {
     margin: 10px 0;
     height: 35px;
 }
-
 .Form-back--projects{
     position: absolute;
     top: 90%;
@@ -1027,6 +936,7 @@ input[type="submit"] {
     height: 120px;
 }
 
+/*Pantalla de informes generales + animación aumento de img*/
 .Home-reports{
     width: 65%;
     height: 500px;
@@ -1085,19 +995,16 @@ input[type="submit"] {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .Overlay-img {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     object-fit: cover;
 }
-
 .Overlay.active {
     visibility: visible;
     opacity: 1;
 }
-
 .Overlay .Overlay-close {
     position: absolute;
     top: 1.25rem;
@@ -1110,12 +1017,13 @@ input[type="submit"] {
 
 
 
-
+/*Filter >> no disponible en esta versión */
 .Reports-date{
     position: absolute;
     top: 55%;
     right: 10%;
 }
+/*Informes generales: crea y gestiona*/
 .Reports-p{
     padding: 1.25rem;
   
@@ -1131,9 +1039,9 @@ input[type="submit"] {
     width: 25%;
     position: absolute;
     top: 65%;
-    left: 75%;
 }
 
+/*Perfil*/
 .Profile{
     width: 100%;
     min-height: 565px;
@@ -1167,7 +1075,6 @@ input[type="submit"] {
 }
 .Profile-picture{
     width: 25%;
-    height: 250px;
     border-radius: 50%;
 }
 .Profile-img{
@@ -1203,7 +1110,7 @@ input[type="submit"] {
 
 
 
-
+/*Calendario Header*/
 .Schedule{
     width: 90%;
     min-height: 500px;
@@ -1317,8 +1224,7 @@ input[type="submit"] {
     padding: 0.625rem 1.875rem;
     border-radius: 30%;
 }
-
-
+/*Calendario pantalla*/
 .CalendarView{
     width: 90%;
     min-height: 200px;
@@ -1375,7 +1281,7 @@ input[type="submit"] {
 }
 
 
-
+/*Botón animación deslizar*/
 .Home-slide{
     width: 4%;
     height: 50px;
@@ -1402,7 +1308,7 @@ input[type="submit"] {
 
 
 
-
+/*Chat*/
 .Chat-container {
     width: 100%;
     min-height: 400px;
@@ -1415,9 +1321,8 @@ input[type="submit"] {
     border-radius: 10px;
     
     overflow: hidden;
-  }
-
-  .Chat-header {
+}
+.Chat-header {
     background-color: var(--secondForm-c);
     padding: 0.9375rem;
 
@@ -1426,9 +1331,7 @@ input[type="submit"] {
     color: var(--basic-c);
     font-weight: bold;
     color: black;
-  }
-
-
+}
 .Chat-messages {
     background-color: var(--home-c);
     padding: 0.625rem;
@@ -1440,7 +1343,6 @@ input[type="submit"] {
 
     overflow-y: auto;
 }
-
 .message {
     max-width: 70%;
     padding: 0.625rem 0.9375rem;
@@ -1452,13 +1354,11 @@ input[type="submit"] {
 
     word-wrap: break-word;
 }
-
 .message.user {
     align-self: flex-end;
     background-color: var(--title-c);
     color: var(--basic-c);
 }
-
 .message.bot {
     background-color: lightgray;
 
@@ -1884,8 +1784,23 @@ input[type="submit"] {
         top: 45%;
     }
     .Home-management--reports{
+        width: 50%;
         position: absolute;
         top: 46%;
+    }
+    .Profile{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+    }
+    .Profile-information{
+        width: 50%;
+        height: 100px;
+        margin: .3125rem;
+    }
+    
+    .Profile-li{
+        font-size: .625rem;
     }
 }
 @media (max-width: 780px){
@@ -1982,6 +1897,20 @@ input[type="submit"] {
         top: 80%;
         left: -30%;
     }
+    .Profile{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+    }
+    .Profile-information{
+        width: 50%;
+        height: 100px;
+        margin: .3125rem;
+    }
+    
+    .Profile-li{
+        font-size: .625rem;
+    }
 }
 @media (max-width: 640px){
     .Header-logo{
@@ -2063,6 +1992,33 @@ input[type="submit"] {
         position: absolute;
         top: 70%;
         left: 20%;
+    }
+    .Form-create{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: start;
+    }
+    .Form-right{
+        margin: .3125rem;
+    }
+    .Form-label--responsive{
+        width: 80%;
+    }
+    .Form-input--responsive{
+        width: 200%;
+    }
+    .Form-label--description{
+        width: 50%;
+    }
+    .Form-label--observations{
+        width: 100%;
+    }
+    .Form-select--contact{
+        width: 50%;
+    }
+    .Form-textarea--observations{
+        width: 200%;
     }
 }
 @media (max-width: 580px){
@@ -2162,6 +2118,33 @@ input[type="submit"] {
     .Home-general{
         position: absolute;
         top: 15%;
+    }
+    .Form-create{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: start;
+    }
+    .Form-right{
+        margin: .3125rem;
+    }
+    .Form-label--responsive{
+        width: 80%;
+    }
+    .Form-input--responsive{
+        width: 200%;
+    }
+    .Form-label--description{
+        width: 50%;
+    }
+    .Form-label--observations{
+        width: 100%;
+    }
+    .Form-select--contact{
+        width: 50%;
+    }
+    .Form-textarea--observations{
+        width: 200%;
     }
 } 
 @media (max-width: 470px){
@@ -2306,6 +2289,38 @@ input[type="submit"] {
         position: absolute;
         top: 70%;
         left: 20%;
+    }
+    .Home-principal--reports{
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        flex-flow: column;
+        position: relative;
+    }
+    .Home-reports{
+        width: 80%;
+        min-height: 300px;
+        margin: 1.25rem auto;
+        position: static;
+
+    }
+    .Reports-p ,.Reports-date , .Home-head--reports{
+        width: 80%;
+        margin: 0 0 0 1.875rem;
+        padding: 1.25rem;
+        position: static;
+    }
+    .Home-management--reports{
+        width: 80%;
+        padding: .3125rem;
+        position: absolute;
+        top: 73%;
+        left: 0;
+    }
+    .Create-link , .Management-link{
+        font-size: .75rem;
+        padding: .3125rem;
+        margin: .3125rem;
     }
 } 
 
