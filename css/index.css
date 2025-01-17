@@ -96,7 +96,7 @@ svg{
     padding: 1em;
     margin: 0 1em 0 0;
 
-    transition: open .5s ease;
+    transition: hover .5s ease;
 }
 .Menu-li.isActive {
     background-color: var(--buttonActive-c);
@@ -615,7 +615,6 @@ svg{
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-c);
-
 }
 .Management-link{
     font-size: 1.2rem;
@@ -865,6 +864,7 @@ input[type="submit"] {
     min-height: 50px;
     background-color: var(--home-c);
 
+    padding: 0.625rem;
     margin: 1.25rem;
 
     border-radius: 7px;
