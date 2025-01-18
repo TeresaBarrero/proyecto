@@ -95,23 +95,20 @@ document.addEventListener('DOMContentLoaded', () => {
 // Función para mostrar option selected 
     // si option tiene atributo 'selected'
         // STYLE padding 20px
+
 function validateChecks(clientStatus){
     if(clientStatus){
         if(clientStatus.toLowerCase() === 'activo'){
-            situation.active.setAttribute('selected' , true)
-            situation.active.style.padding = '12px'
+            situation.active.setAttribute('selected',true)
+            situation.active.style.padding = "20px"
         }
-    }
-    if(clientStatus){
         if(clientStatus.toLowerCase() === 'pendiente'){
-            situation.active.setAttribute('selected' , true)
-            situation.active.style.padding = '12px'
+            situation.pending.setAttribute('selected',true)
+            situation.pending.style.padding = "20px"
         }
-    }
-    if(clientStatus){
         if(clientStatus.toLowerCase() === 'inactivo'){
-            situation.active.setAttribute('selected' , true)
-            situation.active.style.padding = '12px'
+            situation.inactive.setAttribute('selected',true)
+            situation.inactive.style.padding = "20px"
         }
     }
 }

@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('No se encontró el proyecto en el almacenamiento local.');
     }
 });
+
 // Función para mostrar option selected 
     // si option tiene atributo 'selected'
         // STYLE padding 20px
