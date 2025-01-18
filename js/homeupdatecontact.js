@@ -25,6 +25,12 @@ const contact = {
     clientType: document.getElementById('clientType'),
     clientStatus: document.getElementById('clientStatus'),
 };
+const situation = {
+    active: document.querySelector('.Form-option--active'),
+    pending: document.querySelector('.Form-option--pending'),
+    inactive: document.querySelector('.Form-option--inactive')
+};
+
 //Paso el id como parametro y con un .find traigo el objeto cuyo id pasado por parametro sea igual y devuelvo el objeto
 function getContact(id) {
     const data = JSON.parse(localStorage.getItem('contactJSON'));
@@ -80,10 +86,38 @@ document.addEventListener('DOMContentLoaded', () => {
         contact.observations.value = specifyContact.observations;
         contact.clientType.value = specifyContact.clientType;
         contact.clientStatus.value = specifyContact.clientStatus;
+        validateChecks(contact.clientStatus.value);
     } else {
         alert('No se encontró el contacto en el almacenamiento local.');
     }
 });
+
+// Función para mostrar option selected 
+    // si option tiene atributo 'selected'
+        // STYLE padding 20px
+function validateChecks(clientStatus){
+    if(clientStatus){
+        if(clientStatus.toLowerCase() === 'activo'){
+            situation.active.setAttribute('selected' , true)
+            situation.active.style.padding = '12px'
+        }
+    }
+    if(clientStatus){
+        if(clientStatus.toLowerCase() === 'pendiente'){
+            situation.active.setAttribute('selected' , true)
+            situation.active.style.padding = '12px'
+        }
+    }
+    if(clientStatus){
+        if(clientStatus.toLowerCase() === 'inactivo'){
+            situation.active.setAttribute('selected' , true)
+            situation.active.style.padding = '12px'
+        }
+    }
+}
+
+
+
 // Recorre TODOS elementos li
 // Si NO contains class 'Menu-li--Chat'
 // Cuando MOUSEOVER en li 
