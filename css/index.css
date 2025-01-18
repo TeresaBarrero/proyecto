@@ -42,8 +42,7 @@ svg{
     --tasksOk : #5b856f;
 
     --form-ff : 'Zilla Slab';
-    --general-ff : var(--general-ff);
-
+    --general-ff : 'Times New Roman', Times, serif;
 
 }
 
@@ -608,7 +607,7 @@ svg{
     gap: 10px;
 }
 .Form-left{
-    width: 55%;
+    width: 50%;
 }
 .Form-right{
     width: 40%;
