@@ -1916,9 +1916,14 @@ input[type="submit"] {
         height: 100px;
         margin: .3125rem;
     }
-    
     .Profile-li{
         font-size: .625rem;
+    }
+    .Block-profile{
+        width: 15%;
+        position: absolute;
+        top: 17%;
+        left: 43%;
     }
 }
 @media (max-width: 640px){
@@ -2028,6 +2033,12 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 200%;
+    }
+    .Block-profile{
+        width: 20%;
+        position: absolute;
+        top: 18%;
+        left: 40%;
     }
 }
 @media (max-width: 580px){
@@ -2154,6 +2165,12 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 200%;
+    }
+    .Block-profile{
+        width: 20%;
+        position: absolute;
+        top: 18%;
+        left: 40%;
     }
 } 
 @media (max-width: 470px){
@@ -2330,6 +2347,12 @@ input[type="submit"] {
         font-size: .75rem;
         padding: .3125rem;
         margin: .3125rem;
+    }
+    .Block-profile{
+        width: 25%;
+        position: absolute;
+        top: 18%;
+        left: 40%;
     }
 } 
 
