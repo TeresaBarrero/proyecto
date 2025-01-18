@@ -4,6 +4,9 @@ const block = document.querySelectorAll('.Block')
 const btn = document.querySelector('.Btn-burguer')
 const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
+const btnChat = document.querySelector('.Btn-chat')
+const responsiveChat = document.querySelector('.Block-chat--responsive')
+
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const alertButton = document.querySelector('.Home-button')
@@ -60,16 +63,16 @@ const dailyTasks = tasks.filter((task) => {
         && task.completed === false && task.important === false
 })
 const MonthTasks = tasks.filter((task) => {
-    return task.date >= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-01` &&
-        task.date <= `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()}` &&
-        task.date !== `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}-${String(new Date().getDate()).padStart(2, '0')}`
+    return task.date >= `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-01` &&
+        task.date <= `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-${new Date(moment.getFullYear(), moment.getMonth() + 1, 0).getDate()}` &&
+        task.date !== `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-${String(moment.getDate()).padStart(2, '0')}`
         && task.completed === false
         && task.important === false;
 });
 const yearTasks = tasks.filter((task) => {
     return task.date >= `${moment.getFullYear()}-01-01` &&
            task.date <= `${moment.getFullYear()}-12-31` &&
-           task.date !== `${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}-${String(moment.getDate()).padStart(2, '0')}` &&
+           !task.date.startsWith(`${moment.getFullYear()}-${String(moment.getMonth() + 1).padStart(2, '0')}`) &&
            task.completed === false &&
            task.important === false;
 });
@@ -368,32 +371,40 @@ li.forEach((_, i) => {
         })
     }
 })
-/*
+
+
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
-    btn.addEventListener('click' , ()=>{
-        btnNav.classList.toggle('isActive')
-    })
-    
-    
+btn.addEventListener('click' , ()=>{
+    btnNav.classList.toggle('isActive')
+})
+
+
 // Cuando CLICK en .Btn-chat
     // Block-chat le TOGGLE 'isActive'
-    btnChat.addEventListener('click' , ()=>{
-        chat.classList.toggle('isActive')
-        console.log(btnChat)
-    })
-*/
-// Cuando MOUSEOVER home
-// Si NO contains class 'Block-chat'
-// TODOS .Block[i] REMOVE isActive
-// TODOS li REMOVE is Active
+btnChat.addEventListener('click' , ()=>{
+    chat.classList.toggle('isActive')
+    console.log(btnChat)
+})
+btnChat.addEventListener('click' , ()=>{
+    responsiveChat.classList.toggle('isActive')
+    console.log(btnChat)
+})
 
-if (home != null) {
-    home.addEventListener('mouseover', () => {
-        block.forEach((_, i) => {
-            if (!block[i].classList.contains('Block-chat')) {
+
+// Cuando MOUSEOVER home
+    // Si NO contains class 'Block-chat'
+        // TODOS .Block[i] REMOVE isActive
+        // TODOS li REMOVE is Active
+
+if(home != null){
+    home.addEventListener('mouseover' , ()=>{
+        block.forEach( ( _ , i )=>{
+            if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
                 block[i].classList.remove('isActive')
-                li[i].classList.remove('isActive')
+                if(li[i] != undefined){
+                    li[i].classList.remove('isActive')
+                }
             }
         })
     })

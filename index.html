@@ -232,8 +232,9 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="Header-responsive Btn">
+            
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
@@ -253,14 +254,26 @@
         </div>
         <div class="Btn-nav">
             <div class="Btn-seccion">
-                <a href="src/tasks.html">TAREAS</a>
-                <a href="src/calendar.html">CALENDARIO</a>
-                <a href="src/contacts.html">CONTACTOS</a>
-                <a href="src/projects.html">PROYECTOS</a>
-                <a href="src/reports.html">INFORMES GENERALES</a>
+                <a href="src/tasks.html" title="Tareas">TAREAS</a>
+                <a href="src/calendar.html" title="Calendario">CALENDARIO</a>
+                <a href="src/contacts.html" title="Contactos">CONTACTOS</a>
+                <a href="src/projects.html" title="Proyectos">PROYECTOS</a>
+                <a href="src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
         </div>
-
+        <div class="Block Block-chat--responsive Chat">
+            <div class="Chat-container">
+                <div class="Chat-header">
+                    <h3 class="Chat-h3">CHAT</h3>
+                </div>
+                <div class="Chat-messages" id="Chat-messages"></div>
+                <div class="Chat-input">
+                    <input class="Chat-input" type="text" id="message-input"
+                        placeholder="Escribe tu mensaje...">
+                    <button class="Chat-btn" id="send-button" title="Enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
 
 
     </header>

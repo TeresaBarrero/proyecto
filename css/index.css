@@ -224,6 +224,15 @@ svg{
     top: 1.1875rem;
     right: -13rem;
 }
+.Block-chat--responsive{
+    width: 50%;
+    min-height: 400px;
+    max-height: 560px;
+
+    position: absolute;
+    top: 3rem;
+    right: 0;
+}
 
 
 
@@ -466,11 +475,11 @@ svg{
     right: 5%;
     z-index: 2;
 
-    opacity: 0;
+    display: none;
 
 }
 .Tasks-dl--important.isActive {
-    opacity: 1;
+    display: unset;
 }
 .Tasks-dt--important {
     background-color: var(--AlertImportant-c);
@@ -1501,9 +1510,9 @@ input[type="submit"] {
         color: var(--primary-c);
 
         position: absolute;
-        top: 13%;
+        top: 10%;
         right: 0;
-        z-index: 2;
+        z-index: 3;
 
         display: none;
 
@@ -1518,6 +1527,7 @@ input[type="submit"] {
 
         font-family: var(--general-ff);
         font-size: 1rem;
+        
     }
     .Btn-nav.isActive{
         display: unset;
@@ -1671,9 +1681,9 @@ input[type="submit"] {
         color: var(--primary-c);
 
         position: absolute;
-        top: 20%;
+        top: 15%;
         right: 0;
-        z-index: 2;
+        z-index: 3;
 
         display: none;
 
@@ -1695,7 +1705,7 @@ input[type="submit"] {
     .Block-profile{
         width: 15%;
         position: absolute;
-        top: 13%;
+        top: 10%;
         left: 40%;
     }
     .Animation-clipboard , .Animation-calendar , .Animation-people , .Animation-folder , .Animation-graph{

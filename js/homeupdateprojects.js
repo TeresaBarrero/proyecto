@@ -2,9 +2,11 @@
 const li = document.querySelectorAll('.Menu-li');
 const block = document.querySelectorAll('.Block');
 const home = document.querySelector('main');
-const btn = document.querySelector('.Btn-burguer')
-const btnNav = document.querySelector('.Btn-nav')
+const btn = document.querySelector('.Btn-burguer');
+const btnNav = document.querySelector('.Btn-nav');
+const btnChat = document.querySelector('.Btn-chat')
 const chat = document.querySelector('.Block-chat');
+const responsiveChat = document.querySelector('.Block-chat--responsive');
 const liChat = document.querySelector('.Menu-li--chat');
 const successButton = document.querySelector('.Form-button');
 //Obtenemos el id alacenado en el localStorage para obtener la data de este
@@ -24,6 +26,17 @@ const project = {
     information: document.getElementById('information'),
     labelProject: document.getElementById('label-project')
 };
+const priorities = {
+    low: document.querySelector('.Form-low'),
+    medium: document.querySelector('.Form-medium'),
+    high: document.querySelector('.Form-high'),
+    critical: document.querySelector('.Form-critical')
+}
+const statusProjects = {
+    planning: document.querySelector('.Form-planning'),
+    progressing: document.querySelector('.Form-progressing'),
+    complete: document.querySelector('.Form-complete'),
+}
 //Paso el id como parametro y con un .find traigo el objeto cuyo id pasado por parametro sea igual y devuelvo el objeto
 function getProject(id) {
     const data = JSON.parse(localStorage.getItem('projectJSON'));
@@ -73,15 +86,52 @@ document.addEventListener('DOMContentLoaded', () => {
         project.description.value = specifyProject.description;
         project.statusProjects.value = specifyProject.statusProjects;
         project.priority.value = specifyProject.priority;
+        validateChecks(project.priority.value,project.statusProjects.value);
         project.budget.value = specifyProject.budget;
         project.resources.value = specifyProject.resources;
         project.expenses.value = specifyProject.expenses;
         project.information.value = specifyProject.information;
         project.labelProject.value = specifyProject.labelProject;
+        
     } else {
         alert('No se encontró el proyecto en el almacenamiento local.');
     }
 });
+//
+function validateChecks(priority,statusProject){
+    if(priority){
+        if(priority.toLowerCase() === 'low'){
+            priorities.low.setAttribute('selected',true)
+            priorities.low.style.padding = "20px"
+        }
+        if(priority.toLowerCase() === 'medium'){
+            priorities.medium.setAttribute('selected',true)
+            priorities.medium.style.padding = "20px"
+        }
+        if(priority.toLowerCase() === 'high'){
+            priorities.high.setAttribute('selected',true)
+            priorities.high.style.padding = "20px"
+        }
+        if(priority.toLowerCase() === 'critical'){
+            priorities.critical.setAttribute('selected',true)
+            priorities.critical.style.padding = "20px"
+        }
+    }
+    if(statusProject){
+        if(statusProject.toLowerCase() === 'planning'){
+            statusProjects.planning.setAttribute('selected' , true)
+            statusProjects.planning.style.padding = '20px'
+        }
+        if(statusProject.toLowerCase() === 'progressing'){
+            statusProjects.progressing.setAttribute('selected' , true)
+            statusProjects.progressing.style.padding = '20px'
+        }
+        if(statusProject.toLowerCase() === 'complete'){
+            statusProjects.complete.setAttribute('selected' , true)
+            statusProjects.complete.style.padding = '20px'
+        }
+    }
+}
 
 
 
@@ -133,6 +183,7 @@ li.forEach((_, i) => {
     }
 })
 
+
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
     btn.addEventListener('click' , ()=>{
@@ -146,22 +197,29 @@ li.forEach((_, i) => {
         chat.classList.toggle('isActive')
         console.log(btnChat)
     })
-
-// Cuando MOUSEOVER home
-// Si NO contains class 'Block-chat'
-// TODOS .Block[i] REMOVE isActive
-// TODOS li REMOVE is Active
-
-if (home != null) {
-    home.addEventListener('mouseover', () => {
-        block.forEach((_, i) => {
-            if (!block[i].classList.contains('Block-chat')) {
-                block[i].classList.remove('isActive')
-                li[i].classList.remove('isActive')
-            }
-        })
+    btnChat.addEventListener('click' , ()=>{
+        responsiveChat.classList.toggle('isActive')
+        console.log(btnChat)
     })
-}
+    
+    
+    // Cuando MOUSEOVER home
+        // Si NO contains class 'Block-chat'
+            // TODOS .Block[i] REMOVE isActive
+            // TODOS li REMOVE is Active
+    
+    if(home != null){
+        home.addEventListener('mouseover' , ()=>{
+            block.forEach( ( _ , i )=>{
+                if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
+                    block[i].classList.remove('isActive')
+                    if(li[i] != undefined){
+                        li[i].classList.remove('isActive')
+                    }
+                }
+            })
+        })
+    }
 
 
 

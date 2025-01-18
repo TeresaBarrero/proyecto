@@ -4,6 +4,8 @@ const block = document.querySelectorAll('.Block')
 const btn = document.querySelector('.Btn-burguer')
 const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
+const btnChat = document.querySelector('.Btn-chat')
+const responsiveChat = document.querySelector('.Block-chat--responsive')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
 const contactList = document.querySelector('.Contacts-dl')
@@ -124,7 +126,7 @@ li.forEach((_, i) => {
     }
 })
 
-/*
+
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
     btn.addEventListener('click' , ()=>{
@@ -137,24 +139,31 @@ li.forEach((_, i) => {
     btnChat.addEventListener('click' , ()=>{
         chat.classList.toggle('isActive')
         console.log(btnChat)
-    })*/
-
-// Cuando MOUSEOVER home
-// Si NO contains class 'Block-chat'
-// TODOS .Block[i] REMOVE isActive
-// TODOS li REMOVE is Active
-
-if (home != null) {
-    home.addEventListener('mouseover', () => {
-        block.forEach((_, i) => {
-            if (!block[i].classList.contains('Block-chat')) {
-                block[i].classList.remove('isActive')
-                li[i].classList.remove('isActive')
-            }
-        })
     })
-}
-
+    btnChat.addEventListener('click' , ()=>{
+        responsiveChat.classList.toggle('isActive')
+        console.log(btnChat)
+    })
+    
+    
+    // Cuando MOUSEOVER home
+        // Si NO contains class 'Block-chat'
+            // TODOS .Block[i] REMOVE isActive
+            // TODOS li REMOVE is Active
+    
+    if(home != null){
+        home.addEventListener('mouseover' , ()=>{
+            block.forEach( ( _ , i )=>{
+                if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
+                    block[i].classList.remove('isActive')
+                    if(li[i] != undefined){
+                        li[i].classList.remove('isActive')
+                    }
+                }
+            })
+        })
+    }
+    
 
 
 // Calendar recurso aportado parte por ChatGpt

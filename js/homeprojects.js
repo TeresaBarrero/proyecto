@@ -6,6 +6,8 @@ const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
 const chat = document.querySelector('.Block-chat')
 const liChat = document.querySelector('.Menu-li--chat')
+const btnChat = document.querySelector('.Btn-chat')
+const responsiveChat = document.querySelector('.Block-chat--responsive')
 const alertButton = document.querySelector('.Home-button')
 const tasksImportant = document.querySelector('.Tasks-dl--important')
 const clientsButton = document.querySelector('.Home-client')
@@ -137,7 +139,7 @@ li.forEach( ( _, i )=>{
         })  
     }
 })
-/*
+
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
     btn.addEventListener('click' , ()=>{
@@ -151,23 +153,30 @@ li.forEach( ( _, i )=>{
         chat.classList.toggle('isActive')
         console.log(btnChat)
     })
-*/
-// Cuando MOUSEOVER home
-    // Si NO contains class 'Block-chat'
-        // TODOS .Block[i] REMOVE isActive
-        // TODOS li REMOVE is Active
-
-if(home != null){
-    home.addEventListener('mouseover' , ()=>{
-        block.forEach( ( _ , i )=>{
-            if(!block[i].classList.contains('Block-chat')){
-                block[i].classList.remove('isActive')
-                li[i].classList.remove('isActive')
-            }
-        })
+    btnChat.addEventListener('click' , ()=>{
+        responsiveChat.classList.toggle('isActive')
+        console.log(btnChat)
     })
-}
-
+    
+    
+    // Cuando MOUSEOVER home
+        // Si NO contains class 'Block-chat'
+            // TODOS .Block[i] REMOVE isActive
+            // TODOS li REMOVE is Active
+    
+    if(home != null){
+        home.addEventListener('mouseover' , ()=>{
+            block.forEach( ( _ , i )=>{
+                if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
+                    block[i].classList.remove('isActive')
+                    if(li[i] != undefined){
+                        li[i].classList.remove('isActive')
+                    }
+                }
+            })
+        })
+    }
+    
 
 
 // Cuando CLICK en .Home-button

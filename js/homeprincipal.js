@@ -6,6 +6,7 @@ const btnNav = document.querySelector('.Btn-nav')
 const home = document.querySelector('main')
 const btnChat = document.querySelector('.Btn-chat')
 const chat = document.querySelector('.Block-chat')
+const responsiveChat = document.querySelector('.Block-chat--responsive')
 const liChat = document.querySelector('.Menu-li--chat')
 const description = document.getElementById('description')
 const date = document.getElementById('date')
@@ -106,6 +107,10 @@ btnChat.addEventListener('click' , ()=>{
     chat.classList.toggle('isActive')
     console.log(btnChat)
 })
+btnChat.addEventListener('click' , ()=>{
+    responsiveChat.classList.toggle('isActive')
+    console.log(btnChat)
+})
 
 
 // Cuando MOUSEOVER home
@@ -116,9 +121,11 @@ btnChat.addEventListener('click' , ()=>{
 if(home != null){
     home.addEventListener('mouseover' , ()=>{
         block.forEach( ( _ , i )=>{
-            if(!block[i].classList.contains('Block-chat')){
+            if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
                 block[i].classList.remove('isActive')
-                li[i].classList.remove('isActive')
+                if(li[i] != undefined){
+                    li[i].classList.remove('isActive')
+                }
             }
         })
     })
@@ -197,21 +204,22 @@ class Calendar {
     // .Button-slide isVisible a MITAD de la ventana
 
 const buttonSlide = document.querySelector('.Home-slide');
-
-window.addEventListener('scroll', () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
+if(buttonSlide){
+    window.addEventListener('scroll', () => {
     
-    const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
-    
-    if (puntoActivacion) {
-      buttonSlide.classList.add('isVisible')
-    } 
-    else {
-        buttonSlide.classList.remove('isVisible')
-     }
- })
+        let { scrollY, innerHeight } = window
+        let { offsetTop } = buttonSlide
+        
+        const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
+        
+        if (puntoActivacion) {
+          buttonSlide.classList.add('isVisible')
+        } 
+        else {
+            buttonSlide.classList.remove('isVisible')
+         }
+     })
+}
 
 
  // Cuando CLICK en .Button-slide
@@ -226,21 +234,23 @@ if(buttonSlide){
 
 // Cuando scrollY esté arriba
     // .Button-Slide REMOVE `isVisible´
+if(buttonSlide){
 
-window.addEventListener(`scroll` , ()=>{
-        
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-        
-    const puntoActivacion = scrollY <= offsetTop 
-
-    if( puntoActivacion ){
-        buttonSlide.classList.remove(`isVisible`)
-    }
-    else{
-        buttonSlide.classList.add(`isVisible`)
-    }
-})
+    window.addEventListener(`scroll` , ()=>{
+            
+        let { scrollY, innerHeight } = window
+        let { offsetTop } = buttonSlide
+            
+        const puntoActivacion = scrollY <= offsetTop 
+    
+        if( puntoActivacion ){
+            buttonSlide.classList.remove(`isVisible`)
+        }
+        else{
+            buttonSlide.classList.add(`isVisible`)
+        }
+    })
+}
     
  
 
