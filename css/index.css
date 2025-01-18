@@ -1558,8 +1558,7 @@ input[type="submit"] {
     }
     .Form-back{
         position: absolute;
-        top: 75%;
-        right: 5%;
+        right: 0;
         z-index: 2;
     }
     .Home-principal{
@@ -1892,9 +1891,7 @@ input[type="submit"] {
         min-height: 300px;
         margin: 1.25rem auto;
         position: static;
-
     }
-
     .Reports-p ,.Reports-date , .Home-head--reports{
         width: 80%;
         margin: 0 0 0 1.875rem;
@@ -1905,7 +1902,7 @@ input[type="submit"] {
         width: 53%;
         height: 80px;
         position: absolute;
-        top: 80%;
+        top: 70%;
         left: -30%;
     }
     .Profile{
@@ -1926,6 +1923,10 @@ input[type="submit"] {
         position: absolute;
         top: 17%;
         left: 43%;
+    }
+    .Form-select--contact{
+        width: 40%;
+        height: 100px;
     }
 }
 @media (max-width: 640px){
@@ -2014,9 +2015,12 @@ input[type="submit"] {
     }
     .Form-create{
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         justify-content: start;
         align-items: start;
+    }
+    .Form-label , .Form-input{
+        width: 90%;
     }
     .Form-right{
         margin: .3125rem;
@@ -2038,6 +2042,9 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 200%;
+    }
+    .Form-select--contact{
+        height: 100px;
     }
     .Block-profile{
         width: 20%;
@@ -2080,6 +2087,9 @@ input[type="submit"] {
     .event-form button {
         padding: .1875rem;
     }
+    .Home-management{
+        width: 65%;
+    }
     .Reports-container{
         margin: 1.875rem auto;
 
@@ -2101,29 +2111,16 @@ input[type="submit"] {
         position: static;
 
     }
-    .Reports-p ,.Reports-date{
-        width: 80%;
-        margin: 0 0 0 1.875rem;
-        padding: 1.25rem;
-        position: static;
-    }
-    .Home-head--reports{
-        width: 50%;
-        position: absolute;
-        top: 65%;
-        left: 0;
-    }
-    .Home-management--reports{
-        width: 80%;
-        padding: .3125rem;
-        position: absolute;
-        top: 70%;
-        left: 20%;
-    }
-    .Create-link{
+    
+    .Create-link , .Management-link , .Reports-p{
         font-size: .75rem;
         padding: .3125rem;
         margin: .3125rem;
+    }
+    .Home-head{
+        position: absolute;
+        top: 5%;
+        left: 55%;
     }
     .Home-new{
         position: absolute;
@@ -2145,6 +2142,19 @@ input[type="submit"] {
         position: absolute;
         top: 15%;
     }
+    .Reports-p ,.Reports-date , .Home-head--reports{
+        width: 65%;
+        margin: 0 0 0 1.875rem;
+        padding: 1.25rem;
+        position: static;
+    }
+    .Home-management--reports{
+        width: 65%;
+        padding: .3125rem;
+        position: absolute;
+        top: 73%;
+        left: 0;
+    }
     .Form-create{
         display: flex;
         flex-flow: column nowrap;
@@ -2153,6 +2163,9 @@ input[type="submit"] {
     }
     .Form-right{
         margin: .3125rem;
+    }
+    .Form-label , .Form-input{
+        width: 80%;
     }
     .Form-label--responsive{
         width: 80%;
@@ -2171,6 +2184,9 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 200%;
+    }
+    .Profile-information{
+        width: 80%;
     }
     .Block-profile{
         width: 20%;
@@ -2263,6 +2279,9 @@ input[type="submit"] {
         flex-flow: column nowrap;
         justify-content: start;
         align-items: start;
+    }
+    .Form-label , .Form-input{
+        width: 100%;
     }
     .Form-right{
         margin: .3125rem;
