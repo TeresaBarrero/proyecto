@@ -52,6 +52,9 @@ const homeManagement = document.querySelector('.Home-management--projects')
 // Defino FUNCTION getImportantTasks
     //Renderizamos las tareas importantes de la lista
 
+// Defino FUNCTION getYearTasks 
+    // Renderizamos las tareas que correspondan con el resto del año sin incluir el mes en curso 
+
 let tasksDaily = document.querySelector('.Tasks-dl--daily')
 let tasksMonthPending = document.querySelector('.Tasks-dl--pending')
 let tasksYear = document.querySelector('.Tasks-dl--year')
