@@ -1,3 +1,11 @@
+<!-- 
+ Descripción: Este archivo HTML contiene la página principal del sitio web (home)
+ Estructura general del archivo:
+ - "head" : etiquetas meta + enlace CSS y JS + tipografía obtenida a través de Google Fonts
+ - Encabezado (header)
+ - Contenido principal de la página (main)
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,12 +31,15 @@
             <span class="Header-span"></span>
             <a class="Header-a" href="./index.html">
                 <picture class="Header-picture">
+                    <source srcset="assets/Panic.png" media="(min-width: 6.25rem)">
                     <img class="Header-img" src="assets/Panic.png" alt="Panic">
                 </picture>
             </a>
         </h1>
 
-
+        <!-- Sección de navegación del CRM situada en Header 
+                Descripción: Incluyen enlaces directos en el interior de cada sección: Tareas, Calendario, Contactos, Proyectos, Informes generales
+        -->
         <nav class="Header-nav Menu">
             <ul class="Menu-ul">
                 <li class="Menu-li isActive">TAREAS</li>
@@ -47,8 +58,12 @@
                 </li>
             </ul>
 
+            <!-- Menú desplegable
+                    Desde cada una de las secciones del "Header-nav"
+                    Descripción: Incluyen enlaces directos a cada una de las secciones + información sobre el contenido relevante de cada sección
+            -->
             <div class="Menu-information">
-
+                <!-- Sección de Tareas-->
                 <div class="Block Block-tasks">
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
@@ -66,7 +81,7 @@
                         <dd class="Block-dd">TAREAS CUMPLIDAS</dd>
                     </dl>
                 </div>
-
+                <!-- Sección de Calendario-->
                 <div class="Block Block-calendar">
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
@@ -102,7 +117,7 @@
                         </dd>
                     </dl>
                 </div>
-
+                <!-- Sección de Contactos-->
                 <div class="Block Block-contacts">
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
@@ -158,7 +173,7 @@
                         <dd class="Block-dd">GESTIÓN DE PROYECTOS</dd>
                     </dl>
                 </div>
-
+                <!-- Sección de Informes generales-->
                 <div class="Block Block-reports">
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
@@ -180,6 +195,7 @@
                     </div>
                 </div>
 
+                <!-- Chat desplegable (btn)-->
                 <div class="Block Block-chat Chat">
                     <div class="Chat-container">
                         <div class="Chat-header">
@@ -198,7 +214,7 @@
             </div>
         </nav>
 
-
+        <!-- Sección de Perfil-->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -211,7 +227,11 @@
                 </li>
             </ul>
 
-
+        <!-- Desplegable de la sección Perfil
+                Descripción: incluye USUARIO, PERFIL y CERRAR SESIÓN
+                    PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
+                NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
+        -->
             <div class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
@@ -233,14 +253,16 @@
             </div>
         </div>
 
-        <div class="Header-responsive Btn">
-
+        <!-- Sección Menú desplegable para responsive (btn)-->
+        <section class="Header-responsive Btn">
+            <!--Btn menu desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
+                <!-- Btn de CHAT -->
                 <div class="Btn-chat Chat">
                     <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                         viewBox="0 0 16 16">
@@ -251,7 +273,8 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Secciones de HEADER adaptadas para menú desplegable responsive-->
         <div class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="src/tasks.html" title="Tareas">TAREAS</a>
@@ -261,6 +284,7 @@
                 <a href="src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
         </div>
+        <!-- Chat responsive-->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
@@ -278,23 +302,30 @@
     </header>
 
     <main class="Home-principal Home-principal--organizer">
+        <!--background igual en todas las pantallas-->
         <picture class="Home-picture">
+            <source srcset="assets/Panic.png" media="(min-width: 100%)">
             <img class="Home-img" src="assets/Panic.png" alt="Panic">
         </picture>
-        <div class="Home-organizer Organizer">
-            <h2 class="Organizer-h2">ORGANIZA TU DÍA</h2>
-            <form class="Organizer-form"> <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
+        <!-- Form para crear una tarea-->
+        <section class="Home-organizer Organizer">
+            <h2 class="Organizer-h2">CREA TU TAREA</h2>
+            <form class="Organizer-form" method="post"> <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
                 <label class="Form-label Form-label--organizer" for="description">Descripción de tarea</label>
                 <textarea class="Form-textarea Form-textarea--organizer" name="description" id="description"
                     required></textarea>
-
+                <!--Las fechas deben ser fechas futuras (date actual >>> mes actual >>> año)-->
                 <label class="Form-label Form-label--date" for="date">Fecha:</label>
+                <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                 <input class="Form-input" type="date" id="date" name="date" required>
 
                 <button class="Form-button" type="submit" title="Guardar">Guardar</button>
             </form>
-        </div>
+        </section>
 
+        <!-- Animación 
+                Descripción: Cada uno de los svg contiene un enlace directo a cada una de las secciones        
+        -->
         <div class="Home-animation Animation">
             <div class="Animation-clipboard">
                 <a class="Animation-a" href="src/tasks.html" title="Tareas">
