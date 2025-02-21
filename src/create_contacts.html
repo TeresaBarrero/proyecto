@@ -1,3 +1,10 @@
+<!-- 
+ Descripción: Este archivo HTML contiene la página principal del sitio web (home)
+ Estructura general del archivo:
+ - "head" : etiquetas meta + enlace CSS y JS + tipografía obtenida a través de Google Fonts
+ - Encabezado (header)
+ - Contenido principal de la página (main)
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +25,7 @@
 <body>
 
     <header class="Header">
-
+        <!-- logo con enlace a home (index.html)-->
         <h1 class="Header-logo">
             <span class="Header-span"></span>
             <a class="Header-a" href="../index.html" title="Panic">
@@ -28,7 +35,9 @@
             </a>
         </h1>
 
-
+        <!-- Sección de navegación del CRM situada en Header 
+                Descripción: Incluyen enlaces directos en el interior de cada sección: Tareas, Calendario, Contactos, Proyectos, Informes generales
+        -->
         <nav class="Header-nav Menu">
             <ul class="Menu-ul">
                 <li class="Menu-li isActive">TAREAS</li>
@@ -47,8 +56,12 @@
                 </li>
             </ul>
 
+            <!-- Menú desplegable
+                    Desde cada una de las secciones del "Header-nav"
+                    Descripción: Incluyen enlaces directos a cada una de las secciones + información sobre el contenido relevante de cada sección
+            -->
             <div class="Menu-information">
-
+                <!-- Sección de Tareas-->
                 <div class="Block Block-tasks">
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
@@ -67,6 +80,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Calendario-->
                 <div class="Block Block-calendar">
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
@@ -103,6 +117,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Contactos-->
                 <div class="Block Block-contacts">
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
@@ -131,6 +146,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de proyectos -->
                 <div class="Block Block-projects">
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
@@ -159,6 +175,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Informes generales-->
                 <div class="Block Block-reports">
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
@@ -180,6 +197,7 @@
                     </div>
                 </div>
 
+                <!-- Chat desplegable (btn)-->
                 <div class="Block Block-chat Chat">
                     <div class="Chat-container">
                         <div class="Chat-header">
@@ -198,7 +216,7 @@
             </div>
         </nav>
 
-
+        <!-- Sección de Perfil-->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -211,7 +229,11 @@
                 </li>
             </ul>
 
-
+            <!-- Desplegable de la sección Perfil
+                Descripción: incluye USUARIO, PERFIL y CERRAR SESIÓN
+                    PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
+                NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
+            -->
             <div class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
@@ -233,14 +255,16 @@
             </div>
         </div>
 
-        <div class="Header-responsive Btn">
-
+        <!-- Sección Menú desplegable para responsive (btn)-->
+        <section class="Header-responsive Btn">
+            <!--Btn menu desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
+                <!-- Btn de CHAT -->
                 <div class="Btn-chat Chat">
                     <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                         viewBox="0 0 16 16">
@@ -251,8 +275,10 @@
                     </svg>
                 </div>
             </div>
-        </div>
-        <div class="Btn-nav">
+        </section>
+
+        <!-- Secciones de HEADER adaptadas para menú desplegable responsive-->
+        <section class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
                 <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
@@ -260,7 +286,9 @@
                 <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
-        </div>
+        </section>
+
+        <!-- Chat responsive -->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
@@ -278,10 +306,12 @@
     </header>
 
     <main class="Home-principal">
+        <!--background igual en todas las pantallas-->
         <picture class="Home-picture">
             <img class="Home-img" src="../assets/Panic.png" alt="Panic">
         </picture>
 
+        <!-- Home Crear Contacto-->
         <h2 class="Home-h2">CREAR CONTACTO
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C" class="bi bi-plus-circle"
                 viewBox="0 0 16 16">
@@ -290,45 +320,67 @@
                     d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
             </svg>
         </h2>
+
+        <!-- Formulario para crear contacto -->
         <div class="Home-form Form">
             <form class="Form-create"><!--elimino action="" para llevar las instrucciones pertinentes a JS-->
                 <div class="Form-left">
                     <label class="Form-label Form-label--responsive" for="fullName">Nombre y Apellidos</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="fullName" name="fullName" required>
                     <label class="Form-label Form-label--responsive" for="company">Empresa</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="company" name="company" required>
                     <label class="Form-label Form-label--responsive" for="dni">DNI / NIF</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="dni" name="dni" required>
                     <label class="Form-label Form-label--responsive" for="dni">Dirección</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="address" name="address"
                         placeholder="C/" required>
                     <label class="Form-label Form-label--responsive" for="email">Correo electrónico</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="email" id="email" name="email" required>
                     <label class="Form-label Form-label--responsive" for="phone">Teléfono</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="tel" id="phone" name="phone" required>
                     <label class="Form-label Form-label--responsive" for="fax">FAX</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="tel" id="fax" name="fax" required>
                     <label class="Form-label Form-label--responsive" for="label">Etiqueta</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="label" name="label" required>
                 </div>
+
                 <div class="Form-right">
                     <label class="Form-label Form-label--observations" for="observations">Observaciones</label>
                     <textarea class="Form-textarea Form-textarea--observations" name="observations"
                         id="observations"></textarea>
                     <label class="Form-label Form-label--responsive" for="clientType">Tipo de cliente</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
                     <input class="Form-input Form-input--responsive" type="text" id="clientType" name="clientType"
                         required>
                     <label class="Form-label Form-label--responsive" for="clientStatus">Estado de cliente</label>
+                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                    <!-- Check para seleccionar el "Estado de cliente"
+                            El atributo "size" especifica uántas opciones se deben mostrar a la vez sin necesidad de hacer scroll 
+                    -->
                     <select class="Form-select Form-select--contact" name="clientStatus" id="clientStatus" size="3"
                         required>
+                        <!-- &check representa "OK"-->
                         <option class="Form-option--active" value="activo">&check;</option>
+                        <!-- "?" significa "pendiente"-->
                         <option class="Form-option--pending" value="pendiente">?</option>
+                        <!-- "x" significa "inactivo"-->
                         <option class="Form-option--inactive" value="inactivo">x</option>
                     </select>
                 </div>
+                <!-- btn para enviar formulario completado-->
                 <button class="Form-button" type="submit" title="Guardar">Guardar</button>
             </form>
         </div>
+
+        <!-- bnt + enlace para regresar a la pantalla "Contactos" -->
         <div class="Form-back Back">
             <a class="Back-a" href="../src/contacts.html" title="Back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C"
