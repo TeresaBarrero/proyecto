@@ -60,7 +60,16 @@ svg{
 
 }
 
-/* Header */
+/* Header 
+    Descripción: Estilos para Header
+    Estructura:
+        - Logo + picture + img
+        - Nav (Header-nav) + Menu-ul + Menu-li
+        - Header responsive
+        - Menu-information 
+        - Btn-menu + Btn-seccion
+*/
+
 .Header {
     width: 100%;
     background-color: var(--primary-c);
@@ -86,8 +95,6 @@ svg{
     width: 43%;
     height: 70px;
 }
-
-
 /* Menú del Header */
 .Header-nav {
     width: 70%;
@@ -103,9 +110,6 @@ svg{
     justify-content: flex-start;
     align-items: end;
 }
-.Header-responsive{
-    display: none;
-}
 .Menu-li {
     padding: 1em;
     margin: 0 1em 0 0;
@@ -117,6 +121,9 @@ svg{
     border-radius: 10px;
     color: var(--basic-c);
 }
+.Header-responsive{
+    display: none;
+}
 .Menu-information {
     position: relative;
 
@@ -125,7 +132,9 @@ svg{
     display: none;
 }
 
-/*Bloques de información que recoge cada uno de las secciones propuestas en el menu de Header*/
+/*Bloques desplegables de información que recoge cada uno de las secciones propuestas en el menu de Header
+    Descripción: diseño y posición de los diferentes bloques del Header-nav
+*/
 .Block{
     width: 60%;
     background-color: var(--basic-c);
@@ -144,12 +153,11 @@ svg{
 
     z-index: 3;
 }
+/* Transición de apertura del bloque desplegable */
 .Block.Block.isActive {
     display: unset;
 }
-
-
-/*Calendario*/
+/* Bloque de Calendario*/
 .Block-calendar {
     width: 60%;
     min-height: 300px;
@@ -171,8 +179,7 @@ svg{
     padding: 0.625rem;
     text-align: center;
 }
-
-/*Contactos*/
+/* Bloque de Contactos*/
 .Block-contacts {
     width: 60%;
 
@@ -187,8 +194,7 @@ svg{
     justify-content: space-between;
     display: none;
 }
-
-/*Proyectos*/
+/* Bloque de Proyectos*/
 .Block-projects {
     width: 60%;
 
@@ -203,8 +209,7 @@ svg{
     justify-content: space-between;
     display: none;
 }
-
-/*Informes generales*/
+/* Bloque de Informes generales*/
 .Block-reports {
     width: 35%;
 
@@ -219,6 +224,7 @@ svg{
     justify-content: space-between;
     display: none;
 }
+/* Lista de contenidos dentro del bloque desplegable. Edición */
 .Block-dt {
     color: var(--title-c);
     padding: 0 0 0.375rem 0;
@@ -228,7 +234,7 @@ svg{
     padding: 0 0 0.3125rem 1.25rem;
 }
 
-/*Chat*/
+/* Bloque de Chat + Chat responsive */
 .Block-chat {
     width: 56%;
     min-height: 400px;
@@ -252,7 +258,9 @@ svg{
 
 
 
-/*Sección 2 de Header*/ 
+/*Sección 2 de Header
+    Descripción: incluye "Profile"
+*/ 
 .Header-wrapper {
     width: 10%;
     display: flex;
@@ -261,7 +269,7 @@ svg{
     align-items: center;
 }
 
-/*Perfil*/
+/* Bloque de Perfil*/
 .Block-profile {
     width: 10%;
     min-height: 150px;
@@ -280,6 +288,7 @@ svg{
     z-index: 3;
     display: none;
 }
+/* Contenido interno del bloque desplegable de Perfil */
 .Block-li--profile, .Block-li--close{
     background-color: var(--secondForm-c);
     padding: 0.3125rem;
@@ -297,7 +306,16 @@ svg{
 
 
 
-/* MAIN */
+/* MAIN 
+    Descripción: Estilos para main
+        Cada pantalla contiene un estilo diferente aunque en algunas se comparta el diseño
+        Estructura: 
+                - Edición general de Home
+                - picture + img de background (bg)
+                - Home- organizer (index.html) + contenido interno + animation
+                - Home-tasks ( + su contenido interno )
+*/
+/* Edición general del Home */
 .Home{ 
     width: 100%;
     min-height: 30vh;
@@ -306,6 +324,7 @@ svg{
     position: relative;
     
 }
+/* Otra edición general del Home para otras pantallas */
 .Home-principal{
     width: 100%;
     min-height: 150vh;
@@ -313,6 +332,7 @@ svg{
 
     position: relative;
 }
+/* imagen de fondo */
 .Home-picture {
     display: flex;
     flex-flow: row nowrap;
@@ -329,7 +349,7 @@ svg{
 
 }
 
-/* Home, pantalla principal */
+/* Home, pantalla principal (index.html) */
 .Home-organizer {
     width: 50%;
     min-height: 400px;
@@ -359,6 +379,12 @@ svg{
     position: relative;
     left: 60%;
 }
+/* Animación para animar la aparición de los svg de las diferentes secciones
+    Estructura de la información posterior:
+                            - Edición de todos los svg 
+                            - Edición de cada uno de los svg para indicar su posición en la pantalla
+                            - Creación y definición de la animación "fadeInUp"
+*/
 .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
     width: 30%;
     min-height: 75px;
@@ -373,60 +399,63 @@ svg{
     border-radius: 50%;
     border: 1px solid var(--primary-c);
 
-    opacity: 0;
-    transform: translateY(20px); 
-    animation-duration: 1s; 
-    animation-fill-mode: forwards;
+    opacity: 0;     /* Hace que el elemento sea invisible al comienzo de la animación */
+    transform: translateY(20px);    /* Desplaza el elemento 20px hacia abajo desde su posición original */
+    animation-duration: 1s;     /* Define la duración de la animación de 1 segundo */
+    animation-fill-mode: forwards;  /* Hace que el elemento mantenga el estado final de la animación al finalizarla */ 
 }
 .Animation-clipboard{
     position: absolute;
     top: 0;
     left: 40%;
-    animation-name: fadeInUp;
-    animation-delay: 0s;
+    animation-name: fadeInUp;   /* Aplica la animación llamada "fadeInUp" que implica que el elemento se desplace hacia arriba y se vuelva visible */
+    animation-delay: 0s;    /* La animación comenzará de forma inmediata */
 }
 .Animation-calendar{
     position: absolute;
     top: 20%;
     left: 60%;
-    animation-name: fadeInUp;
-    animation-delay: 0.3s;
+    animation-name: fadeInUp;   /* Aplica la animación llamada "fadeInUp" que implica que el elemento se desplace hacia arriba y se vuelva visible */
+    animation-delay: 0.3s;  /* La animación comenzará a los 0.3 segundos */
 }
 .Animation-people{
     position: absolute;
     top: 40%;
     left: 80%;
-    animation-name: fadeInUp;
-    animation-delay: 0.6s;
+    animation-name: fadeInUp;   /* Aplica la animación llamada "fadeInUp" que implica que el elemento se desplace hacia arriba y se vuelva visible */
+    animation-delay: 0.6s;  /* La animación comenzará a los 0.6 segundos */
 }
 .Animation-folder{
     position: absolute;
     top: 60%;
     left: 60%;
-    animation-name: fadeInUp;
-    animation-delay: 0.9s;
+    animation-name: fadeInUp;   /* Aplica la animación llamada "fadeInUp" que implica que el elemento se desplace hacia arriba y se vuelva visible */
+    animation-delay: 0.9s;  /* La animación comenzará a los 0.9 segundos */
 }
 .Animation-graph{
     position: absolute;
     top: 80%;
     left: 40%;
-    animation-name: fadeInUp;
-    animation-delay: 1.2s;
+    animation-name: fadeInUp;   /* Aplica la animación llamada "fadeInUp" que implica que el elemento se desplace hacia arriba y se vuelva visible */
+    animation-delay: 1.2s;   /* La animación comenzará a los 1.2 segundos */
 }
-
-@keyframes fadeInUp {
+@keyframes fadeInUp {       /* Definición de la animación "fadeInUp" que hace que un elemento se vuelva visible y se desplace hacia arriba*/
     0% {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 0; /* Al inicio de la animación, el elemento es invisible */
+        transform: translateY(20px);    /* El elemento comienza 20px por debajo de su posición original */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Al final de la animación, el elemento es visible */
+        transform: translateY(0);   /* El elemento vuelve a su posición original, sin desplazamiento */
     }
 }
 
 
-/*Contenido de Tareas y Contactos*/ 
+/*Edición de Home-tasks (tasks.html)
+    + contenido interno de la pantalla
+*/ 
+
+/* Tasks y Contacts comparten edición en = Tasks-dt y Contacts-dt + Tasks-dd y Contacts-dd + Tasks-dl, .Contacts-dl */
 .Tasks-dt, .Contacts-dt{
     background-color: var(--title-c);
     padding: 0.625rem;
@@ -434,6 +463,8 @@ svg{
     border-radius: 5px;
     color: var(--primary-c);
     text-align: center;
+
+    font-weight: bold;
 }
 .Tasks-dd, .Contacts-dd{
     background-color: rgb(232, 231, 231);
@@ -459,9 +490,6 @@ svg{
     font-size: 1.25rem;
     font-weight: bold;
 
-}
-.Tasks-dt, .Contacts-dt {
-    font-weight: bold;
 }
 .Tasks-dl, .Contacts-dl{
     width: 80%;
