@@ -1,3 +1,14 @@
+/* ESTRUCTURA GENERAL 
+    index.css (en este archivo se incluye el CSS completo del proyecto)
+    - Reset
+    - Header
+    - Main
+    - Responsive
+
+*/
+
+/* Establece reglas globales para todos los elementos
+    Descripción: pone en valor 0 todos los estilos preestablecidos en algunas etiquetas*/
 * {
     margin: 0;
     padding: 0;
@@ -30,19 +41,22 @@ span {
 svg{
     cursor: pointer;
 }
-:root{
-    --primary-c: #04202C;
-    --home-c: whitesmoke;
-    --form-c: #5B7065;
-    --secondForm-c : #C9D1C8;
-    --basic-c: white;
-    --buttonActive-c: #304040;
-    --title-c: #DDA288;
-    --AlertImportant-c : rgb(109, 37, 37);
-    --tasksOk : #5b856f;
 
-    --form-ff : 'Zilla Slab';
-    --general-ff : 'Times New Roman', Times, serif;
+/* Estilos optimizados*/
+:root{
+    --primary-c: #04202C;   /* Color del Header y títulos generales (h2) */
+    --home-c: whitesmoke;   /* Color para fondo (bg) de main + textarea + selected + input */
+    --form-c: #5B7065;  /* Color de fondo (bg) de los formularios */
+    --secondForm-c : #C9D1C8;   /* Color de fondo (bg) de profile + close + label + calendario + chat */ 
+    --basic-c: white;   /* Color de tipografía para header + overlay(reports) + profile + addEvent (calendario) + calendarView(vista de calendario en bloque desplegable Header) +  menssage.user + Chat-input button
+                            Color de fondo (bg) para Block (bloques desplegables Header) + tasks (apartado "Tareas del día" , "Tareas pendientes del mes", "Tareas pendientes del año", "Tareas cumplidas", "Tareas importantes") + contacts (apartado de Contactos) Home Management (apartado) + Form-select--contact + Home Reports (apartado Informes Generales)*/
+    --buttonActive-c: #304040;  /* Color de fondo (bg) de botón (btn) de formularios + add event (añadir evento en calendario) + CalendarView-header(header del calendario situado en bloque desplegable del header) +  Profile-li (listado de información en Perfil)*/
+    --title-c: #DDA288;     /* Color para svg de Perfil + color de fondo (bg) de btn de menú responsive + color de fondo de btn slide + color de fondo (bg) de Tasks-dt (título de apartados = "Tareas del día", "Tareas pendientes del mes" , "Tareas pendientes del año" + título de sección en bloques desplegables Header (Tareas + Calendario + Contactos + Proyectos + Informes Generales)) */
+    --AlertImportant-c : rgb(109, 37, 37);  /*Color para btn de apertura del apartado = "Tareas importantes"*/
+    --tasksOk : #5b856f;    /*Color de fondo (bg) de título de apartado "Tareas cumplidas" */
+
+    --form-ff : 'Zilla Slab';   /*Tipografía de formularios : label +  input + textarea + select + botón (btn)*/
+    --general-ff : 'Times New Roman', Times, serif; /* Tipografía utilizada para nombre de secciones Header + calendario (utilizada generalmente en "body") */
 
 }
 
