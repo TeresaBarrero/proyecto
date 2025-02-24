@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- 
  Descripción: Este archivo HTML contiene la página principal del sitio web (home)
  Estructura general del archivo:
@@ -5,8 +7,6 @@
  - Encabezado (header)
  - Contenido principal de la página (main)
  -->
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -63,6 +63,9 @@
             <div class="Menu-information">
                 <!-- Sección de Tareas -->
                 <div class="Block Block-tasks">
+                    <!-- Bloque desplegable de "Tareas"
+                            Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
                             <a class="Tasks-a" href="../src/tasks.html" title="Tareas">
@@ -82,6 +85,9 @@
 
                 <!-- Sección de Calendario-->
                 <div class="Block Block-calendar">
+                    <!-- Bloque de Calendario
+                            Descipción: Calendario en miniatura de utilidad visual 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
                             <a class="Calendar-a" href="../src/calendar.html" title="Calendario">
@@ -119,6 +125,9 @@
 
                 <!-- Sección de Contactos-->
                 <div class="Block Block-contacts">
+                    <!-- Bloque desplegable de "Contactos"
+                            Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
                             <a class="Contacts-a" href="../src/contacts.html" title="Contactos">
@@ -148,6 +157,9 @@
 
                 <!-- Sección de Proyectos -->
                 <div class="Block Block-projects">
+                    <!-- Bloque desplegable de "Proyectos"
+                            Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
                             <a class="Projects-a" href="../src/projects.html" title="Proyectos">
@@ -177,6 +189,9 @@
 
                 <!-- Sección de Informes generales -->
                 <div class="Block Block-reports">
+                    <!-- Bloque desplegable de "Informes Generales"
+                            Descripción Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
                             <a class="Reports-a" href="../src/reports.html" title="Informes generales">
@@ -197,12 +212,15 @@
                     </div>
                 </div>
 
-                <!-- Chat desplegable (btn) -->
-                <div class="Block Block-chat Chat">
+                <!-- Sección Chat -->
+                <section class="Block Block-chat Chat">
+                    <!-- Chat desplegable -->
                     <div class="Chat-container">
                         <div class="Chat-header">
+                            <!-- Título introductorio "CHAT" -->
                             <h2 class="Chat-h2">CHAT</h2>
                         </div>
+                        <!-- Funcionalidad de Chat (necesario para CSS y JS) -->
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
                             <input class="Chat-input" type="text" id="message-input"
@@ -210,7 +228,7 @@
                             <button class="Chat-btn" id="send-button" title="Enviar">Enviar</button>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </nav>
 
@@ -277,7 +295,7 @@
         </div>
 
         <!-- Secciones de HEADER adaptadas para menú desplegable responsive -->
-        <section class="Btn-nav">
+        <nav class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
                 <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
@@ -285,7 +303,7 @@
                 <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
-        </section>
+        </nav>
 
         <!-- Chat responsive -->
         <div class="Block Block-chat--responsive Chat">
@@ -310,117 +328,119 @@
             <img class="Home-img" src="../assets/Panic.png" alt="Panic">
         </picture>
 
-        <!-- Título introductorio a home "ACTUALIZAR PROYECTO"-->
-        <h2 class="Home-h2"> ACTUALIZAR PROYECTO
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C" class="bi bi-plus-circle"
-                viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                <path
-                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-            </svg>
-        </h2>
+        <section class="Home-section">
+            <!-- Título introductorio a home "ACTUALIZAR PROYECTO"-->
+            <h2 class="Home-h2"> ACTUALIZAR PROYECTO
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C" class="bi bi-plus-circle"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                </svg>
+            </h2>
 
-        <!-- Formulario para actualizar proyectos y para ver la información completa del proyecto guardado previamente en "crear proyectos" -->
-        <div class="Home-form Form">
-            <form action="#" method="POST">
-               <!-- Para facilitar su edición en CSS se ha dividido en: 
+            <!-- Formulario para actualizar proyectos y para ver la información completa del proyecto guardado previamente en "crear proyectos" -->
+            <div class="Home-form Form">
+                <form action="#" method="POST">
+                    <!-- Para facilitar su edición en CSS se ha dividido en: 
                         Primer formulario 
-               --> 
-                <div class="Form-first">
-                    <div class="Form-left Form-left--projects">
-                        <h2 class="Form-h2">Información general del proyecto</h2>
-                        <label class="Form-label  Form-label--projects" for="project-name">Nombre del proyecto</label>
+                    -->
+                    <div class="Form-first">
+                        <section class="Form-left Form-left--projects">
+                            <h2 class="Form-h2">Información general del proyecto</h2>
+                            <label class="Form-label  Form-label--projects" for="project-name">Nombre del
+                                proyecto</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <input class="Form-input Form-input--projects" type="text" id="project-name"
+                                name="project-name" required>
+                            <label class="Form-label Form-label--projects" for="client">Cliente asociado</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <input class="Form-input Form-input--projects" type="text" id="client" name="client"
+                                required>
+                            <label class="Form-label Form-label--projects" for="start-date">Fecha de inicio</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <input class="Form-input Form-input--projects" type="date" id="start-date" name="start-date"
+                                required>
+                            <label class="Form-label Form-label--projects" for="end-date">Fecha de fin</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <input class="Form-input Form-input--projects" type="date" id="end-date" name="end-date"
+                                required>
+                            <label class="Form-label Form-label--projects" for="description">Descripción</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <textarea class="Form-input Form-input-description" name="description" id="description"
+                                required></textarea>
+                        </section>
+                        <div class="Form-right Form-right--projects">
+                            <label class="Form-label Form-label--status" for="status">Estado del proyecto</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <!-- Check para seleccionar el "Estado de proyecto"
+                                El atributo "size" especifica cuántas opciones se deben mostrar a la vez sin necesidad de hacer scroll 
+                            -->
+                            <select class="Form-select Form-select--status  Form-select--status" name="status"
+                                id="status" size="3" required>
+                                <option class="Form-planning" value="planning">Planificación</option>
+                                <option class="Form-progressing" value="progressing">En progreso</option>
+                                <option class="Form-complete" value="complete">Completado</option>
+                            </select>
+                            <label class="Form-label Form-label--priority" for="priority">Prioridad</label>
+                            <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
+                            <!-- Check para seleccionar "Prioridad"
+                                El atributo "size" especifica cuántas opciones se deben mostrar a la vez sin necesidad de hacer scroll 
+                            -->
+                            <select class="Form-select Form-select--priority" name="priority" id="priority" size="4"
+                                required>
+                                <option class="Form-low" value="low">Baja</option>
+                                <option class="Form-medium" value="medium">Media</option>
+                                <option class="Form-high" value="high">Alta</option>
+                                <option class="Form-critical" value="critical">Crítica</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Segundo Formulario: "Recursos y presupuestos"-->
+                    <section class="Form-second">
+                        <h2 class="Form-h2">Recursos y presupuestos</h2>
+                        <label class="Form-label Form-label--projects" for="budget">Presupuesto del proyecto</label>
                         <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <input class="Form-input Form-input--projects" type="text" id="project-name" name="project-name"
-                            required>
-                        <label class="Form-label Form-label--projects" for="client">Cliente asociado</label>
+                        <input class="Form-input" type="number" id="budget" name="budget" required>
+                        <label class="Form-label" for="resources">Recursos asignados</label>
+                        <!-- el atributo "accept" representa que este formulario acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
+                        <input class="Form-input" type="file" id="resources" name="resources"
+                            accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
+                        <label class="Form-label" for="expenses">Registro de gastos</label>
+                        <!-- acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
+                        <input class="Form-input Form-input--expenses" type="file" id="expenses" name="expenses"
+                            accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
+                    </section>
+
+                    <!-- Tercer Formulario: "Comunicación y documentación"-->
+                    <section class="Form-third">
+                        <h2 class="Form-h2">Comunicación y documentación</h2>
+                        <label class="Form-label Form-label--projects" for="comments">Comentarios</label>
+                        <!-- el atributo "accept" representa que este formulario acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
+                        <input class="Form-input" type="file" id="information" name="information"
+                            accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
                         <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <input class="Form-input Form-input--projects" type="text" id="client" name="client" required>
-                        <label class="Form-label Form-label--projects" for="start-date">Fecha de inicio</label>
-                        <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <input class="Form-input Form-input--projects" type="date" id="start-date" name="start-date"
-                            required>
-                        <label class="Form-label Form-label--projects" for="end-date">Fecha de fin</label>
-                        <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <input class="Form-input Form-input--projects" type="date" id="end-date" name="end-date"
-                            required>
-                        <label class="Form-label Form-label--projects" for="description">Descripción</label>
-                        <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <textarea class="Form-input Form-input-description" name="description" id="description"
+                        <textarea class="Form-input Form-input-comments" name="comments" id="comments"
                             required></textarea>
-                    </div>
-                    <div class="Form-right Form-right--projects">
-                        <label class="Form-label Form-label--status" for="status">Estado del proyecto</label>
+                    </section>
+
+                    <!-- Cuarto Formulario-->
+                    <div class="Form-fourth">
+                        <label class="Form-label Form-label--projects" for="label-project">Etiqueta</label>
                         <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                         <!-- Check para seleccionar el "Estado de proyecto"
-                            El atributo "size" especifica cuántas opciones se deben mostrar a la vez sin necesidad de hacer scroll 
-                        -->
-                        <select class="Form-select Form-select--status  Form-select--status" name="status" id="status"
-                            size="3" required>
-                            <option class="Form-planning" value="planning">Planificación</option>
-                            <option class="Form-progressing" value="progressing">En progreso</option>
-                            <option class="Form-complete" value="complete">Completado</option>
-                        </select>
-                        <label class="Form-label Form-label--priority" for="priority">Prioridad</label>
-                        <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                        <!-- Check para seleccionar "Prioridad"
-                            El atributo "size" especifica cuántas opciones se deben mostrar a la vez sin necesidad de hacer scroll 
-                        -->
-                        <select class="Form-select Form-select--priority" name="priority" id="priority" size="4"
-                            required>
-                            <option class="Form-low" value="low">Baja</option>
-                            <option class="Form-medium" value="medium">Media</option>
-                            <option class="Form-high" value="high">Alta</option>
-                            <option class="Form-critical" value="critical">Crítica</option>
-                        </select>
+                        <input class="Form-input" type="text" id="label-project" name="label-project" required>
                     </div>
-                </div>
 
-                <!-- Segundo Formulario: "Recursos y presupuestos"-->
-                <div class="Form-second">
-                    <h2 class="Form-h2">Recursos y presupuestos</h2>
-                    <label class="Form-label Form-label--projects" for="budget">Presupuesto del proyecto</label>
-                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                    <input class="Form-input" type="number" id="budget" name="budget" required>
-                    <label class="Form-label" for="resources">Recursos asignados</label>
-                    <!-- el atributo "accept" representa que este formulario acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
-                    <input class="Form-input" type="file" id="resources" name="resources"
-                        accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
-                    <label class="Form-label" for="expenses">Registro de gastos</label>
-                    <!-- acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
-                    <input class="Form-input Form-input--expenses" type="file" id="expenses" name="expenses"
-                        accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
-                </div>
+                    <!-- btn de enviar formulario-->
+                    <div class="Form-send">
+                        <button class="Form-button" type="submit" title="Enviar">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-                <!-- Tercer Formulario: "Comunicación y documentación"-->
-                <div class="Form-third">
-                    <h2 class="Form-h2">Comunicación y documentación</h2>
-                    <label class="Form-label Form-label--projects" for="comments">Comentarios</label>
-                    <!-- el atributo "accept" representa que este formulario acepta archivos con los siguientes formatos: .pdf , .doc , .docs , .sls , .xlsx , .txt , .jpg , .png-->
-                    <input class="Form-input" type="file" id="information" name="information"
-                        accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
-                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                    <textarea class="Form-input Form-input-comments" name="comments" id="comments" required></textarea>
-                </div>
-
-                <!-- Cuarto Formulario-->
-                <div class="Form-fourth">
-                    <label class="Form-label Form-label--projects" for="label-project">Etiqueta</label>
-                    <!-- El atributo "required" asegura que este campo debe ser completado antes de enviar el formulario-->
-                    <input class="Form-input" type="text" id="label-project" name="label-project" required>
-                </div>
-
-                <!-- btn de enviar formulario-->
-                <div class="Form-send">
-                    <button class="Form-button" type="submit" title="Enviar">Enviar</button>
-                </div>
-            </form>
-        </div>
-
-
-
-
-
+        <!-- bnt + enlace para regresar a la pantalla "Proyectos" -->
         <div class="Form-back Form-back--projects Back">
             <a class="Back-a" href="../src/projects.html" title="Back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C"

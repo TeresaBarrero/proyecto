@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <!-- 
  Descripción: Este archivo HTML contiene la página principal del sitio web (home)
  Estructura general del archivo:
@@ -5,9 +7,6 @@
  - Encabezado (header)
  - Contenido principal de la página (main)
  -->
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,7 @@
 <body>
 
     <header class="Header">
-
+        <!-- logo con enlace a home (index.html)-->
         <h1 class="Header-logo">
             <span class="Header-span"></span>
             <a class="Header-a" href="../index.html" title="Panic">
@@ -64,6 +63,9 @@
             <div class="Menu-information">
                 <!-- Sección de Tareas-->
                 <div class="Block Block-tasks">
+                    <!-- Bloque desplegable de "Tareas" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
                             <a class="Tasks-a" href="../src/tasks.html" title="Tareas">
@@ -83,6 +85,9 @@
 
                 <!-- Sección de Calendario-->
                 <div class="Block Block-calendar--home">
+                    <!-- Bloque de Calendario
+                            Descripción: Calendario en miniatura de utilidad visual 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
                             <a class="Calendar-a" href="../src/calendar.html" title="Calendar">
@@ -104,6 +109,9 @@
 
                 <!-- Sección de Contactos-->
                 <div class="Block Block-contacts">
+                    <!-- Bloque desplegable de "Contactos" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
                             <a class="Contacts-a" href="../src/contacts.html" title="Contactos">
@@ -133,6 +141,9 @@
 
                 <!-- Sección de proyectos -->
                 <div class="Block Block-projects">
+                    <!-- Bloque desplegable de "Proyectos" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
                             <a class="Projects-a" href="../src/projects.html" title="Proyectos">
@@ -162,6 +173,9 @@
 
                 <!-- Sección de Informes generales-->
                 <div class="Block Block-reports">
+                    <!-- Bloque desplegable de "Informes Generales" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
                             <a class="Reports-a" href="../src/reports.html" title="Informes generales">
@@ -182,12 +196,15 @@
                     </div>
                 </div>
 
-                <!-- Chat desplegable (btn)-->
-                <div class="Block Block-chat Chat">
+                <!-- Sección Chat-->
+                <section class="Block Block-chat Chat">
+                    <!-- Chat desplegable -->
                     <div class="Chat-container">
                         <div class="Chat-header">
+                            <!-- Título introductorio "CHAT"-->
                             <h2 class="Chat-h2">CHAT</h2>
                         </div>
+                        <!-- Funcionalidad de Chat (necesario para CSS y JS) -->
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
                             <input class="Chat-input" type="text" id="message-input"
@@ -195,7 +212,7 @@
                             <button class="Chat-btn" id="send-button" title="Enviar">Enviar</button>
                         </div>
                     </div>
-                </div>
+                </section>
 
 
             </div>
@@ -262,7 +279,7 @@
             </div>
         </section>
         <!-- Secciones de HEADER adaptadas para menú desplegable responsive-->
-        <section class="Btn-nav">
+        <nav class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
                 <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
@@ -270,7 +287,7 @@
                 <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
-        </section>
+        </nav>
         <!-- Chat responsive-->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
@@ -292,13 +309,16 @@
     <main class="Home-principal Schedule">
         <!-- Header del calendario -->
         <div class="Schedule-header">
+            <!-- btn para retroceder al mes anterior -->
             <button id="prevMonth" class="Schedule-prev" title="prevMonth"><svg xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
                     <path
                         d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
                 </svg>
             </button>
+            <!-- Container para mostrar el nombre del mes y el año actual-->
             <div id="monthYear" class="Schedule-month"></div>
+            <!-- btn para avanzar al siguiente mes -->
             <button id="nextMonth" class="Schedule-next" title="nextMonth">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-caret-right" viewBox="0 0 16 16">
@@ -308,7 +328,7 @@
             </button>
         </div>
 
-        <!-- Home calendario (edición css)-->
+        <!-- Container principal para cuadrícula del calendario -->
         <div id="calendarGrid" class="Schedule-grid"></div>
     </main>
 

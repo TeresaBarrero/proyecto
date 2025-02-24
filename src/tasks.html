@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <!-- 
  Descripción: Este archivo HTML contiene la página principal del sitio web (home)
  Estructura general del archivo:
@@ -6,9 +7,6 @@
  - Encabezado (header)
  - Contenido principal de la página (main)
  -->
- <!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +62,9 @@
             <div class="Menu-information">
                 <!-- Sección de Tareas-->
                 <div class="Block Block-tasks">
+                    <!-- Bloque desplegable de "Tareas" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
                             <a class="Tasks-a" href="../src/tasks.html" title="Tareas">
@@ -83,6 +84,9 @@
 
                 <!-- Sección de Calendario -->
                 <div class="Block Block-calendar">
+                    <!-- Bloque de Calendario
+                            Descripción: Calendario en miniatura de utilidad visual 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
                             <a class="Calendar-a" href="../src/calendar.html" title="Calendario">
@@ -120,6 +124,9 @@
 
                 <!-- Sección de Contactos -->
                 <div class="Block Block-contacts">
+                    <!-- Bloque desplegable de "Contactos" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
                             <a class="Contacts-a" href="../src/contacts.html" title="Contactos">
@@ -149,6 +156,9 @@
 
                 <!-- Sección de Proyectos -->
                 <div class="Block Block-projects">
+                    <!-- Bloque desplegable de "Proyectos" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
                             <a class="Projects-a" href="../src/projects.html" title="Proyectos">
@@ -178,6 +188,9 @@
 
                 <!-- Sección de Informes generales -->
                 <div class="Block Block-reports">
+                    <!-- Bloque desplegable de "Informes Generales" 
+                                Descripción: Incluye una lista con la información de la sección 
+                    -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
                             <a class="Reports-a" href="../src/reports.html" title="Informes generales">
@@ -198,12 +211,15 @@
                     </div>
                 </div>
 
-                <!-- Chat desplegable (btn)-->
+                <!-- Sección Chat-->
                 <div class="Block Block-chat Chat">
+                    <!-- Chat desplegable -->
                     <div class="Chat-container">
                         <div class="Chat-header">
-                            <h3 class="Chat-h3">CHAT</h3>
+                            <!-- Título introductorio "CHAT"-->
+                            <h2 class="Chat-h2">CHAT</h2>
                         </div>
+                        <!-- Funcionalidad de Chat (necesario para CSS y JS)-->
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
                             <input class="Chat-input" type="text" id="message-input"
@@ -233,7 +249,7 @@
                     PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
                 NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
              -->
-            <section class="Block Block-profile">
+            <div class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#04202C"
@@ -251,11 +267,11 @@
                     </li>
                     <li class="Block-li Block-li--close">CERRAR SESION</li>
                 </ul>
-            </section>
+            </div>
         </div>
 
         <!-- Sección Menú desplegable para responsive (btn)-->
-        <section class="Header-responsive Btn">
+        <div class="Header-responsive Btn">
             <!-- Btn menú desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
@@ -275,10 +291,10 @@
                     </svg>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Secciones de HEADER adaptadas para menú desplegable responsive -->
-        <div class="Btn-nav">
+        <nav class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
                 <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
@@ -286,13 +302,13 @@
                 <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
-        </div>
+        </nav>
 
         <!-- Chat responsive -->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
-                    <h3 class="Chat-h3">CHAT</h3>
+                    <h2 class="Chat-h2">CHAT</h2>
                 </div>
                 <div class="Chat-messages" id="Chat-message"></div>
                 <div class="Chat-input">
@@ -325,30 +341,28 @@
                         d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
                 </svg>
             </h2>
-            <!-- Sección "Tareas del día" -->
+            <!-- Apartado "Tareas del día" -->
             <dl class="Tasks-dl Tasks-dl--daily">
                 <dt class="Tasks-dt">
                     TAREAS DEL DÍA
                 </dt>
                 <dd></dd>
             </dl>
-            <!-- Sección "Tareas pendientes del mes"-->
+            <!-- Apartado "Tareas pendientes del mes"-->
             <dl class="Tasks-dl Tasks-dl--pending">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL MES
                 </dt>
                 <dd></dd>
             </dl>
-            <!-- Sección "Tareas pendientes del año"-->
+            <!-- Apartado "Tareas pendientes del año"-->
             <dl class="Tasks-dl Tasks-dl--year">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL AÑO
                 </dt>
                 <dd></dd>
             </dl>
-            <!-- Sección "Tareas importantes"
-                    + btn (ALERTA)
-            -->
+            <!-- Apartado "Tareas importantes" -->
             <dl class="Tasks-dl Tasks-dl--important">
                 <dt class="Tasks-dt Tasks-dt--important">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
@@ -360,7 +374,7 @@
                 </dt>
                 <dd></dd>
             </dl>
-            <!-- Sección "Tareas cumplidas"-->
+            <!-- Apartado "Tareas cumplidas"-->
             <dl class="Tasks-dl Tasks-dl--ok">
                 <dt class="Tasks-dt Tasks-dt--ok">
                     TAREAS CUMPLIDAS
@@ -374,7 +388,7 @@
             </dl>
         </section>
 
-        <!--  -->
+        <!-- Btn de apertura de pantalla desplegable de "TAREAS IMPORTANTES" -->
         <div class="Home-button Alert">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
                 class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
@@ -383,7 +397,7 @@
             </svg>
         </div>
 
-        <!-- slide hacia arriba-->
+        <!-- btn + transición > deslizar hacia arriba-->
         <div class="Home-slide Slide">
             <svg class="Slide-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
                 viewBox="0 0 16 16">
