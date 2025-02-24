@@ -1,3 +1,10 @@
+<!-- 
+ Descripción: Este archivo HTML contiene la página principal del sitio web (home)
+ Estructura general del archivo:
+ - "head" : etiquetas meta + enlace CSS y JS + tipografía obtenida a través de Google Fonts
+ - Encabezado (header)
+ - Contenido principal de la página (main)
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +25,7 @@
 <body>
 
     <header class="Header">
-
+        <!-- logo con enlace a home (index.html)-->
         <h1 class="Header-logo">
             <span class="Header-span"></span>
             <a class="Header-a" href="../index.html" title="Panic">
@@ -28,7 +35,9 @@
             </a>
         </h1>
 
-
+        <!-- Sección de navegación del CRM situada en Header 
+                Descripción: Incluyen enlaces directos en el interior de cada sección: Tareas, Calendario, Contactos, Proyectos, Informes generales
+        -->
         <nav class="Header-nav Menu">
             <ul class="Menu-ul">
                 <li class="Menu-li isActive">TAREAS</li>
@@ -47,8 +56,12 @@
                 </li>
             </ul>
 
+            <!-- Menú desplegable
+                    Desde cada una de las secciones del "Header-nav"
+                    Descripción: Incluyen enlaces directos a cada una de las secciones + información sobre el contenido relevante de cada sección
+            -->
             <div class="Menu-information">
-
+                <!-- Sección de Tareas -->
                 <div class="Block Block-tasks">
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
@@ -67,6 +80,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Calendario -->
                 <div class="Block Block-calendar">
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
@@ -103,6 +117,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Contactos -->
                 <div class="Block Block-contacts">
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
@@ -131,6 +146,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Proyectos -->
                 <div class="Block Block-projects">
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
@@ -159,6 +175,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Informes generales -->
                 <div class="Block Block-reports">
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
@@ -180,10 +197,11 @@
                     </div>
                 </div>
 
+                <!-- Chat desplegable (btn)-->
                 <div class="Block Block-chat Chat">
                     <div class="Chat-container">
                         <div class="Chat-header">
-                            <h3 class="Chat-h3">CHAT</h3>
+                            <h2 class="Chat-h2">CHAT</h2>
                         </div>
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
@@ -193,12 +211,10 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </nav>
 
-
+        <!-- Sección de Perfil-->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -211,8 +227,12 @@
                 </li>
             </ul>
 
-
-            <div class="Block Block-profile">
+            <!-- Desplegable de la sección Perfil
+                Descripción: incluye USUARIO, PERFIL y CERRAR SESIÓN
+                    PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
+                NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
+            -->
+            <section class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#04202C"
@@ -230,17 +250,19 @@
                     </li>
                     <li class="Block-li Block-li--close">CERRAR SESION</li>
                 </ul>
-            </div>
+            </section>
         </div>
 
-        <div class="Header-responsive Btn">
-
+        <!-- Sección Menú desplegable para responsive -->
+        <section class="Header-responsive Btn">
+            <!-- Btn menú desplegable responsive -->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
+                <!-- Btn de CHAT -->
                 <div class="Btn-chat Chat">
                     <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                         viewBox="0 0 16 16">
@@ -251,8 +273,10 @@
                     </svg>
                 </div>
             </div>
-        </div>
-        <div class="Btn-nav">
+        </section>
+
+        <!-- Secciones de HEADER adaptadas para menú desplegable-->
+        <section class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
                 <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
@@ -260,7 +284,9 @@
                 <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
-        </div>
+        </section>
+
+        <!-- Chat responsive -->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
@@ -278,10 +304,12 @@
     </header>
 
     <main class="Home-principal">
+        <!-- background igual en todas las pantallas -->
         <picture class="Home-picture">
             <img class="Home-img" src="../assets/Panic.png" alt="Panic">
         </picture>
 
+        <!-- Título pantalla "GESTIÓN DE CONTACTOS"-->
         <h2 class="Home-h2">
             GESTIÓN DE CONTACTOS
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -294,14 +322,22 @@
                     d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
             </svg>
         </h2>
+
+        <!-- Home de "GESTIÓN DE CONTACTOS"-->
         <div class="Home-management Management">
             <ul class="Management-ul">
                 <li class="Management-li Export">
+                    <!-- Formulario-->
                     <form class="Export-form" action="/upload" method="post" enctype="multipart/form-data"
                         id="exportForm">
+                        <!-- Form para "Exportar archivo"-->
                         <label class="Export-label" for="export-file"> EXPORTAR ARCHIVO</label>
+                        <!-- el atributo "accept" indica los formatos admitidos
+                                Descripción: en este caso admite pdf, doc, docx, xls, xlsx, txt, jpg, png
+                        -->
                         <input class="Export-input" type="file" id="export-file" name="file"
                             accept=".pdf, .doc, .docx, .xls, .xlsx, .txt, .jpg, .png">
+                        <!-- Enlace que permite exportar archivo (en este caso, pdf)-->
                         <a class="Export-btn" href="../assets/informe_proyectos_simulado.pdf"
                             download="informe_proyectos_simulado.pdf" title="Export">
                             <svg class="Export-svg" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -318,7 +354,7 @@
 
         </div>
 
-
+        <!-- bnt + enlace para regresar a la pantalla "Contactos" -->
         <div class="Management-back Back">
             <a class="Back-a" href="../src/contacts.html" title="Back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#04202C"

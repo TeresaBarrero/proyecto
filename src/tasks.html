@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+
+<!-- 
+ Descripción: Este archivo HTML contiene la página principal del sitio web (home)
+ Estructura general del archivo:
+ - "head" : etiquetas meta + enlace CSS y JS + tipografía obtenida a través de Google Fonts
+ - Encabezado (header)
+ - Contenido principal de la página (main)
+ -->
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,7 +26,7 @@
 <body>
 
     <header class="Header">
-
+        <!-- logo con enlace a home (index.html)-->
         <h1 class="Header-logo">
             <span class="Header-span"></span>
             <a class="Header-a" href="../index.html" title="Panic">
@@ -28,7 +36,9 @@
             </a>
         </h1>
 
-
+        <!-- Sección de navegación del CRM situada en Header 
+                Descripción: Incluyen enlaces directos en el interior de cada sección: Tareas, Calendario, Contactos, Proyectos, Informes generales
+        -->
         <nav class="Header-nav Menu">
             <ul class="Menu-ul">
                 <li class="Menu-li isActive">TAREAS</li>
@@ -47,8 +57,12 @@
                 </li>
             </ul>
 
+            <!-- Menú desplegable
+                    Desde cada una de las secciones del "Header-nav"
+                    Descripción: Incluyen enlaces directos a cada una de las secciones + información sobre el contenido relevante de cada sección
+            -->
             <div class="Menu-information">
-
+                <!-- Sección de Tareas-->
                 <div class="Block Block-tasks">
                     <dl class="Block-dl">
                         <dt class="Block-dt Tasks">
@@ -67,6 +81,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Calendario -->
                 <div class="Block Block-calendar">
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
@@ -103,6 +118,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Contactos -->
                 <div class="Block Block-contacts">
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
@@ -131,6 +147,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Proyectos -->
                 <div class="Block Block-projects">
                     <dl class="Block-dl">
                         <dt class="Block-dt Projects">
@@ -159,6 +176,7 @@
                     </dl>
                 </div>
 
+                <!-- Sección de Informes generales -->
                 <div class="Block Block-reports">
                     <dl class="Block-dl">
                         <dt class="Block-dt Reports">
@@ -180,6 +198,7 @@
                     </div>
                 </div>
 
+                <!-- Chat desplegable (btn)-->
                 <div class="Block Block-chat Chat">
                     <div class="Chat-container">
                         <div class="Chat-header">
@@ -193,12 +212,10 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </nav>
 
-
+        <!-- Sección de Perfil -->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -211,8 +228,12 @@
                 </li>
             </ul>
 
-
-            <div class="Block Block-profile">
+            <!-- Desplegable de la sección Perfil
+                Descripción: incluye USUARIO, PERFIL y CERRAR SESIÓN
+                    PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
+                NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
+             -->
+            <section class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#04202C"
@@ -230,17 +251,20 @@
                     </li>
                     <li class="Block-li Block-li--close">CERRAR SESION</li>
                 </ul>
-            </div>
+            </section>
         </div>
 
-        <div class="Header-responsive Btn">
-
+        <!-- Sección Menú desplegable para responsive (btn)-->
+        <section class="Header-responsive Btn">
+            <!-- Btn menú desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
+
+                <!-- Btn de CHAT -->
                 <div class="Btn-chat Chat">
                     <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                         viewBox="0 0 16 16">
@@ -251,7 +275,9 @@
                     </svg>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Secciones de HEADER adaptadas para menú desplegable responsive -->
         <div class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
@@ -261,6 +287,8 @@
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
         </div>
+
+        <!-- Chat responsive -->
         <div class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
@@ -273,17 +301,19 @@
                 </div>
             </div>
         </div>
-
-
     </header>
 
     <main class="Home-principal">
+        <!-- background igual en todas las pantallas-->
         <picture class="Home-picture">
             <img class="Home-img" src="../assets/Panic.png" alt="Panic">
         </picture>
 
-
-        <div class="Home-tasks Tasks">
+        <!-- Sección TAREAS
+                Descripción: Se pintarán las tareas generadas desde el home (index.html)
+                    Solo se pinta la TAREA en su apartado correspondiente
+        -->
+        <section class="Home-tasks Tasks">
             <h2 class="Tasks-h2">TAREAS
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#04202C" class="bi bi-list-task"
                     viewBox="0 0 16 16">
@@ -295,24 +325,30 @@
                         d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5zM2 7h1v1H2zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm1 .5H2v1h1z" />
                 </svg>
             </h2>
+            <!-- Sección "Tareas del día" -->
             <dl class="Tasks-dl Tasks-dl--daily">
                 <dt class="Tasks-dt">
                     TAREAS DEL DÍA
                 </dt>
                 <dd></dd>
             </dl>
+            <!-- Sección "Tareas pendientes del mes"-->
             <dl class="Tasks-dl Tasks-dl--pending">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL MES
                 </dt>
                 <dd></dd>
             </dl>
+            <!-- Sección "Tareas pendientes del año"-->
             <dl class="Tasks-dl Tasks-dl--year">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL AÑO
                 </dt>
                 <dd></dd>
             </dl>
+            <!-- Sección "Tareas importantes"
+                    + btn (ALERTA)
+            -->
             <dl class="Tasks-dl Tasks-dl--important">
                 <dt class="Tasks-dt Tasks-dt--important">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
@@ -324,6 +360,7 @@
                 </dt>
                 <dd></dd>
             </dl>
+            <!-- Sección "Tareas cumplidas"-->
             <dl class="Tasks-dl Tasks-dl--ok">
                 <dt class="Tasks-dt Tasks-dt--ok">
                     TAREAS CUMPLIDAS
@@ -335,7 +372,9 @@
                 </dt>
                 <dd></dd>
             </dl>
-        </div>
+        </section>
+
+        <!--  -->
         <div class="Home-button Alert">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
                 class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
@@ -344,7 +383,7 @@
             </svg>
         </div>
 
-
+        <!-- slide hacia arriba-->
         <div class="Home-slide Slide">
             <svg class="Slide-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black"
                 viewBox="0 0 16 16">
