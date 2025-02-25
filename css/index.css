@@ -8,7 +8,10 @@
 */
 
 /* Establece reglas globales para todos los elementos
-    Descripción: pone en valor 0 todos los estilos preestablecidos en algunas etiquetas*/
+    Estructura: 
+    - * {} ---> Pone en valor 0 todos los estilos preestablecidos en algunas etiquetas
+    - li + a + p a + body + h1, h2, h3, h4, h5, h6 + span + svg ---> Restablecimiento de algunos estilos predeterminados.  
+*/
 * {
     margin: 0;
     padding: 0;
@@ -384,12 +387,6 @@ svg{
                             - Edición de todos los svg de animación index.html
                             - Edición de cada uno de los svg para indicar su posición en la pantalla
                             - Creación y definición de la animación "fadeInUp"
-                            - Edición de Tasks y Contacts y sus derivadas
-                            - Edición y transformación de Home-button
-                            - botones expuestos en la pantalla de Contactos (crear, gestionar, enviar email, llamar)
-                            - Edición de h2 y management
-                            - Edición de formularios y sus derivados + elementos de formulario
-                            - Edición de botón de vuelta (Home-back + Management-back)
 */
 .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
     width: 30%;
@@ -458,10 +455,11 @@ svg{
 
 
 /*Edición de Home-tasks (tasks.html)
-    + contenido interno de la pantalla
+    Estructura de la información posterior : 
+                            - Tasks y Contacts comparten edición en = Tasks-dt y Contacts-dt + Tasks-dd y Contacts-dd + Tasks-dl, .Contacts-dl 
+                            - Edición independiente de Tasks-dl--important + efecto al añadir la clase .isActive
+                            - Edición independiente de Tasks-dt--important + Tasks-dd--important + Tasks-dt--ok + Tasks-dd--ok
 */ 
-
-/* Tasks y Contacts comparten edición en = Tasks-dt y Contacts-dt + Tasks-dd y Contacts-dd + Tasks-dl, .Contacts-dl */
 .Tasks-dt, .Contacts-dt{
     background-color: var(--title-c);
     padding: 0.625rem;
@@ -547,7 +545,11 @@ svg{
 }
 
 
-/*Botón para trasladarse entre pantallas*/
+/*Botón para trasladarse entre pantallas
+    Estructura: 
+            - Edición botón (Home-button)
+            - Efecto al añadir ":hover"
+*/
 .Home-button {
     width: 4%;
     height: 50px;
@@ -570,25 +572,29 @@ svg{
 }
 
 
-/*Crear Contactos*/
+
+/*Edición de Home-contacts (contacts.html)
+    Estructura de la información posterior : 
+                            - Edición del svg "Crear contactos"
+                            - Edición del svg "Gestionar contactos"
+                            - Edición del svg "Enviar email"
+                            - Edición del svg "tlf" 
+*/ 
 .Contacts-create {
     position: absolute;
     top: 35%;
     right: 6%;
 }
-/*Gestionar contactos*/
 .Contacts-management {
     position: absolute;
     top: 40%;
     right: 6%;
 }
-/*Enviar email*/
 .Contacts-email{
     position: absolute;
     top: 8%;
     left: 5%;
 }
-/* Dirige a un tlf*/
 .Contacts-tlf{
     position: absolute;
     top: 8%;
@@ -596,7 +602,7 @@ svg{
 }
 
 
-/*Títulos y gestión*/
+/* Edición de títulos generales (Home-h2) y elementos de gestión (Management) */
 .Home-h2 , .Create-link{
     padding: 1.25rem;
     margin: 1.25rem 1.875rem 0;
@@ -623,7 +629,12 @@ svg{
     color: var(--primary-c);    
 }
 
-/*Form Create-contacts + Form Create-projects*/
+/* Edición de formularios (Formularios en Create contacts + Create projects)
+    Estructura de la información posterior : 
+                        - Edición formulario general
+                        - Edición de elementos de los elementos del formulario
+                        - Edición de botón de vuelta (Form- back + Management-back)
+*/
 .Home-form{
     width: 80%;
     min-height: 200px;
@@ -758,7 +769,6 @@ input[type="submit"] {
     padding: 0.3125rem;
     border-radius: 5px;
 }
-
 /*Botón de vuelta*/
 .Form-back{
     position: absolute;
@@ -775,7 +785,11 @@ input[type="submit"] {
 
 
 
-/* Pantalla de Gestión */
+/* Edición de pantalla de gestión (home_managements.html)
+    Estructura de la información posterior : 
+                        - Edición home general (Home-management)
+                        - Edición de listado de las diferentes opciones en el apartado de gestión + efecto cuando el usuario pasa el cursor sobre el elemento de la lista (:hover)
+*/
 .Home-management{
     width: 40%;
     min-height: 100px;
@@ -806,7 +820,17 @@ input[type="submit"] {
     padding: 0.3125rem;
 }
 
-/* Contenido de la pantalla de proyectos e informes generales */
+
+/* Edición de las pantallas de Proyectos y de Informes Generales
+    Estructura de la información posterior : 
+                        - Edición home general
+                        - Edición del listado de proyectos (Projects-ul + Projects-li)
+                        - Edición de apartados = Crear Proyectos (Home-new) + Gestión de proyectos (Home-head)
+                        - Edición de Home-management--projects + efecto al aplicar la clase .isActive 
+                        - Edición de Home- management--reports + efecto al aplicar la clase .isActive
+                        - Edición de svg y form del apartado desplegable de Gestión de proyectos 
+                        ("Home-management Home-management--projects Management isActive"") y el interior del apartado (Export-svg + Export-form + Efecto cuando el usuario pasa el cursor sobre la clase .Export)
+*/
 .Home-general{
     width: 55%;
     border-right: 1px solid black;
@@ -866,8 +890,6 @@ input[type="submit"] {
 .Home-management--reports.isActive{
     display: unset; /* Restablece el display según el valor original del elemento*/
 }
-
-
 .Management-li{
     padding: 0.5rem;
 }
@@ -884,7 +906,12 @@ input[type="submit"] {
 }
 
 
-/*Formulario 2. Crea un proyecto*/
+/*Edición de Formulario 2 = "Crea un proyecto"
+    Estructura de la información posterior:  
+                - Edición formulario general
+                - Edición de elementos de los elementos del formulario
+                - Edición de titulares "h2" (Form-h2 , Organizer-h2 , Tasks-h2 >>> comparten edición)
+*/
 .Form-first{
     display: flex;
     flex-flow: row nowrap;
@@ -996,7 +1023,13 @@ input[type="submit"] {
 }
 
 
-/*Pantalla de Informes Generales + animación aumento de img*/
+/* Edición de la pantalla de Informes Generales
+    Estructura de la información posterior:
+                        - Edición general (Home-reports)
+                        - Edición de contenedor donde aparecen las imágenes de los reports (informes generales)
+                        - Edición de la imagen y animación aumento de img
+                        - Edición de las opciones de "Crea" y "Gestiona" en Informes generales
+*/
 .Home-reports{
     width: 65%;
     height: 500px;
@@ -1074,16 +1107,6 @@ input[type="submit"] {
     cursor: pointer;     /* Cambia el cursor a "pointer" al pasar sobre la imagen y para indicar que es interactivo */
     border: none;
 }
-
-
-
-/*Filter >> no disponible en esta versión */ 
-.Reports-date{
-    position: absolute;
-    top: 55%;
-    right: 10%;
-}
-/*Informes generales: crea y gestiona*/
 .Reports-p{
     padding: 1.25rem;
   
@@ -1101,7 +1124,22 @@ input[type="submit"] {
     top: 65%;
 }
 
-/*Perfil*/
+
+/*Filter >> no disponible en esta versión */ 
+.Reports-date{
+    position: absolute;
+    top: 55%;
+    right: 10%;
+}
+
+
+/* Edición de la pantalla de Perfil
+    Estructura de la información posterior:
+                        - Edición general (Profile)
+                        - Edición de imagen de perfil
+                        - Edición del listado de información que aparece en perfil
+                        - Profile-li--close(edición y efecto de cursor) > Funcionalidad propuesta para la siguiente versión
+*/
 .Profile{
     width: 100%;
     min-height: 565px;
@@ -1162,15 +1200,27 @@ input[type="submit"] {
     width: 60%;
     background-color: var(--title-c);
     margin: 0.625rem 0;
-    cursor: pointer;
+    cursor: pointer;    /* Cambia el cursor a "pointer" al pasar sobre elsvg y para indicar que es interactivo */
 }
-.Wrapper-profile , .Wrapper-configuration , .Wrapper-search{
-    cursor: pointer;
+.Wrapper-profile{
+    cursor: pointer;    /* Cambia el cursor a "pointer" al pasar sobre el elemento y para indicar que es interactivo */
 }
 
 
 
-/*Calendario Header*/
+/* Edición de la pantalla de Calendario (calendar.html)
+    Estructura de la información posterior:
+                        - Edición del contenedor principal del calendario
+                        - Edición del contenedor del encabezado del calendario (Schedule-header)
+                        - Edición del contenedor para la cuadrícula del calendario (Schedule-grid)
+                        - Edición para cada día del calendario + el número del día
+                        - Edición para el botón de agregar evento (add-event)
+                        - Estilo para el formulario de eventos (event-form)
+                        - Estilo para el botón dentro del formulario + botones de "prev" y "next"
+                        - Estilo para los eventos dentro del calendario
+                        - Estilo para el título del mes
+
+*/
 .Schedule{
     width: 90%;
     min-height: 500px;
@@ -1226,7 +1276,7 @@ input[type="submit"] {
     font-family: var(--general-ff);
     text-align: center;
 
-    cursor: pointer;
+    cursor: pointer;    /* Cambia el cursor a "pointer" al pasar sobre el elemento y para indicar que es interactivo */
 }
 .add-event:hover {
     background-color: var(--form-c);
@@ -1261,7 +1311,7 @@ input[type="submit"] {
     padding: 0.3125rem;
     font-size: 0.9rem;
     font-family: var(--general-ff);
-    cursor: pointer;
+    cursor: pointer;     /* Cambia el cursor a "pointer" al pasar sobre el elemento y para indicar que es interactivo */
 }
 .calendar-event {
     background-color: var(--title-c);
@@ -1285,7 +1335,17 @@ input[type="submit"] {
     border-radius: 30%;
 }
 
-/*Calendario pantalla*/
+
+/* Edición del bloque desplegable del HEADER de Calendario (adaptado al bloque desplegable) // Calendario de funcionalidad solo visible
+    Estructura de la información posterior:
+                        - Edición del contenedor principal del calendario
+                        - Edición del contenedor del encabezado del calendario (Schedule-header)
+                        - Edición del contenedor para la cuadrícula del calendario (Schedule-grid)
+                        - Edición para cada día del calendario + el número del día
+                        - Estilo para el botón dentro del formulario + botones de "prev" y "next"
+                        - Estilo para el título del mes
+
+*/
 .CalendarView{
     width: 90%;
     min-height: 200px;
@@ -1342,7 +1402,7 @@ input[type="submit"] {
 }
 
 
-/*Botón animación deslizar*/
+/* Edición del Botón de deslizar + animación al añadirle la clase .isVisible */
 .Home-slide{
     width: 4%;
     height: 50px;
@@ -1354,22 +1414,33 @@ input[type="submit"] {
     justify-content: center;
     align-items: center;
 
-    position: fixed;
-    bottom: 5%;
+    position: fixed;    /* Fija el botón en la pantalla,  sin que se mueva al hacer scroll */
+    bottom: 5%; 
     right: 0;
 
     border-radius: 50px;
-    cursor: pointer;
+    cursor: pointer;     /* Cambia el cursor a "pointer" al pasar sobre el elemento y para indicar que es interactivo */
 
-    opacity: 1;
+    opacity: 1;     /* Hace que el botón sea completamente visible por defecto */
 }
 .Home-slide.isVisible{
-    opacity: 0;
+    opacity: 0; /* Cuando se le agrega la clase .isVisible >>> este efecto hace que el botón se vuelva invisible */
 }
 
 
 
-/*Chat*/
+/* Edición de CHAT
+    Estructura de la información posterior:
+                        - Edición del contenedor principal del Chat
+                        - Estilo para el encabezado del chat
+                        - Estilo para el contenedor de los mensajes del chat
+                        - Estilo general para los mensajes
+                        - Estilo para los mensajes del usuario
+                        - Estilo para los mensajes del bot
+                        - Estilo para el contenedor para la entrada del texto del chat
+                        - Estilo para el campo de texto de entrada
+                        - Estilo para el botón de enviar mensaje + animación
+*/
 .Chat-container {
     width: 100%;
     min-height: 400px;
@@ -1381,7 +1452,7 @@ input[type="submit"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     
-    overflow: hidden;
+    overflow: hidden;   /* Efecto que oculta cualquier contenido que desborde el área del contenedor */
 }
 .Chat-header {
     background-color: var(--secondForm-c);
@@ -1402,7 +1473,7 @@ input[type="submit"] {
     flex: 1;
     gap: 10px;
 
-    overflow-y: auto;
+    overflow-y: auto;   /* Muestra una barra de desplazamiento vertical solo cuando el contenido excede la altura del contenedor */
 }
 .message {
     max-width: 70%;
@@ -1413,18 +1484,16 @@ input[type="submit"] {
     font-size: 0.875rem;
     line-height: 1.4;
 
-    word-wrap: break-word;
+    word-wrap: break-word;  /* Permite que las palabras largas se dividan y ajusten al contenedor */
 }
 .message.user {
-    align-self: flex-end;
+    align-self: flex-end;   /* Alinea el mensaje del usuario a la derecha */
     background-color: var(--title-c);
     color: var(--basic-c);
 }
 .message.bot {
     background-color: lightgray;
-
-    align-self: flex-start;
-
+    align-self: flex-start;     /* Alinea el mensaje del bot a la izquierda */
     color: #333;
 }
 .Chat-input {
@@ -1434,14 +1503,14 @@ input[type="submit"] {
     border-top: 1px solid #ddd;
 }
 .Chat-input input {
-    flex: 1;
+    flex: 1;    /* El campo de texto ocupa todo el espacio disponible dentro de la clase Chat-input */
     padding: 0.625rem;
     
     border: 1px solid #ddd;
     border-radius: 20px;
     font-size: 0.875rem;
 
-    outline: none;
+    outline: none;  /* Elimina el borde predeterminado al hacer foco */
 }
 .Chat-input button {
     background-color: #587065;
@@ -1454,26 +1523,28 @@ input[type="submit"] {
     border-radius: 20px;
     font-size: 0.875rem;
 
-    cursor: pointer;
+    cursor: pointer;    /* Cambia el cursor a "pointer" al pasar sobre el botón indicando también que es interactivo */
 }
 .Chat-input button:hover {
-    background-color: var(--buttonActive-c);
+    background-color: var(--buttonActive-c);    /* Cuando el usuario pasa el cursor sobre el botón (:hover), este cambia su estilo >>> el color de fondo del botón */
 }
 
 
+
+/* Animación para deslizar el contenido desde la izquierda "slideRight" */
 @keyframes slideRight{
     from{
-        opacity: 0;
-        transform: translateX(-100%);
+        opacity: 0; /* Comienza con el contenido completamente transparente */
+        transform: translateX(-100%);   /* El contenido empieza fuera de la pantalla hacia la izquierda */
     }
     to{
-        opacity: 1;
-        transform: translateX(0%);
+        opacity: 1; /* Finaliza con el contenido completamente visible */
+        transform: translateX(0%);  /* El contenido se traslada a su posición original */
     }
 }
 
 
-
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 1900px */
 @media (max-width: 1900px){
     .Header-logo{
         width: 11%;
@@ -1525,6 +1596,7 @@ input[type="submit"] {
         left: 77%;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 1600px */
 @media (max-width: 1600px){
     .Header-logo{
         width: 13%;
@@ -1548,6 +1620,7 @@ input[type="submit"] {
         width: 90%;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 1070px */
 @media (max-width: 1070px){
     .Header{
         width: 100%;
@@ -1719,6 +1792,7 @@ input[type="submit"] {
         top: 30%;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 850px */
 @media (max-width: 850px){
     .Header{
         width: 100%;
@@ -1893,6 +1967,7 @@ input[type="submit"] {
         font-size: .625rem;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 780px */
 @media (max-width: 780px){
     .Header-logo{
         width: 22%;
@@ -2009,6 +2084,7 @@ input[type="submit"] {
         height: 100px;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 640px */
 @media (max-width: 640px){
     .Header-logo{
         width: 25%;
@@ -2142,6 +2218,7 @@ input[type="submit"] {
         right: 0;
     }
 }
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 580px */
 @media (max-width: 580px){
     .Header-logo{
         width: 26%;
@@ -2289,6 +2366,7 @@ input[type="submit"] {
         text-align: center;
     }
 } 
+/* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 470px */
 @media (max-width: 470px){
 
     .Header-logo{
