@@ -381,9 +381,15 @@ svg{
 }
 /* Animación para animar la aparición de los svg de las diferentes secciones
     Estructura de la información posterior:
-                            - Edición de todos los svg 
+                            - Edición de todos los svg de animación index.html
                             - Edición de cada uno de los svg para indicar su posición en la pantalla
                             - Creación y definición de la animación "fadeInUp"
+                            - Edición de Tasks y Contacts y sus derivadas
+                            - Edición y transformación de Home-button
+                            - botones expuestos en la pantalla de Contactos (crear, gestionar, enviar email, llamar)
+                            - Edición de h2 y management
+                            - Edición de formularios y sus derivados + elementos de formulario
+                            - Edición de botón de vuelta (Home-back + Management-back)
 */
 .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
     width: 30%;
@@ -517,9 +523,10 @@ svg{
     right: 5%;
     z-index: 2;
 
-    display: none;
+    display: none;  /* Por defecto, el elemento Tasks-dl--important está oculto */
 
 }
+/* Cuando Tasks-dl--important está isActive > restablece el display según el valor original del elemento   */
 .Tasks-dl--important.isActive {
     display: unset;
 }
@@ -540,7 +547,7 @@ svg{
 }
 
 
-/*Botón para moverse entre pantallas*/
+/*Botón para trasladarse entre pantallas*/
 .Home-button {
     width: 4%;
     height: 50px;
@@ -551,16 +558,17 @@ svg{
     justify-content: center;
     align-items: center;
 
-    position: fixed;
+    position: fixed;    /* fija el botón en una posición de la pantalla, sin que se mueva con scroll */
     top: 18%;
     right: 0;
 
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;    /*Cambia el cursor a "pointer" al pasar sobre el botón */
 }
 .Home-button:hover {
-    transform: scale(0.95);
+    transform: scale(0.95); /* Reduce el tamaño del botón al 95% para un efecto de click */
 }
+
 
 /*Crear Contactos*/
 .Contacts-create {
@@ -587,6 +595,7 @@ svg{
     right: 5%;
 }
 
+
 /*Títulos y gestión*/
 .Home-h2 , .Create-link{
     padding: 1.25rem;
@@ -600,7 +609,7 @@ svg{
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-c);
-    cursor: pointer;
+    cursor: pointer;    /*Cambia el cursor a "pointer" al pasar sobre el botón */
 }
 .Home-head{
     width: 25%;
@@ -611,13 +620,10 @@ svg{
 
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--primary-c);
-
-    
+    color: var(--primary-c);    
 }
 
 /*Form Create-contacts + Form Create-projects*/
-
 .Home-form{
     width: 80%;
     min-height: 200px;
@@ -769,7 +775,7 @@ input[type="submit"] {
 
 
 
-
+/* Pantalla de Gestión */
 .Home-management{
     width: 40%;
     min-height: 100px;
@@ -793,6 +799,7 @@ input[type="submit"] {
 .Management-li{
     font-size: 1rem;
 }
+/*Efecto cuando el usuario pasa el cursor sobre el elemento */
 .Management-li:hover{
     background-color: var(--home-c);
     border-radius: 10px;
@@ -803,7 +810,6 @@ input[type="submit"] {
 .Home-general{
     width: 55%;
     border-right: 1px solid black;
-
 }
 .Projects-ul{
     width: 88%;
@@ -846,23 +852,26 @@ input[type="submit"] {
     top: 45%;
     right: 3%;
 
-    display: none;
+    display: none;  /* Por defecto, el elemento está oculto */
+}
+.Home-management--projects.isActive{
+    display: unset; /* Restablece el display según el valor original del elemento*/
 }
 .Home-management--reports{
     position: absolute;
     top: 70%;
     right: 3%;
-    display: none;
+    display: none;  /* Por defecto, el elemento está oculto */
 }
 .Home-management--reports.isActive{
-    display: unset;
+    display: unset; /* Restablece el display según el valor original del elemento*/
 }
-.Home-management--projects.isActive{
-    display: unset;
-}
+
+
 .Management-li{
     padding: 0.5rem;
 }
+/* Exportar archivos*/
 .Export-svg{
     margin: 0 0 0 1.25rem;
 }
@@ -871,12 +880,11 @@ input[type="submit"] {
     flex-flow: row nowrap;
 }
 .Export:hover{
-    background-color: var(--secondForm-c);
+    background-color: var(--secondForm-c);  /* Cuando el usuario pasa el cursor sobre el elemento con la clase .Export, cambia el color de fondo */
 }
 
 
 /*Formulario 2. Crea un proyecto*/
-
 .Form-first{
     display: flex;
     flex-flow: row nowrap;
@@ -912,6 +920,7 @@ input[type="submit"] {
     position: absolute;
     top: 90%;
 }
+/* Form-h2 , Organizer-h2 , Tasks-h2 >>> comparten edición */
 .Form-h2 , .Organizer-h2 , .Tasks-h2 {
     width: 100%;
     padding: 1.25rem;
@@ -921,7 +930,7 @@ input[type="submit"] {
     font-weight: bold;
     color: var(--primary-c);
     text-align: center;
-    text-decoration-line: underline;
+    text-decoration-line: underline;    /* Subrayado */
 }
 .Form-send{
     width: 100%;
@@ -943,7 +952,7 @@ input[type="submit"] {
     font-family: var(--form-ff);
     color: var(--home-c);
 
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor a "pointer" al pasar sobre el botón */
 }
 .Form-low , .Form-medium , .Form-high , .Form-critical{
     background-color: red;
@@ -986,7 +995,8 @@ input[type="submit"] {
     height: 120px;
 }
 
-/*Pantalla de informes generales + animación aumento de img*/
+
+/*Pantalla de Informes Generales + animación aumento de img*/
 .Home-reports{
     width: 65%;
     height: 500px;
@@ -998,7 +1008,7 @@ input[type="submit"] {
     border-radius: 8px;
     box-shadow: 9px 4px 8px rgba(0, 0, 0.3, 0.5);
 
-    overflow-y: scroll;
+    overflow-y: scroll; /* Habilita el desplazamiento vertical cuando el contenido excede la altura del contenedor */
 
     position: absolute;
     z-index: 2;
@@ -1022,11 +1032,11 @@ input[type="submit"] {
 
     border: 0.5px solid var(--primary-c);
     
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    cursor: pointer;    /* Cambia el cursor a "pointer" al pasar sobre la imagen y para indicar que la imagen es interactiva */
+    transition: transform 0.3s ease;    /* Agrega una transición suave a la transformación */
 }
 .Reports-img:hover{
-    transform: scale(1.0);   
+    transform: scale(1.0);   /* Al pasar el cursor sobre la imagen, mantiene el tamaño original al hacer hover */
 }
 .Overlay {
     width: 100%;
@@ -1041,19 +1051,19 @@ input[type="submit"] {
     top: 0;
     left: 0;
     
-    visibility: hidden;
+    visibility: hidden; /* Inicialmente oculto */
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;  /* Transición suave al mostrar/ ocultar */
 }
 .Overlay-img {
     max-width: 90%;
     max-height: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  /* Sobra para efecto de profundidad */
+    object-fit: cover;  /* Ajusta la imagen para cubrir el espacio sin distorsión */
 }
 .Overlay.active {
-    visibility: visible;
-    opacity: 1;
+    visibility: visible;    /* Cuando se le aplica .active a la clase .Overlay >>> se hace visible */
+    opacity: 1; /* Lo hace completamente opaco */
 }
 .Overlay .Overlay-close {
     position: absolute;
@@ -1061,13 +1071,13 @@ input[type="submit"] {
     right: 20px;
     font-size: 1.25rem;
     color: var(--basic-c);
-    cursor: pointer;
+    cursor: pointer;     /* Cambia el cursor a "pointer" al pasar sobre la imagen y para indicar que es interactivo */
     border: none;
 }
 
 
 
-/*Filter >> no disponible en esta versión */
+/*Filter >> no disponible en esta versión */ 
 .Reports-date{
     position: absolute;
     top: 55%;
@@ -1117,7 +1127,7 @@ input[type="submit"] {
     border: 1px solid black;
 
     border-radius: 8px;
-    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 9px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
 
     position: absolute;
     z-index: 2;
