@@ -83,7 +83,7 @@
                     </dl>
                 </div>
 
-                <!-- Sección de Calendario-->
+                <!-- Sección de Calendario -->
                 <div class="Block Block-calendar">
                     <!-- Bloque de Calendario
                             Descripción: Calendario en miniatura de utilidad visual 
@@ -123,14 +123,14 @@
                     </dl>
                 </div>
 
-                <!-- Sección de Contactos-->
+                <!-- Sección de Contactos -->
                 <div class="Block Block-contacts">
                     <!-- Bloque desplegable de "Contactos" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Contacts">
-                            <a class="Contacts-a" href="../src/contacts.html" title="Contacto">
+                            <a class="Contacts-a" href="../src/contacts.html" title="Contactos">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path
@@ -155,7 +155,7 @@
                     </dl>
                 </div>
 
-                <!-- Sección de proyectos -->
+                <!-- Sección de Proyectos -->
                 <div class="Block Block-projects">
                     <!-- Bloque desplegable de "Proyectos" 
                                 Descripción: Incluye una lista con la información de la sección 
@@ -187,7 +187,7 @@
                     </dl>
                 </div>
 
-                <!-- Sección de Informes generales-->
+                <!-- Sección de Informes generales -->
                 <div class="Block Block-reports">
                     <!-- Bloque desplegable de "Informes Generales" 
                                 Descripción: Incluye una lista con la información de la sección 
@@ -213,14 +213,14 @@
                 </div>
 
                 <!-- Sección Chat-->
-                <section class="Block Block-chat Chat">
+                <div class="Block Block-chat Chat">
                     <!-- Chat desplegable -->
                     <div class="Chat-container">
                         <div class="Chat-header">
                             <!-- Título introductorio "CHAT"-->
                             <h2 class="Chat-h2">CHAT</h2>
                         </div>
-                        <!-- Funcionalidad de Chat (necesario para CSS y JS) -->
+                        <!-- Funcionalidad de Chat (necesario para CSS y JS)-->
                         <div class="Chat-messages" id="Chat-messages"></div>
                         <div class="Chat-input">
                             <input class="Chat-input" type="text" id="message-input"
@@ -228,13 +228,11 @@
                             <button class="Chat-btn" id="send-button" title="Enviar">Enviar</button>
                         </div>
                     </div>
-                </section>
-
-
+                </div>
             </div>
         </nav>
 
-        <!-- Sección de Perfil-->
+        <!-- Sección de Perfil -->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -247,11 +245,11 @@
                 </li>
             </ul>
 
-        <!-- Desplegable de la sección Perfil
+            <!-- Desplegable de la sección Perfil
                 Descripción: incluye USUARIO, PERFIL y CERRAR SESIÓN
                     PERFIL contiene un enlace que lleva directo a la pantalla de PERFIL
                 NO PROGRAMADO el apartado de CERRAR SESIÓN (*propuesto para la siguiente versión)
-        -->
+             -->
             <div class="Block Block-profile">
                 <ul class="Block-ul">
                     <li class="Block-li Block-li">
@@ -275,13 +273,14 @@
 
         <!-- Sección Menú desplegable para responsive (btn)-->
         <div class="Header-responsive Btn">
-            <!--Btn menu desplegable responsive-->
+            <!-- Btn menú desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                 </svg>
+
                 <!-- Btn de CHAT -->
                 <div class="Btn-chat Chat">
                     <svg class="Chat-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
@@ -295,7 +294,7 @@
             </div>
         </div>
 
-        <!-- Secciones de HEADER adaptadas para menú desplegable responsive-->
+        <!-- Secciones de HEADER adaptadas para menú desplegable responsive -->
         <nav class="Btn-nav">
             <div class="Btn-seccion">
                 <a href="../src/tasks.html" title="Tareas">TAREAS</a>
@@ -305,7 +304,8 @@
                 <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
         </nav>
-        <!-- Chat responsive-->
+
+        <!-- Chat responsive -->
         <section class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">

@@ -303,4 +303,6 @@ function addMessage(text, sender) {
      chatMessages.scrollTop = chatMessages.scrollHeight;
 }
  
+
+
 })();
