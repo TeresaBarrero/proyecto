@@ -1,4 +1,4 @@
-
+(function() {
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
 const btn = document.querySelector('.Btn-burguer')
@@ -274,6 +274,8 @@ new Calendar();
     }
      
     
+})();
+
  
 
 

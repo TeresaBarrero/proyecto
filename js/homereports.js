@@ -1,4 +1,4 @@
-
+(function() {
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
 const home = document.querySelector('main')
@@ -295,4 +295,4 @@ overlay.addEventListener('click', (e) => {
          chatMessages.scrollTop = chatMessages.scrollHeight;
     }
      
-    
+})();

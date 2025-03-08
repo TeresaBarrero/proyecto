@@ -1,4 +1,4 @@
-
+(function() {
 const li = document.querySelectorAll('.Menu-li');
 const block = document.querySelectorAll('.Block');
 const home = document.querySelector('main');
@@ -328,7 +328,8 @@ function addMessage(text, sender) {
 
      chatMessages.scrollTop = chatMessages.scrollHeight;
 }
- 
+
+})();
 
 
 

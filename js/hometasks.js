@@ -1,4 +1,4 @@
-
+(function() {
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
 const btn = document.querySelector('.Btn-burguer')
@@ -614,4 +614,4 @@ buttonSlide.addEventListener(`click`, () => {
          chatMessages.scrollTop = chatMessages.scrollHeight;
     }
      
-    
+})();

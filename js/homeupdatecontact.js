@@ -1,4 +1,4 @@
-
+(function() {
 const li = document.querySelectorAll('.Menu-li')
 const block = document.querySelectorAll('.Block')
 const btn = document.querySelector('.Btn-burguer')
@@ -303,8 +303,4 @@ function addMessage(text, sender) {
      chatMessages.scrollTop = chatMessages.scrollHeight;
 }
  
-
-
-
-
-
+})();
