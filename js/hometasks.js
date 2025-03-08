@@ -529,10 +529,9 @@ new Calendar();
 
 
 
-
 // Cuando hago scroll hacia abajo, 
-// .Button-slide le ADD `isActive´
-// .Button-slide isVisible a MITAD de la ventana
+// .Button-slide le ADD `isInvisible
+// .Button-slide isInvisible a MITAD de la ventana
 
 const buttonSlide = document.querySelector('.Home-slide');
 
@@ -544,10 +543,10 @@ window.addEventListener('scroll', () => {
     const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
 
     if (puntoActivacion) {
-        buttonSlide.classList.add('isVisible')
+        buttonSlide.classList.remove('isInvisible')
     }
     else {
-        buttonSlide.classList.remove('isVisible')
+        buttonSlide.classList.add('isInvisible')
     }
 })
 
@@ -558,27 +557,6 @@ window.addEventListener('scroll', () => {
 buttonSlide.addEventListener(`click`, () => {
     window.scrollTo({ top: 0, behavior: `smooth` })
 })
-
-
-// Cuando scrollY esté arriba
-// .Button-Slide REMOVE `isVisible´
-
-window.addEventListener(`scroll`, () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-
-    const puntoActivacion = scrollY <= offsetTop
-
-    if (puntoActivacion) {
-        buttonSlide.classList.remove(`isVisible`)
-    }
-    else {
-        buttonSlide.classList.add(`isVisible`)
-    }
-})
-
-
 
 
 

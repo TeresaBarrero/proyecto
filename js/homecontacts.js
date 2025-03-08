@@ -1,14 +1,15 @@
-
-const li = document.querySelectorAll('.Menu-li')
-const block = document.querySelectorAll('.Block')
-const btn = document.querySelector('.Btn-burguer')
-const btnNav = document.querySelector('.Btn-nav')
-const home = document.querySelector('main')
-const btnChat = document.querySelector('.Btn-chat')
-const responsiveChat = document.querySelector('.Block-chat--responsive')
-const chat = document.querySelector('.Block-chat')
-const liChat = document.querySelector('.Menu-li--chat')
-const contactList = document.querySelector('.Contacts-dl')
+(function() {
+const body = document.querySelector('body')
+const li = body.querySelectorAll('.Menu-li')
+const block = body.querySelectorAll('.Block')
+const btn = body.querySelector('.Btn-burguer')
+const btnNav = body.querySelector('.Btn-nav')
+const home = body.querySelector('main')
+const btnChat = body.querySelector('.Btn-chat')
+const responsiveChat = body.querySelector('.Block-chat--responsive')
+const chat = body.querySelector('.Block-chat')
+const liChat = body.querySelector('.Menu-li--chat')
+const contactList = body.querySelector('.Contacts-dl')
 const contacts = getContacts()
 
 
@@ -231,8 +232,8 @@ new Calendar();
 
 
 // Cuando hago scroll hacia abajo, 
-// .Button-slide le ADD `isActive´
-// .Button-slide isVisible a MITAD de la ventana
+// .Button-slide le ADD `isInvisible
+// .Button-slide isInvisible a MITAD de la ventana
 
 const buttonSlide = document.querySelector('.Home-slide');
 
@@ -244,10 +245,10 @@ window.addEventListener('scroll', () => {
     const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
 
     if (puntoActivacion) {
-        buttonSlide.classList.add('isVisible')
+        buttonSlide.classList.remove('isInvisible')
     }
     else {
-        buttonSlide.classList.remove('isVisible')
+        buttonSlide.classList.add('isInvisible')
     }
 })
 
@@ -259,24 +260,6 @@ buttonSlide.addEventListener(`click`, () => {
     window.scrollTo({ top: 0, behavior: `smooth` })
 })
 
-
-// Cuando scrollY esté arriba
-// .Button-Slide REMOVE `isVisible´
-
-window.addEventListener(`scroll`, () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-
-    const puntoActivacion = scrollY <= offsetTop
-
-    if (puntoActivacion) {
-        buttonSlide.classList.remove(`isVisible`)
-    }
-    else {
-        buttonSlide.classList.add(`isVisible`)
-    }
-})
 
 
 
@@ -336,4 +319,4 @@ window.addEventListener(`scroll`, () => {
     }
      
     
- 
+})();

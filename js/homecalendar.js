@@ -66,7 +66,6 @@ li.forEach( ( _, i )=>{
 })
 
 
-
 // Cuando CLICK en .Btn-burguer
     // Btn-nav TOGGLE isActive
     btn.addEventListener('click' , ()=>{
@@ -104,57 +103,6 @@ li.forEach( ( _, i )=>{
         })
     }
     
-
-
-
-// Cuando CLICK en .Home-button
-    // tasksImportant TOGGLE isActive
-    
-if(alertButton != null){
-    alertButton.addEventListener('click' , ()=>{
-        tasksImportant.classList.toggle('isActive')
-    
-        console.log(alertButton)
-    })
-}
-
-
-// Cuando CLICK en .Home-client
-    // listClients TOBBLE isActive
-if(clientsButton != null){
-    
-    clientsButton.addEventListener('click' , ()=>{
-        listClients.classList.toggle('isActive')
-    })
-}
-
-
-// Cuando CLICK en .Clients
-    // arrow le STYLE transform rotate (90deg)
-if(clients != null){
-
-    clients.addEventListener('click', ()=>{
-        if(statusArrow === 0){
-            arrow.style.transform = 'rotate(90deg)'
-            statusArrow = 1
-        }
-        else{
-            arrow.style.transform = 'rotate(0deg)'
-            statusArrow = 0
-        }
-        console.log(arrow)
-    })
-}    
-
-// Cuando CLICK en .Management-link
-    // homeManagement TOGGLE isActive
-if(management != null){
-
-    management.addEventListener('click' , ()=>{
-        homeManagement.classList.toggle('isActive')
-        console.log(management)
-    })
-}
 
 
 

@@ -1423,8 +1423,8 @@ input[type="submit"] {
 
     opacity: 1;     /* Hace que el botón sea completamente visible por defecto */
 }
-.Home-slide.isVisible{
-    opacity: 0; /* Cuando se le agrega la clase .isVisible >>> este efecto hace que el botón se vuelva invisible */
+.Home-slide.isInvisible{
+    opacity: 0; /* Cuando se le agrega la clase .isInvisible >>> este efecto hace que el botón se vuelva invisible */
 }
 
 
