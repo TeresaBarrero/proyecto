@@ -27,7 +27,7 @@
         <!-- logo con enlace a home (index.html)-->
         <h1 class="Header-logo">
             <span class="Header-span"></span>
-            <a class="Header-a" href="../index.html" title="Panic">
+            <a class="Header-a" href="../index.html">
                 <picture class="Header-picture">
                     <source srcset="../assets/Panic.png" media="(min-width: 6.25rem)">
                     <img class="Header-img" src="../assets/Panic.png" alt="Panic">
@@ -66,31 +66,44 @@
                     <!-- Bloque desplegable de "Tareas" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Tasks">
-                            <a class="Tasks-a" href="../src/tasks.html" title="Tareas">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <ul class="Block-dt">
+                        <li class="Block-title"> <a href="../src/tasks.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                TAREAS</a>
-                        </dt>
-                        <dd class="Block-dd">TAREAS DEL DÍA</dd>
-                        <dd class="Block-dd">TAREAS PENDIENTES DEL MES</dd>
-                        <dd class="Block-dd">TAREAS IMPORTANTES</dd>
-                        <dd class="Block-dd">TAREAS CUMPLIDAS</dd>
-                    </dl>
+                                </svg> TAREAS </a> </li>
+                        <li><a href="../src/tasks.html#tareasdia"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg>TAREAS DEL DÍA</a></li>
+                        <li><a href="../src/tasks.html#tareasmes"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> TAREAS PENDIENTES DEL MES </a></li>
+                        <li><a href="../src/tasks.html#tareasaño"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> TAREAS PENDIENTES DEL AÑO </a></li>
+                        <li><a href="../src/tasks.html#tareasok"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> TAREAS CUMPLIDAS </a></li>
+                        <li><a href="../src/tasks.html#tareasimportantes"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> TAREAS IMPORTANTES </a></li>
+                    </ul>
                 </div>
 
-                <!-- Sección de Calendario -->
+                <!-- Sección de Calendario-->
                 <div class="Block Block-calendar">
                     <!-- Bloque de Calendario
                             Descripción: Calendario en miniatura de utilidad visual 
                     -->
                     <dl class="Block-dl">
                         <dt class="Block-dt Calendar">
-                            <a class="Calendar-a" href="../src/calendar.html" title="Calendario">
+                            <a class="Calendar-a" href="../src/calendar.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path
@@ -123,36 +136,27 @@
                     </dl>
                 </div>
 
-                <!-- Sección de Contactos -->
+                <!-- Sección de Contactos-->
                 <div class="Block Block-contacts">
                     <!-- Bloque desplegable de "Contactos" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Contacts">
-                            <a class="Contacts-a" href="../src/contacts.html" title="Contactos">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <ul class="Block-dt">
+                        <li class="Block-title"> <a href="../src/contacts.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                CONTACTOS
-                            </a>
-                        </dt>
-                        <dd class="Block-dd"></dd>
-                    </dl>
-                    <dl class="Block-dl Block-dl--contacts">
-                        <dt class="Block-dt">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                            </svg>
-                            CONFIGURACIÓN
-                        </dt>
-                        <dd class="Block-dd">CREAR CONTACTO</dd>
-                        <dd class="Block-dd">GESTIÓN DE CONTACTOS</dd>
-                    </dl>
+                                </svg> CONTACTOS </a> </li>
+                        <li> <a href="../src/create_contacts.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> CREAR CONTACTO </a> </li>
+                        <li> <a href="../src/home_management.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> GESTIÓN DE CONTACTO </a> </li>
+                    </ul>
                 </div>
 
                 <!-- Sección de Proyectos -->
@@ -160,60 +164,46 @@
                     <!-- Bloque desplegable de "Proyectos" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Projects">
-                            <a class="Projects-a" href="../src/projects.html" title="Proyectos">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <ul class="Block-dt">
+                        <li class="Block-title"> <a href="../src/projects.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                PROYECTOS
-                            </a>
-                        </dt>
-                        <dd class="Block-dd"></dd>
-                    </dl>
-                    <dl class="Block-dl Block-dl--projects">
-                        <dt class="Block-dt">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                            </svg>
-                            CONFIGURACIÓN
-                        </dt>
-                        <dd class="Block-dd">CREAR PROYECTO</dd>
-                        <dd class="Block-dd">GESTIÓN DE PROYECTOS</dd>
-                    </dl>
+                                </svg> PROYECTOS </a> </li>
+                        <li> <a href="../src/create_projects.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> CREAR PROYECTO </a> </li>
+                        <li> <a href="../src/projects.html#homemanagement"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> GESTIÓN DE CONTACTO </a> </li>
+                    </ul>
                 </div>
 
-                <!-- Sección de Informes generales -->
+                <!-- Sección de Informes generales-->
                 <div class="Block Block-reports">
                     <!-- Bloque desplegable de "Informes Generales" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Reports">
-                            <a class="Reports-a" href="../src/reports.html" title="Informes generales">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <ul class="Block-dt">
+                        <li class="Block-title"> <a href="../src/reports.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                INFORMES GENERALES
-                            </a>
-
-                        </dt>
-                        <dd class="Block-dd"></dd>
-                        <dd class="Block-dd">FILTRO:</dd>
-                    </dl>
-                    <div class="Block-dd Block-dd--calendar">
-                        <input type="date" name="Filter" id="Filter" style="background-color: #587065;">
-                    </div>
+                                </svg> INFORMES GENERALES </a> </li>
+                        <li> <a href="../src/reports.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                </svg> FILTRO: </a> </li>
+                        <li class="Block-dd Block-dd--calendar"><input type="date" name="Filter" id="Filter"
+                                style="background-color: #587065;"> </li>
                 </div>
 
-                <!-- Sección Chat-->
-                <div class="Block Block-chat Chat">
+                <!-- Sección Chat -->
+                <section class="Block Block-chat Chat">
                     <!-- Chat desplegable -->
                     <div class="Chat-container">
                         <div class="Chat-header">
@@ -228,11 +218,11 @@
                             <button class="Chat-btn" id="send-button" title="Enviar">Enviar</button>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </nav>
 
-        <!-- Sección de Perfil -->
+        <!-- Sección de Perfil-->
         <div class="Header-wrapper Menu">
             <ul class="Menu-ul Menu-ul--wrapper">
                 <li class="Menu-li Menu-li--wrapper Wrapper">
@@ -262,7 +252,7 @@
                     </li>
                     <li class="Block-li Block-li--user">USUARIO</li>
                     <li class="Block-li Block-li--profile">
-                        <a class="Profile-a" href="../src/profile.html" title="Perfil">
+                        <a class="Profile-a" href="../src/profile.html">
                             PERFIL
                         </a>
                     </li>
@@ -273,7 +263,7 @@
 
         <!-- Sección Menú desplegable para responsive (btn)-->
         <div class="Header-responsive Btn">
-            <!-- Btn menú desplegable responsive-->
+            <!--Btn menú desplegable responsive-->
             <div class="Btn-menu">
                 <svg class="Btn-burguer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=#DDA288
                     viewBox="0 0 16 16">
@@ -294,18 +284,18 @@
             </div>
         </div>
 
-        <!-- Secciones de HEADER adaptadas para menú desplegable responsive -->
+        <!-- Secciones de HEADER adaptadas para menú desplegable responsive-->
         <nav class="Btn-nav">
             <div class="Btn-seccion">
-                <a href="../src/tasks.html" title="Tareas">TAREAS</a>
-                <a href="../src/calendar.html" title="Calendario">CALENDARIO</a>
-                <a href="../src/contacts.html" title="Contactos">CONTACTOS</a>
-                <a href="../src/projects.html" title="Proyecto">PROYECTOS</a>
-                <a href="../src/reports.html" title="Informes generales">INFORMES GENERALES</a>
+                <a href="src/tasks.html" title="Tareas">TAREAS</a>
+                <a href="src/calendar.html" title="Calendario">CALENDARIO</a>
+                <a href="src/contacts.html" title="Contactos">CONTACTOS</a>
+                <a href="src/projects.html" title="Proyectos">PROYECTOS</a>
+                <a href="src/reports.html" title="Informes generales">INFORMES GENERALES</a>
             </div>
         </nav>
 
-        <!-- Chat responsive -->
+        <!-- Chat responsive-->
         <section class="Block Block-chat--responsive Chat">
             <div class="Chat-container">
                 <div class="Chat-header">
@@ -318,6 +308,8 @@
                 </div>
             </div>
         </section>
+
+
     </header>
 
     <main class="Home-principal">

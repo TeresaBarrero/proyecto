@@ -153,7 +153,7 @@ html{
     font-weight: bold;
 
     position: absolute;
-    top: 0;
+    top: 50%;
     display: none;
     transition: open .5s ease;
 
