@@ -7,7 +7,7 @@
  - Encabezado (header)
  - Contenido principal de la página (main)
  -->
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,21 +67,34 @@
                     <!-- Bloque desplegable de "Tareas" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Tasks">
-                            <a class="Tasks-a" href="src/tasks.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <ul class="Block-dt">
+                        <li class="Block-title"> <a href="src/tasks.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                TAREAS</a>
-                        </dt>
-                        <dd class="Block-dd">TAREAS DEL DÍA</dd>
-                        <dd class="Block-dd">TAREAS PENDIENTES DEL MES</dd>
-                        <dd class="Block-dd">TAREAS IMPORTANTES</dd>
-                        <dd class="Block-dd">TAREAS CUMPLIDAS</dd>
-                    </dl>
+                                </svg> TAREAS </a> </li>
+                        <li><a href="src/tasks.html#tareasdia"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                            </svg>TAREAS DEL DÍA</a></li>
+                        <li><a href="src/tasks.html#tareasmes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                            </svg> TAREAS PENDIENTES DEL MES </a></li>
+                        <li><a href="src/tasks.html#tareasaño"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                            </svg> TAREAS PENDIENTES DEL AÑO </a></li>
+                        <li><a href="src/tasks.html#tareasok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                            </svg> TAREAS CUMPLIDAS </a></li>
+                        <li><a href="src/tasks.html#tareasimportantes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                            </svg> TAREAS IMPORTANTES </a></li>
+                    </ul>
                 </div>
 
                 <!-- Sección de Calendario-->
@@ -332,7 +345,8 @@
         <!-- Form para crear una tarea-->
         <section class="Home-organizer Organizer">
             <h2 class="Organizer-h2">CREA TU TAREA</h2>
-            <form class="Organizer-form" method="post"> <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
+            <form class="Organizer-form" method="post">
+                <!--elimino action="" para llevar las instrucciones pertinentes a JS-->
                 <label class="Form-label Form-label--organizer" for="description">Descripción de tarea</label>
                 <textarea class="Form-textarea Form-textarea--organizer" name="description" id="description"
                     required></textarea>

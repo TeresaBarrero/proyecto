@@ -66,21 +66,35 @@
                     <!-- Bloque desplegable de "Tareas" 
                                 Descripción: Incluye una lista con la información de la sección 
                     -->
-                    <dl class="Block-dl">
-                        <dt class="Block-dt Tasks">
-                            <a class="Tasks-a" href="../src/tasks.html" title="Tareas">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                                </svg>
-                                TAREAS</a>
-                        </dt>
-                        <dd class="Block-dd">TAREAS DEL DÍA</dd>
-                        <dd class="Block-dd">TAREAS PENDIENTES DEL MES</dd>
-                        <dd class="Block-dd">TAREAS IMPORTANTES</dd>
-                        <dd class="Block-dd">TAREAS CUMPLIDAS</dd>
-                    </dl>
+                    <ul class="Block-dt Tasks">
+                        <li class="Block-title"> <a href="../src/tasks.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg> TAREAS </a> </li>
+                        <li><a href="#tareasdia"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                        </svg> TAREAS DEL DÍA</a></li>
+                        <li><a href="#tareasmes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                        </svg> TAREAS PENDIENTES DEL MES </a></li>
+                        <li><a href="#tareasaño"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                        </svg> TAREAS PENDIENTES DEL AÑO </a></li>
+                        <li><a href="#tareasok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                        </svg> TAREAS CUMPLIDAS </a></li>
+                        <li><a href="#tareasimportantes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                        </svg> TAREAS IMPORTANTES </a></li>
+                    </ul>
+                </div>
                 </div>
 
                 <!-- Sección de Calendario -->
@@ -229,7 +243,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </nav>
 
         <!-- Sección de Perfil -->
@@ -344,40 +357,28 @@
                 </svg>
             </h2>
             <!-- Apartado "Tareas del día" -->
-            <dl class="Tasks-dl Tasks-dl--daily">
+            <dl id="tareasdia" class="Tasks-dl Tasks-dl--daily">
                 <dt class="Tasks-dt">
                     TAREAS DEL DÍA
                 </dt>
                 <dd></dd>
             </dl>
             <!-- Apartado "Tareas pendientes del mes"-->
-            <dl class="Tasks-dl Tasks-dl--pending">
+            <dl id="tareasmes" class="Tasks-dl Tasks-dl--pending">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL MES
                 </dt>
                 <dd></dd>
             </dl>
             <!-- Apartado "Tareas pendientes del año"-->
-            <dl class="Tasks-dl Tasks-dl--year">
+            <dl id="tareasaño" class="Tasks-dl Tasks-dl--year">
                 <dt class="Tasks-dt">
                     TAREAS PENDIENTES DEL AÑO
                 </dt>
                 <dd></dd>
             </dl>
-            <!-- Apartado "Tareas importantes" -->
-            <dl class="Tasks-dl Tasks-dl--important">
-                <dt class="Tasks-dt Tasks-dt--important">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
-                        class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                    </svg>
-                    TAREAS IMPORTANTES
-                </dt>
-                <dd></dd>
-            </dl>
             <!-- Apartado "Tareas cumplidas"-->
-            <dl class="Tasks-dl Tasks-dl--ok">
+            <dl id="tareasok" class="Tasks-dl Tasks-dl--ok">
                 <dt class="Tasks-dt Tasks-dt--ok">
                     TAREAS CUMPLIDAS
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -385,6 +386,18 @@
                         <path
                             d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
                     </svg>
+                </dt>
+                <dd></dd>
+            </dl>
+            <!-- Apartado "Tareas importantes" -->
+            <dl id="tareasimportantes" class="Tasks-dl Tasks-dl--important">
+                <dt class="Tasks-dt Tasks-dt--important">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                        class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                    </svg>
+                    TAREAS IMPORTANTES
                 </dt>
                 <dd></dd>
             </dl>
