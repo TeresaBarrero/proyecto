@@ -231,7 +231,7 @@ html{
     display: none;
 }
 /* Lista de contenidos dentro del bloque desplegable. Edición */
-.Block-dt {
+.Block-dt , .Block-dd{
     color: var(--title-c);
     padding: 0 0 0.375rem 0;
 }
