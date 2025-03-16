@@ -22,7 +22,6 @@ li {
     list-style: none;
 }
 a {
-    display: block;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -142,7 +141,7 @@ html{
     Descripción: diseño y posición de los diferentes bloques del Header-nav
 */
 .Block{
-    width: 60%;
+    width: 45%;
     background-color: var(--basic-c);
     margin: 1em;
     padding: 1em;
@@ -584,24 +583,52 @@ html{
                             - Edición del svg "tlf" 
 */ 
 .Contacts-create {
+    padding: 10px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+
     position: absolute;
     top: 35%;
-    right: 6%;
+    right: 1%;
+
+    font-size: 9px;
+    text-align: center;
 }
 .Contacts-management {
+    padding: 13px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+
     position: absolute;
-    top: 40%;
-    right: 6%;
+    top: 45%;
+    right: 2%;
+
+    font-size: 9px;
+    text-align: center;
 }
 .Contacts-email{
+    padding: 10px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+
     position: absolute;
     top: 8%;
-    left: 5%;
+    left: 2%;
+
+    font-size: 9px;
+    text-align: center;
 }
 .Contacts-tlf{
+    padding: 10px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+
     position: absolute;
     top: 8%;
-    right: 5%;
+    right: 2%;
+
+    font-size: 9px;
+    text-align: center;
 }
 
 
@@ -621,15 +648,21 @@ html{
     cursor: pointer;    /*Cambia el cursor a "pointer" al pasar sobre el botón */
 }
 .Home-head{
-    width: 25%;
+    width: 30%;
     padding: 10px 0;
+    margin: 10px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
 
     position: absolute;
-    left: 58%;
+    top: 20%;
+    right: 13.5%;
 
     font-size: 1.2rem;
     font-weight: bold;
+    text-align: center;
     color: var(--primary-c);    
+
 }
 
 /* Edición de formularios (Formularios en Create contacts + Create projects)
@@ -865,18 +898,32 @@ input[type="submit"] {
     border-radius: 7px;
 }
 .Home-new{
+    width: 30%;
+    padding: 10px;
+
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+    margin: 10px;
+
     position: absolute;
-    top: 25%;
+    top: 10%;
     right: 22%;
 }
-.Home-head{
+/*.Home-head{
+    width: 30%;
+    padding-left: 10px;
+    border: 1px solid #DDA288;
+    border-radius: 5px;
+    margin: 10px;
+
     position: absolute;
-    top: 40%;
-    right: 3%;
-}
+    top: 35%;
+    right: 10%;
+    
+}*/
 .Home-management--projects{
     position: absolute;
-    top: 45%;
+    top: 25%;
     right: 3%;
 
     display: none;  /* Por defecto, el elemento está oculto */
@@ -886,7 +933,7 @@ input[type="submit"] {
 }
 .Home-management--reports{
     position: absolute;
-    top: 70%;
+    top: 45%;
     right: 3%;
     display: none;  /* Por defecto, el elemento está oculto */
 }
@@ -1118,20 +1165,20 @@ input[type="submit"] {
     color: var(--primary-c);
 
     position: absolute;
-    top: 45%;
+    top: 25%;
     right: 17%;
 }
 .Home-head--reports{
     width: 25%;
     position: absolute;
-    top: 65%;
+    top: 35%;
 }
 
 
 /*Filter >> no disponible en esta versión */ 
 .Reports-date{
     position: absolute;
-    top: 55%;
+    top: 30%;
     right: 10%;
 }
 
@@ -1548,7 +1595,7 @@ input[type="submit"] {
 
 
 /* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 1900px */
-@media (max-width: 1900px){
+@media (min-width: 1900px){
     .Header-logo{
         width: 11%;
     }
@@ -1579,22 +1626,22 @@ input[type="submit"] {
         left: 10%;
     }
     .Block-contacts{
-        width: 30%;
+        min-width: 30%;
         position: absolute;
         left: 20%;
     }
     .Block-projects{
-        width: 50%;
+        min-width: 50%;
         position: absolute;
         left: 32%;
     }
     .Block-reports{
-        width: 30%;
+        min-width: 30%;
         position: absolute;
         left: 42%;
     }
     .Block-profile{
-        width: 10%;
+        min-width: 10%;
         position: absolute;
         left: 77%;
     }
@@ -1735,16 +1782,20 @@ input[type="submit"] {
     .Home-new{
         width: 40%;
         position: absolute;
-        top: 25%;
+        top: 15%;
         right: 7%;
+    }
+    .Contacts-dl{
+        max-width: 70%;
     }
     .Create-link{
         width: 60%;
     }
     .Home-head{
+        width: 40%;
         position: absolute;
-        top: 40%;
-        left: 60%;
+        top: 25%;
+        left: 55%;
     }
     .Form-back--projects{
         position: absolute;
@@ -1768,13 +1819,14 @@ input[type="submit"] {
     }
     .Home-management--projects{
         position: absolute;
-        top: 47%;
+        top: 32%;
         left: 50%;
     }
     .Home-head--reports{
+        width: 28%;
         position: absolute;
         top: 45%;
-        left: 75%;
+        left: 69%;
     }
     .Home-management--reports{
         width: 40%;
@@ -1890,7 +1942,7 @@ input[type="submit"] {
     .Contacts-create{
         position: absolute;
         top: 33%;
-        right: 6%;
+        right: 2%;
     }
     .Form-back{
         position: absolute;
@@ -1913,17 +1965,17 @@ input[type="submit"] {
         width: 50%;
     }
     .Home-new{
-        width: 40%;
         position: absolute;
-        top: 25%;
+        top: 15%;
         right: 30%;
+        text-align: start;
     }
     .Create-link{
         width: 100%;
     }
     .Home-head{
         position: absolute;
-        top: 40%;
+        top: 25%;
     }
     .Form-back--projects{
         position: absolute;
@@ -1944,16 +1996,16 @@ input[type="submit"] {
         left: 73%;
     }
     .Management-link{
-        width: 80%;
+        width: 100%;
     }
     .Home-management--projects{
         position: absolute;
-        top: 45%;
+        top: 33%;
     }
     .Home-management--reports{
         width: 50%;
         position: absolute;
-        top: 46%;
+        top: 50%;
     }
     .Profile{
         display: flex;
@@ -2006,6 +2058,12 @@ input[type="submit"] {
     .Home-principal--projects{
         width: 100%;
     }
+    .Contacts-dl{
+        width: 60%;
+    }
+    .Contacts-management{
+        right: 3%;
+    }
     .Projects{
         width: 90%;
         margin: auto;
@@ -2015,15 +2073,16 @@ input[type="submit"] {
         border-right: none;
     }
     .Home-new{
+        width: 43%;
         position: absolute;
-        top: -3%;
+        top: 0;
         font-size: 0.625rem;
     }
     .Home-head{
-        width: 35%;
+        width: 43%;
         position: absolute;
-        top: 5%;
-        left: 63%;
+        top: 8%;
+        left: 55%;
         font-size: 0.625rem;
     }
     .Home-management--projects{
@@ -2034,7 +2093,7 @@ input[type="submit"] {
     }
     .Home-h2{
         position: absolute;
-        top: 5%;
+        top: 2%;
         left: 10%;
     }
     .Home-principal--reports{
@@ -2047,21 +2106,32 @@ input[type="submit"] {
     .Home-reports{
         width: 80%;
         min-height: 300px;
-        margin: 1.25rem auto;
+        margin: 7.5rem auto;
         position: static;
     }
-    .Reports-p ,.Reports-date , .Home-head--reports{
-        width: 80%;
-        margin: 0 0 0 1.875rem;
-        padding: 1.25rem;
-        position: static;
+    .Home-head--reports{
+        width: 40%;
+        padding: .625rem;
+        position: absolute;
+        top: 80%;
+        left: 10%;
+    }
+    .Reports-p{
+        position: absolute;
+        top: 65%;
+        left: 10%;
+    }
+    .Reports-date{
+        position: absolute;
+        top: 73%;
+        left: 15%;
     }
     .Home-management--reports{
         width: 53%;
         height: 80px;
         position: absolute;
-        top: 70%;
-        left: -30%;
+        top: 87%;
+        left: 15%;
     }
     .Profile{
         display: flex;
@@ -2095,15 +2165,21 @@ input[type="submit"] {
     .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
         width: 23%;
     }
+    .Contacts-dl{
+        margin: 1.25rem;
+    }
     .Contacts-email{
         position: absolute;
         top: 5%;
-        left: 91%;
+        left: 80%;
     }
     .Contacts-tlf{
         position: absolute;
-        top: 10%;
-        right: 3%;
+        top: 15%;
+        right: 8%;
+    }
+    .Contacts-management{
+        top: 42%;
     }
     .Slide{
         width: 30px;
@@ -2429,6 +2505,9 @@ input[type="submit"] {
         top: 5%;
         left: 63%;
         font-size: .75rem;
+    }
+    .Contacts-email{
+        left: 75%;
     }
     .Home-management--projects{
         width: 80%;
