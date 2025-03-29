@@ -2501,6 +2501,13 @@ input[type="submit"] {
     .Header-logo{
         width: 33%;
     }
+    .Btn-menu{
+        padding-right: .5rem;
+    }
+    .Chat-svg{
+        width: 80%;
+        height: 80%;
+    }
     .Schedule{
         width: 60%;
         min-height: 200px;
