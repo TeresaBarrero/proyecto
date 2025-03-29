@@ -1651,6 +1651,28 @@ input[type="submit"] {
     .Header-logo{
         width: 13%;
     }
+    .Block-contacts{
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    .Block-projects{
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 38%;
+    }
+    .Block-reports{
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+    .Block-profile{
+        position: absolute;
+        top: 7%;
+        left: 79%;
+    }
     .Animation-graph , .Animation-clipboard , .Animation-folder , .Animation-people , .Animation-calendar{
         width: 15%;
     }
@@ -1668,6 +1690,21 @@ input[type="submit"] {
     }
     .Management-link{
         width: 90%;
+    }
+    .Form-back{
+        position: absolute;
+        top: 40%;
+    }
+    .Form-back--projects{
+        position: absolute;
+        top: 65%;
+    }
+    .Home-management--reports{
+        position: absolute;
+        top: 38%;
+    }
+    .Profile-information{
+        margin-top: 2.5rem;
     }
 }
 /* Estilo RESPONSIVE aplicado a pantallas con un ancho máximo de 1070px */
@@ -2557,10 +2594,9 @@ input[type="submit"] {
         font-size: 0.625rem;
     }
     .Home-head{
-        width: 35%;
         position: absolute;
         top: 5%;
-        left: 63%;
+        left: 45%;
         font-size: .75rem;
     }
     .Contacts-email{
