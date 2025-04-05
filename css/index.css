@@ -60,8 +60,8 @@ html{
     --AlertImportant-c : rgb(109, 37, 37);  /*Color para btn de apertura del apartado = "Tareas importantes"*/
     --tasksOk : #5b856f;    /*Color de fondo (bg) de título de apartado "Tareas cumplidas" */
 
-    --form-ff : 'Zilla Slab';   /*Tipografía de formularios : label +  input + textarea + select + botón (btn)*/
-    --general-ff : 'Times New Roman', Times, serif; /* Tipografía utilizada para nombre de secciones Header + calendario (utilizada generalmente en "body") */
+    --form-ff : 'Indie Flower';   /*Tipografía de formularios : label +  input + textarea + select + botón (btn)*/
+    --general-ff : 'Forum'; /* Tipografía utilizada para nombre de secciones Header + calendario (utilizada generalmente en "body") */
 
 }
 
