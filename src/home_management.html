@@ -4,15 +4,18 @@
  Descripción: Este archivo HTML contiene la página principal del sitio web (home)
  Estructura general del archivo:
  - "head" : etiquetas meta + enlace CSS y JS + tipografía obtenida a través de Google Fonts
+            (Enlaces externos de Google Fonts. No incluye  rel="noopener", o rel="nofollow" > cargan recursos de las fuentes, no enlaza a otra página web )
  - Encabezado (header)
  - Contenido principal de la página (main)
+        - Enlaces internos: no incluyen " rel="noopener", o rel="nofollow" "
+        - + enlace archivo pdf (no incluye rel="noopener" o rel="nofollow")
  -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panic</title>
-    <link rel="icon" href="../assets/Panic.png" type="image/x-icon">
+    <link rel="icon" href="../assets/Panic.webp" type="image/x-icon">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../js/homeprincipal.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +38,7 @@
             <span class="Header-span"></span>
             <a class="Header-a" href="../index.html">
                 <picture class="Header-picture">
-                    <source srcset="../assets/Panic.png" media="(min-width: 6.25rem)">
+                    <source srcset="../assets/Panic.webp" media="(min-width: 6.25rem)">
                     <img class="Header-img" src="../assets/Panic.webp" alt="Panic">
                 </picture>
             </a>
@@ -321,7 +324,7 @@
     <main class="Home-principal">
         <!-- background igual en todas las pantallas -->
         <picture class="Home-picture">
-            <source srcset="../assets/Panic.png" media="(min-width: 31.25rem)">
+            <source srcset="../assets/Panic.webp" media="(min-width: 31.25rem)">
             <img class="Home-img" src="../assets/Panic.webp" alt="Panic">
         </picture>
 
