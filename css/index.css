@@ -1583,11 +1583,11 @@ input[type="submit"] {
 
 /* Animación para deslizar el contenido desde la izquierda "slideRight" */
 @keyframes slideRight{
-    from{
+    0% {
         opacity: 0; /* Comienza con el contenido completamente transparente */
         transform: translateX(-100%);   /* El contenido empieza fuera de la pantalla hacia la izquierda */
     }
-    to{
+    100% {
         opacity: 1; /* Finaliza con el contenido completamente visible */
         transform: translateX(0%);  /* El contenido se traslada a su posición original */
     }
@@ -2311,15 +2311,17 @@ input[type="submit"] {
         top: 70%;
         left: 0;
     }
+    .Home-h2{
+        position: static;
+
+    }
     .Form-create{
         display: flex;
         flex-flow: row wrap;
         justify-content: start;
         align-items: start;
     }
-    .Form-label , .Form-input{
-        width: 90%;
-    }
+
     .Form-left , .Form-right{
         width: 90%;
         margin: .625rem;
@@ -2329,7 +2331,7 @@ input[type="submit"] {
         align-items: center;
     }
     .Form-label--responsive{
-        width: 80%;
+        width: 110%;
     }
     .Form-input--responsive{
         width: 100%;
@@ -2345,9 +2347,19 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 100%;
+        margin-bottom: 1.25rem;
     }
     .Form-select--contact{
         height: 100px;
+    }
+    .Form-label--projects{
+        width: 100%;
+    }
+    .Form-input--projects{
+        width: 90%;
+    }
+    .Form-input--description , .Form-input-comments{
+        width: 100%;
     }
     .Block-profile{
         width: 20%;
@@ -2357,6 +2369,7 @@ input[type="submit"] {
     }
     .Form-back{
         position: absolute;
+        top: 95%;
         right: 0;
     }
 }
@@ -2497,11 +2510,8 @@ input[type="submit"] {
         width: 90%;
         margin: .3125rem;
     }
-    .Form-label , .Form-input{
-        width: 80%;
-    }
     .Form-label--responsive{
-        width: 80%;
+        width: 110%;
     }
     .Form-input--responsive{
         width: 100%;
@@ -2517,6 +2527,12 @@ input[type="submit"] {
     }
     .Form-textarea--observations{
         width: 100%;
+    }
+    .Form-label--projects{
+        width: 100%;
+    }
+    .Form-input--projects{
+        width: 90%;
     }
     .Profile-information{
         width: 80%;
@@ -2582,9 +2598,7 @@ input[type="submit"] {
         border-right: none;
     }
     .Home-h2{
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: static;
         font-size: 1rem;
     }
     .Home-new{
@@ -2623,18 +2637,14 @@ input[type="submit"] {
         justify-content: start;
         align-items: start;
     }
-    .Form-label , .Form-input{
-        width: 100%;
-    }
-    .Form-left , .Form-right{
-        width: 90%;
-        margin: .3125rem;
+    .Form-h2{
+        font-size: 1rem;
     }
     .Form-label--responsive{
-        width: 80%;
+        width: 120%;
     }
     .Form-input--responsive{
-        width: 100%;
+        width: 110%;
     }
     .Form-label--description{
         width: 50%;
@@ -2648,10 +2658,16 @@ input[type="submit"] {
     .Form-textarea--observations{
         width: 100%;
     }
-    .Back{
+    .Form-back{
         position: absolute;
         top: 95%;
-        right: 10%;
+        right: 0;
+    }
+    .Form-label--projects{
+        width: 100%;
+    }
+    .Form-input--projects{
+        width: 90%;
     }
     .Reports-container{
         margin: 1.875rem auto;
