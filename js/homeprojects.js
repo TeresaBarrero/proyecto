@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const li = document.querySelectorAll('.Menu-li')
     const block = document.querySelectorAll('.Block')
     const btn = document.querySelector('.Btn-burguer')
@@ -18,15 +18,15 @@
     const management = document.querySelector('.Management-link')
     const homeManagement = document.querySelector('.Home-management--projects')
     let statusArrow = 0
-    
-    
-    
-                        // Función realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
-    
+
+
+
+    // Función realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
+
     // Function = devuelveme projectJSON,
-        // Si no existe,  CREATE IT
-    
-    
+    // Si no existe,  CREATE IT
+
+
     const projects = getProject()
     function getProject() {
         if (!localStorage.getItem('projectJSON')) {
@@ -34,7 +34,7 @@
         }
         return JSON.parse(localStorage.getItem('projectJSON'))
     }
-    
+
     // Defino una función de edit y delet
     function listProjects() {
         const editSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -44,27 +44,27 @@
         const deleteSvgCode = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
       <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
     </svg>`
-    
-    
-    //Utilizamos DOMParser para parsear (toma los datos y los descompone) el string como si de un elemento html se tratara el svg
-            //Por cada elemento de projects = CREATE etiqueta 'li'
-            // A 'li' le ADD class
-            // AÑADO este listContact como hijo de contactList
-            // Clono los svg anteriores para utilizarlos en varias partes 
-            // ADJUNTO id de contacts para traer DATA a otra pantalla 
-    
-    // Cuando CLICK en editSvgClone
+
+
+        //Utilizamos DOMParser para parsear (toma los datos y los descompone) el string como si de un elemento html se tratara el svg
+        //Por cada elemento de projects = CREATE etiqueta 'li'
+        // A 'li' le ADD class
+        // AÑADO este listContact como hijo de contactList
+        // Clono los svg anteriores para utilizarlos en varias partes 
+        // ADJUNTO id de contacts para traer DATA a otra pantalla 
+
+        // Cuando CLICK en editSvgClone
         // Guardo ID en el localStorage para luego representarlo en la pantalla donde me traigo la data
         // LINK to 'update_projects?
-    
-    // Cuando CLICK en deleteSvgClone
+
+        // Cuando CLICK en deleteSvgClone
         // FINDINDEX del objeto 'contacto' a eliminar mediante el i que obtengo comparando ID
         // DELETE objeto 
         // GUARDAR objetos excepto el eliminado
         // RECHARGE pág para actualizar data
         const editSvgElement = new DOMParser().parseFromString(editSvgCode, 'image/svg+xml').documentElement
         const deleteSvgElement = new DOMParser().parseFromString(deleteSvgCode, 'image/svg+xml').documentElement
-    
+
         projects.forEach((project) => {
             const listProjects = document.createElement('li')
             listProjects.textContent = project.projectName
@@ -89,298 +89,291 @@
         })
     }
     listProjects()
-    
-    
-    
-    
-    
+
+
+
+
+
     // Recorre TODOS elementos li
-        // Si NO contains class 'Menu-li--Chat'
-            // Cuando MOUSEOVER en li 
-                // TODOS .Menu-li REMOVE isActive
-                // TODOS .Block REMOVE is Active
-                // .Menu-li [POSICION] ADD isActive
-                // .Block [POSICION] ADD isActive
-    
-        // SI contains class 'Menu-li--Chat'
-            // Cuando CLICK en liChat
-                // chat TOGGLE 'isActive'
-                // Recorre TODOS li 
-                    // Si NO contains class 'Menu-li--Chat' o 'Block-Chat'
-                        // TODOS li REMOVE isActive
-    
-        // SI NO contains class 'Menu-li--wrapper`
-            // TODOS li[i] ADD 'isActive'
-    
-    li.forEach( ( _, i )=>{
-        if(!li[i].classList.contains('Menu-li--chat')){
-            li[i].addEventListener('mouseover', ()=>{
-                li.forEach( ( _ , i )=>{
-                    li[i].classList.remove('isActive')
-                    block[i].classList.remove('isActive')
-                })
-                if(!li[i].classList.contains('Menu-li--wrapper')){
-                    li[i].classList.add('isActive')
-                }
-                block[i].classList.add('isActive')
-            })   
-        }
-        else{
-            li[i].addEventListener('click', ()=>{
-                //liChat.classList.toggle('isActive')
-                chat.classList.toggle('isActive')
-                li.forEach( ( _ , i )=>{
-                    if(!li[i].classList.contains('Menu-li--chat'||'Block-chat')){
+    // Si NO contains class 'Menu-li--Chat'
+    // Cuando MOUSEOVER en li 
+    // TODOS .Menu-li REMOVE isActive
+    // TODOS .Block REMOVE is Active
+    // .Menu-li [POSICION] ADD isActive
+    // .Block [POSICION] ADD isActive
+
+    // SI contains class 'Menu-li--Chat'
+    // Cuando CLICK en liChat
+    // chat TOGGLE 'isActive'
+    // Recorre TODOS li 
+    // Si NO contains class 'Menu-li--Chat' o 'Block-Chat'
+    // TODOS li REMOVE isActive
+
+    // SI NO contains class 'Menu-li--wrapper`
+    // TODOS li[i] ADD 'isActive'
+
+    li.forEach((_, i) => {
+        if (!li[i].classList.contains('Menu-li--chat')) {
+            li[i].addEventListener('mouseover', () => {
+                requestAnimationFrame(() => {
+                    li.forEach((_, i) => {
                         li[i].classList.remove('isActive')
                         block[i].classList.remove('isActive')
+                    })
+                    if (!li[i].classList.contains('Menu-li--wrapper')) {
+                        li[i].classList.add('isActive')
                     }
+                    block[i].classList.add('isActive')
                 })
-                
-            })  
+            })
+        }
+        else {
+            li[i].addEventListener('click', () => {
+                requestAnimationFrame(() => {
+                    //liChat.classList.toggle('isActive')
+                    chat.classList.toggle('isActive')
+                    li.forEach((_, i) => {
+                        if (!li[i].classList.contains('Menu-li--chat') && !li[i].classList.contains('Block-chat')) {
+                            li[i].classList.remove('isActive')
+                            block[i].classList.remove('isActive')
+                        }
+                    })
+                })
+            })
         }
     })
-    
+
     // Cuando CLICK en .Btn-burguer
-        // Btn-nav TOGGLE isActive
-        btn.addEventListener('click' , ()=>{
+    // Btn-nav TOGGLE isActive
+    btn.addEventListener('click', () => {
+        requestAnimationFrame(() => {
             btnNav.classList.toggle('isActive')
         })
-        
-        
-        // Cuando CLICK en .Btn-chat
-            // Block-chat le TOGGLE 'isActive'
-        btnChat.addEventListener('click' , ()=>{
+    })
+
+
+    // Cuando CLICK en .Btn-chat
+    // Block-chat le TOGGLE 'isActive'
+    btnChat.addEventListener('click', () => {
+        requestAnimationFrame(() => {
             chat.classList.toggle('isActive')
             console.log(btnChat)
         })
-        btnChat.addEventListener('click' , ()=>{
+    })
+    btnChat.addEventListener('click', () => {
+        requestAnimationFrame(() => {
             responsiveChat.classList.toggle('isActive')
             console.log(btnChat)
         })
-        
-        
-        // Cuando MOUSEOVER home
-            // Si NO contains class 'Block-chat'
-                // TODOS .Block[i] REMOVE isActive
-                // TODOS li REMOVE is Active
-        
-        if(home != null){
-            home.addEventListener('mouseover' , ()=>{
-                block.forEach( ( _ , i )=>{
-                    if(!block[i].classList.contains('Block-chat'||'Block-chat--responsive')){
+    })
+
+
+    // Cuando MOUSEOVER home
+    // Si NO contains class 'Block-chat'
+    // TODOS .Block[i] REMOVE isActive
+    // TODOS li REMOVE is Active
+
+    if (home != null) {
+        home.addEventListener('mouseover', () => {
+            requestAnimationFrame(() => {
+                block.forEach((_, i) => {
+                    if (!block[i].classList.contains('Block-chat' || 'Block-chat--responsive')) {
                         block[i].classList.remove('isActive')
-                        if(li[i] != undefined){
+                        if (li[i] != undefined) {
                             li[i].classList.remove('isActive')
                         }
                     }
                 })
             })
-        }
-        
-    
-    
-    // Cuando CLICK en .Home-button
-        // tasksImportant TOGGLE isActive
-        
-    if(alertButton != null){
-        alertButton.addEventListener('click' , ()=>{
-            tasksImportant.classList.toggle('isActive')
-        
-            console.log(alertButton)
         })
     }
-    
-    // Cuando CLICK en .Home-client
-        // listClients TOBBLE isActive
-    if(clientsButton != null){
-        
-        clientsButton.addEventListener('click' , ()=>{
-            listClients.classList.toggle('isActive')
-        })
-    }
-    
-    
-    // Cuando CLICK en .Clients
-        // arrow le STYLE transform rotate (90deg)
-    if(clients != null){
-    
-        clients.addEventListener('click', ()=>{
-            if(statusArrow === 0){
-                arrow.style.transform = 'rotate(90deg)'
-                statusArrow = 1
-            }
-            else{
-                arrow.style.transform = 'rotate(0deg)'
-                statusArrow = 0
-            }
-            console.log(arrow)
-        })
-    }    
-    
+
     // Cuando CLICK en .Management-link
-        // homeManagement TOGGLE isActive
-    if(management != null){
-    
-        management.addEventListener('click' , ()=>{
+    // homeManagement TOGGLE isActive
+    if (management != null) {
+
+        management.addEventListener('click', () => {
             homeManagement.classList.toggle('isActive')
             console.log(management)
         })
     }
-    
-    
-    
+
+
+
     // Calendar recurso aportado parte por ChatGpt
-    
+
     class Calendar {
         constructor() {
-          this.currentDate = new Date();
-          this.init();
+            this.currentDate = new Date();
+            this.init();
         }
-    
+
         init() {
-          this.renderHeader();
-          this.generateDays();
-          document.getElementById("prevMonth").addEventListener("click", () => this.prevMonth());
-          document.getElementById("nextMonth").addEventListener("click", () => this.nextMonth());
+            this.renderHeader();
+            this.generateDays();
+            document.getElementById("prevMonth").addEventListener("click", () => this.prevMonth());
+            document.getElementById("nextMonth").addEventListener("click", () => this.nextMonth());
         }
-    
+
         renderHeader() {
-          const monthYear = document.getElementById("monthYear");
-          const options = { month: "long", year: "numeric" };
-          monthYear.textContent = this.currentDate.toLocaleDateString("es-ES", options);
+            const monthYear = document.getElementById("monthYear");
+            const options = { month: "long", year: "numeric" };
+            monthYear.textContent = this.currentDate.toLocaleDateString("es-ES", options);
         }
-    
+
         generateDays() {
-          const calendarGrid = document.getElementById("calendarGrid");
-          calendarGrid.innerHTML = "";
-    
-          const year = this.currentDate.getFullYear();
-          const month = this.currentDate.getMonth();
-          const firstDayOfMonth = new Date(year, month, 1);
-          const lastDayOfMonth = new Date(year, month + 1, 0);
-          const daysInMonth = lastDayOfMonth.getDate();
-    
-          for (let day = 1; day <= daysInMonth; day++) {
-            const date = new Date(year, month, day);
-    
-            const dayElement = document.createElement("div");
-            dayElement.classList.add("calendar-day");
-    
-            const dayNumber = document.createElement("div");
-            dayNumber.classList.add("calendar-day-number");
-            dayNumber.textContent = day;
-    
-            dayElement.appendChild(dayNumber);
-            calendarGrid.appendChild(dayElement);
-          }
+            const calendarGrid = document.getElementById("calendarGrid");
+            calendarGrid.innerHTML = "";
+
+            const year = this.currentDate.getFullYear();
+            const month = this.currentDate.getMonth();
+            const firstDayOfMonth = new Date(year, month, 1);
+            const lastDayOfMonth = new Date(year, month + 1, 0);
+            const daysInMonth = lastDayOfMonth.getDate();
+
+            requestAnimationFrame(() => {
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(year, month, day);
+
+                    const dayElement = document.createElement("div");
+                    dayElement.classList.add("calendar-day");
+
+                    const dayNumber = document.createElement("div");
+                    dayNumber.classList.add("calendar-day-number");
+                    dayNumber.textContent = day;
+
+                    dayElement.appendChild(dayNumber);
+                    calendarGrid.appendChild(dayElement);
+                }
+            })
         }
-    
+
         prevMonth() {
-          this.currentDate.setMonth(this.currentDate.getMonth() - 1);
-          this.renderHeader();
-          this.generateDays();
+            this.currentDate.setMonth(this.currentDate.getMonth() - 1);
+            this.renderHeader();
+            this.generateDays();
         }
-    
+
         nextMonth() {
-          this.currentDate.setMonth(this.currentDate.getMonth() + 1);
-          this.renderHeader();
-          this.generateDays();
+            this.currentDate.setMonth(this.currentDate.getMonth() + 1);
+            this.renderHeader();
+            this.generateDays();
         }
-      }
-    
-      new Calendar();
-    
-    
-// Cuando hago scroll hacia abajo, 
-// .Button-slide le ADD `isInvisible
-// .Button-slide isInvisible a MITAD de la ventana
-
-const buttonSlide = document.querySelector('.Home-slide');
-
-window.addEventListener('scroll', () => {
-
-    let { scrollY, innerHeight } = window
-    let { offsetTop } = buttonSlide
-
-    const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
-
-    if (puntoActivacion) {
-        buttonSlide.classList.remove('isInvisible')
     }
-    else {
-        buttonSlide.classList.add('isInvisible')
+
+    new Calendar();
+
+
+    // Cuando hago scroll hacia abajo, 
+    // .Button-slide le ADD `isActive´
+    // .Button-slide isVisible a MITAD de la ventana
+
+    const buttonSlide = document.querySelector('.Home-slide');
+
+    window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+            let { scrollY, innerHeight } = window
+            let { offsetTop } = buttonSlide
+
+            const puntoActivacion = scrollY >= offsetTop - innerHeight / 2
+
+            if (puntoActivacion) {
+                buttonSlide.classList.remove('isInvisible')
+            }
+            else {
+                buttonSlide.classList.add('isInvisible')
+            }
+        })
+    })
+
+
+
+
+    // Cuando CLICK en .Button-slide
+    // scrollY arriba
+
+    if (buttonSlide) {
+        buttonSlide.addEventListener(`click`, () => {
+            window.scrollTo({ top: 0, behavior: `smooth` })
+        })
     }
-})
 
 
-// Cuando CLICK en .Button-slide
-// scrollY arriba
+    // Cuando scrollY esté arriba
+    // .Button-Slide REMOVE `isVisible´
+    if (buttonSlide) {
 
-buttonSlide.addEventListener(`click`, () => {
-    window.scrollTo({ top: 0, behavior: `smooth` })
-})
+        window.addEventListener(`scroll`, () => {
+            requestAnimationFrame(() => {
+                let { scrollY, innerHeight } = window
+                let { offsetTop } = buttonSlide
+
+                const puntoActivacion = scrollY <= offsetTop
+
+                if (puntoActivacion) {
+                    buttonSlide.classList.remove(`isVisible`)
+                }
+                else {
+                    buttonSlide.classList.add(`isVisible`)
+                }
+            })
+        })
+    }
 
 
+    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
-    
-    
-    
-        
-    
-                            // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
-                            
-    
-      // Declaro variables de Chat
-        // Cuando CLICK en sendButton
-            // envía un mensaje
-        // Cuando CLICK en una tecla en messageImput
-            // Si es 'Enter' se envía el mensaje
-        
-        //Al send mensaje
-            // Si es distinto que "", pasa a otra función
-            // Si en setTimeout NO REPLY,  
-                // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
-    
-    
-        // La función addMensaje crea un nuevo elemento 'messageElement'
-            // Añado la clase 'message' y el valor 'sender'
-            // El texto de messageElement tiene el valor de 'text'
-        // Se añade messageElement como hijo de 'chatMessages'
-    
-        const chatMessages = document.getElementById('Chat-messages');
-        const messageInput = document.getElementById('message-input');
-        const sendButton = document.getElementById('send-button');
-        
-        sendButton.addEventListener('click', sendMessage);
-        
-        messageInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
+
+    // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+    // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+    // Si es 'Enter' se envía el mensaje
+
+    //Al send mensaje
+    // Si es distinto que "", pasa a otra función
+    // Si en setTimeout NO REPLY,  
+    // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
+
+
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+    // Añado la clase 'message' y el valor 'sender'
+    // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
+
+    const chatMessages = document.getElementById('Chat-messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+
+    sendButton.addEventListener('click', sendMessage);
+
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
             sendMessage();
-          }
-        });
-        function sendMessage() {
-          const message = messageInput.value.trim();
-        
-          if (message !== '') {
+        }
+    });
+    function sendMessage() {
+        const message = messageInput.value.trim();
+
+        if (message !== '') {
             addMessage(message, 'user');
             setTimeout(() => {
-               addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
-             }, 1000);
+                addMessage('¡Hola! ¿Cómo puedo ayudarte?', 'bot');
+            }, 1000);
             messageInput.value = '';
-             }
-         }
-      
-        function addMessage(text, sender) {
-          const messageElement = document.createElement('div');
-          messageElement.classList.add('message', sender);
-             messageElement.textContent = text;
-        
-             chatMessages.appendChild(messageElement);
-        
-             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-         
-        
-     
-    
+    }
+
+    function addMessage(text, sender) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', sender);
+        messageElement.textContent = text;
+
+        requestAnimationFrame(() => {
+            chatMessages.appendChild(messageElement);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        })
+    }
+
 })();
