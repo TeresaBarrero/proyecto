@@ -284,25 +284,25 @@
 
     new Calendar();
 
-// Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
+    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
 
-  // Declaro variables de Chat
-  // Cuando CLICK en sendButton
-  // envía un mensaje
-  // Cuando CLICK en una tecla en messageImput
-  // Si es 'Enter' se envía el mensaje
+    // Declaro variables de Chat
+    // Cuando CLICK en sendButton
+    // envía un mensaje
+    // Cuando CLICK en una tecla en messageImput
+    // Si es 'Enter' se envía el mensaje
 
-  //Al send mensaje
-  // Si es distinto que "", pasa a otra función
-  // Si en setTimeout NO REPLY,  
-  // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
+    //Al send mensaje
+    // Si es distinto que "", pasa a otra función
+    // Si en setTimeout NO REPLY,  
+    // Devuelve un mensaje (por defecto) y recibo addMensage '¡Hola! ¿Cómo puedo ayudarte?'
 
 
-  // La función addMensaje crea un nuevo elemento 'messageElement'
-  // Añado la clase 'message' y el valor 'sender'
-  // El texto de messageElement tiene el valor de 'text'
-  // Se añade messageElement como hijo de 'chatMessages'
+    // La función addMensaje crea un nuevo elemento 'messageElement'
+    // Añado la clase 'message' y el valor 'sender'
+    // El texto de messageElement tiene el valor de 'text'
+    // Se añade messageElement como hijo de 'chatMessages'
 
     const chatMessages = document.getElementById('Chat-messages');
     const messageInput = document.getElementById('message-input');
