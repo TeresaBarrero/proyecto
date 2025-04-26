@@ -79,7 +79,7 @@
     //Actualizo la información en el diseño de la data obtenida mediante el id
     document.addEventListener('DOMContentLoaded', () => {
         if (specifyProject) {
-            project.projectName.value = specifyProject.proyectName;
+            project.projectName.value = specifyProject.projectName;
             project.client.value = specifyProject.client;
             project.startDate.value = specifyProject.startDate;
             project.endDate.value = specifyProject.endDate;
