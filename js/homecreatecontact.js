@@ -10,8 +10,6 @@
     const responsiveChat = document.querySelector('.Block-chat--responsive')
     const successButton = document.querySelector('.Form-button')
 
-    // Función realizada con ayuda de documentación oficial (MDN y W3S) y ChatGpt
-
     // Defino objeto 'contact' 
     // le ADD los datos de FORM
 
@@ -162,10 +160,7 @@
     }
 
 
-
-
-
-    // Calendar recurso aportado parte por ChatGpt
+    // Calendar 
 
     class Calendar {
         constructor() {
@@ -227,14 +222,6 @@
     }
 
     new Calendar();
-
-
-
-
-
-
-    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
-
 
     // Declaro variables de Chat
     // Cuando CLICK en sendButton

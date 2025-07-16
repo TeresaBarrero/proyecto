@@ -12,8 +12,6 @@
     const contacts = getContacts()
 
 
-    // Función realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
-
     // Function = devuelveme contactJSON,
     // Si no existe,  CREATE IT
     function getContacts() {
@@ -177,7 +175,7 @@
 
 
 
-    // Calendar recurso aportado parte por ChatGpt
+    // Calendar 
 
     class Calendar {
         constructor() {
@@ -275,12 +273,6 @@
         })
     })
 
-
-
-
-
-
-    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
 
     // Declaro variables de Chat

@@ -13,8 +13,6 @@
     const successButton = document.querySelector('.Form-button')
 
 
-    // Funcionalidad realizada con apoyo de documentación oficial (MDN y W3S) y ChatGpt
-
 
     //  Creo FUNCTION
     // Si desc o date VACÍO,
@@ -138,10 +136,7 @@
     }
 
 
-
-
-
-    // Calendar recurso aportado parte por ChatGpt
+    // Calendar 
 
     class Calendar {
         constructor() {
@@ -204,8 +199,6 @@
 
     new Calendar();
 
-
-    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
 
     // Declaro variables de Chat

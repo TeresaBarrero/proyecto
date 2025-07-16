@@ -19,8 +19,6 @@
     const homeManagement = document.querySelector('.Home-management--projects')
 
 
-    // Funcionalidad realizada con apoyo de Documentación Oficial (MDN y W3S) y ChatGpt
-
 
     // Declaro variables
 
@@ -441,7 +439,7 @@
     }
 
 
-    // Calendar recurso aportado parte por ChatGpt
+    // Calendar 
 
     class Calendar {
         constructor() {
@@ -539,9 +537,6 @@
     })
 
 
-
-
-    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
 
     // Declaro variables de Chat

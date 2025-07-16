@@ -122,7 +122,7 @@
 
 
 
-    // Calendar recurso aportado parte por ChatGpt
+    // Calendar 
 
     class Calendar {
         constructor() {
@@ -226,9 +226,6 @@
     });
 
 
-
-
-    // Función realizada con ayuda de ChatGpt y de documentación oficial (MDN y W3S)
 
 
     // Declaro variables de Chat
